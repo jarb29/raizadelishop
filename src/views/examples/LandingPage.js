@@ -11,9 +11,6 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
   Col
@@ -25,7 +22,6 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
 
 function LandingPage() {
-  const [pills, setPills] = React.useState("1");
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   React.useEffect(() => {
@@ -223,154 +219,6 @@ function LandingPage() {
                     <CardTitle tag="h4">James Logan</CardTitle>
                     <p className="category">@jameslogan</p>
                   </CardFooter>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="pricing-2">
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="6">
-                <h2 className="title">Pick the best plan for you</h2>
-                <Nav
-                  className="nav-pills-info justify-content-center"
-                  pills
-                  role="tablist"
-                >
-                  <NavItem>
-                    <NavLink
-                      className={pills === "1" ? "active" : ""}
-                      onClick={e => {
-                        e.preventDefault();
-                        setPills("1");
-                      }}
-                      role="tablist"
-                      href="#pablo"
-                    >
-                      Legal Entity
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={pills === "2" ? "active" : ""}
-                      onClick={e => {
-                        e.preventDefault();
-                        setPills("2");
-                      }}
-                      role="tablist"
-                      href="#pablo"
-                    >
-                      Individual
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </Col>
-            </Row>
-            <Row>
-              <Col md="4">
-                <Card className="card-pricing card-plain">
-                  <CardBody>
-                    <h6 className="category">Enterprise</h6>
-                    <CardTitle tag="h1">
-                      <small>$</small>
-                      59
-                    </CardTitle>
-                    <ul>
-                      <li>
-                        <b>10GB</b> Disk Space
-                      </li>
-                      <li>
-                        <b>100GB</b> Monthly Bandwidth
-                      </li>
-                      <li>
-                        <b>20</b> Email Accounts
-                      </li>
-                      <li>
-                        <b>Unlimited</b> subdomains
-                      </li>
-                    </ul>
-                    <Button
-                      className="btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      Sign Up
-                    </Button>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card
-                  className="card-pricing card-background card-raised"
-                  style={{
-                    backgroundImage:
-                      "url(" + require("assets/img/pricing2.jpg") + ")"
-                  }}
-                >
-                  <CardBody>
-                    <h6 className="category text-info">Professional</h6>
-                    <CardTitle tag="h1">
-                      <small>$</small>
-                      29
-                    </CardTitle>
-                    <ul>
-                      <li>
-                        <b>5GB</b> Disk Space
-                      </li>
-                      <li>
-                        <b>50GB</b> Monthly Bandwidth
-                      </li>
-                      <li>
-                        <b>10</b> Email Accounts
-                      </li>
-                      <li>
-                        <b>Unlimited</b> subdomains
-                      </li>
-                    </ul>
-                    <Button
-                      className="btn-neutral btn-round"
-                      color="default"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      Sign Up
-                    </Button>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-pricing card-plain">
-                  <CardBody>
-                    <h6 className="category">Standard</h6>
-                    <CardTitle tag="h1">
-                      <small>$</small>
-                      17
-                    </CardTitle>
-                    <ul>
-                      <li>
-                        <b>2GB</b> Disk Space
-                      </li>
-                      <li>
-                        <b>25GB</b> Monthly Bandwidth
-                      </li>
-                      <li>
-                        <b>5</b> Email Accounts
-                      </li>
-                      <li>
-                        <b>Unlimited</b> subdomains
-                      </li>
-                    </ul>
-                    <Button
-                      className="btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      Get Started
-                    </Button>
-                  </CardBody>
                 </Card>
               </Col>
             </Row>

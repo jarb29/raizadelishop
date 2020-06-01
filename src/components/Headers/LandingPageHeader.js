@@ -1,7 +1,28 @@
 import React from "react";
 
+import {
+  Button,
+  Card,
+  CardBody,
+  Collapse,
+  FormGroup,
+  Form,
+  Input,
+  NavbarBrand,
+  Navbar,
+  NavItem,
+  NavLink,
+  Nav,
+  Container,
+  Row,
+  Col,
+  Carousel,
+  CarouselItem,
+  CarouselIndicators
+} from "reactstrap";
+
 // reactstrap components
-import { Button, Container } from "reactstrap";
+
 
 // core components
 
@@ -33,32 +54,59 @@ function LandingPageHeader() {
         <div className="content-center">
           <Container>
             <h1 className="title">Raiza's Coffe Shop.</h1>
-            <div className="text-center">
-              <Button
-                className="btn-icon btn-round mr-1"
-                color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-              >
-                <i className="fab fa-facebook-square"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round mr-1"
-                color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-              >
-                <i className="fab fa-twitter"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-              >
-                <i className="fab fa-google-plus"></i>
-              </Button>
-            </div>
+              <Row>
+                <Col className="ml-auto mr-auto" md="10">
+                  <Card
+                    className="card-raised card-form-horizontal card-plain"
+                    data-background-color=""
+                  >
+                    <CardBody>
+                      <Form action="" method="">
+                        <Row>
+                          <Col md="3">
+                            <FormGroup>
+                              <Input
+                                autoComplete="family-name"
+                                defaultValue=""
+                                placeholder="Full Name"
+                                type="text"
+                              ></Input>
+                            </FormGroup>
+                          </Col>
+                          <Col md="3">
+                            <FormGroup>
+                              <Input
+                                autoComplete="email"
+                                placeholder="Your Email"
+                                type="email"
+                              ></Input>
+                            </FormGroup>
+                          </Col>
+                          <Col md="3">
+                            <FormGroup>
+                              <Input
+                                autoComplete="current-password"
+                                placeholder="Password"
+                                type="password"
+                              ></Input>
+                            </FormGroup>
+                          </Col>
+                          <Col md="3">
+                            <Button
+                              block
+                              className="btn-round"
+                              color="info"
+                              type="button"
+                            >
+                              Join Us
+                            </Button>
+                          </Col>
+                        </Row>
+                      </Form>
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
           </Container>
         </div>
       </div>

@@ -405,7 +405,9 @@ function Headers() {
               style={{
                 backgroundImage: "url(" + require("assets/img/bg14.jpg") + ")"
               }}
-            ></div>
+            >
+            </div>
+
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
@@ -416,6 +418,8 @@ function Headers() {
                     islands most legendary clubs.
                   </h5>
                 </Col>
+
+
                 <Col className="ml-auto mr-auto" md="10">
                   <Card
                     className="card-raised card-form-horizontal card-plain"
@@ -467,8 +471,11 @@ function Headers() {
                     </CardBody>
                   </Card>
                 </Col>
+
               </Row>
+              
             </Container>
+
           </div>
         </div>
         <div className="header-3">
