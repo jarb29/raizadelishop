@@ -15,6 +15,7 @@ import Projects from "./sections-sections/Projects.js";
 import Pricing from "./sections-sections/Pricing.js";
 import Testimonials from "./sections-sections/Testimonials.js";
 import ContactUs from "./sections-sections/ContactUs.js";
+import RaizaFrontPage from "./sections-sections/RaizaFrontPage";
 
 function Sections() {
   React.useEffect(() => {
@@ -43,6 +44,7 @@ function Sections() {
       <div className="wrapper">
         <div className="section-space"></div>
         <Headers />
+        <RaizaFrontPage />
         <Features />
         <Blogs />
         <Teams />

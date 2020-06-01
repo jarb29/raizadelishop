@@ -127,10 +127,7 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons business_money-coins"></i>
                     Pricing
                   </DropdownItem>
-                  <DropdownItem to="/sections#testimonials" tag={Link}>
-                    <i className="now-ui-icons ui-2_chat-round"></i>
-                    Testimonials
-                  </DropdownItem>
+               
                   <DropdownItem to="/sections#contact-us" tag={Link}>
                     <i className="now-ui-icons tech_mobile"></i>
                     Contact Us
