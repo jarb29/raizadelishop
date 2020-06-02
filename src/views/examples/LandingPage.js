@@ -83,37 +83,16 @@ function LandingPage() {
                     }}
                   ></div>
                   <h3>
-                    So what does the new record for the lowest level of winter
-                    ice actually mean
+                  Aperitivos para todos los gustos!
                   </h3>
                   <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
+                  Amamos los postres, el disfruté de una rica salsa; eso es más que obvio. Por muchos años, una taza de café junto a un postre, una salsa para acompañar con nuestras carnes, pollo, papas fritas o empanadas ha sido un deleite a nuestro paladar que nos relaja llenando de energía a nuestra alma, cuerpo y mente.
                   </p>
                   <p>
-                    For a start, it does not automatically follow that a record
-                    amount of ice will melt this summer. More important for
-                    determining the size of the annual thaw is the state of the
-                    weather as the midnight sun approaches and temperatures
-                    rise. But over the more than 30 years of satellite records,
-                    scientists have observed a clear pattern of decline,
-                    decade-by-decade.
+                  ¿Quieres recrear nuestro premiun deli experiencia en tu casa? Nuestra online deli tienda te ofrece una variedad de aperitivos, salsas (regalos de alerta) y todo lo esencial para esas tardes o desayunos de relajación que necesitas.
                   </p>
                   <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
+                  Cuatros de nuestros principales productos.
                   </p>
                 </Col>
               </Row>
