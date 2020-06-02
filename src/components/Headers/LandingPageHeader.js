@@ -53,7 +53,7 @@ function LandingPageHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">Raiza's Coffe Shop.</h1>
+            <h1 className="title">Raiza's Deli Shop.</h1>
               <Row>
                 <Col className="ml-auto mr-auto" md="10">
                   <Card

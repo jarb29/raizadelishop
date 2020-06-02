@@ -42,13 +42,10 @@ function LandingPage() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Who we are?</h2>
+                <h2 className="title">Quienes Somos?</h2>
                 <h5 className="description">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record low maximum sea ice extent tihs year down
-                  to low ice extent in the Pacific and a late drop in ice extent
-                  in the Barents Sea.
+                 Tienda dedicada a la venta de productos hechos artesanalamente que se puede disfrutar
+                 con la compañia de una taza de tea, cafe o como acompañamiento de otros platos.
                 </h5>
               </Col>
             </Row>
@@ -64,11 +61,9 @@ function LandingPage() {
                     }}
                   >
                     <p className="blockquote blockquote-info">
-                      "Over the span of the satellite record, Arctic sea ice has
-                      been declining significantly, while sea ice in the
-                      Antarctichas increased very slightly" <br></br>
+                      "Aperitivos para todos los gustos" <br></br>
                       <br></br>
-                      <small>-NOAA</small>
+                      <small>Raiza</small>
                     </p>
                   </div>
                   <div
