@@ -55,7 +55,7 @@ function LandingPageHeader() {
           <Container>
             <h1 className="title">Raiza's Deli Shop.</h1>
               <Row>
-                <Col className="ml-auto mr-auto" md="10">
+                <Col className="ml-auto mr-auto" md="12">
                   <Card
                     className="card-raised card-form-horizontal card-plain"
                     data-background-color=""
