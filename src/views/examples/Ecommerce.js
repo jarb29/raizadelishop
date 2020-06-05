@@ -62,10 +62,8 @@ function Ecommerce() {
         
         <div className="main">
           <div className="section">
-
-
             <Container>
-              <h2 className="section-title">Find what you need</h2>
+              <h2 className="section-title">Encuentar el duclce que te guste</h2>
               <Row>
                 <Col md="3">
                   <div className="collapse-panel">
@@ -385,30 +383,11 @@ function Ecommerce() {
                         </CardBody>
                       </Card>
                     </Col>
-                    <Col className="ml-auto mr-auto" md="3">
-                      <Button
-                        className="btn-round"
-                        color="info"
-                        id="tooltip51956639"
-                      >
-                        Load more...
-                      </Button>
-                      <UncontrolledTooltip
-                        delay={0}
-                        target="tooltip51956639"
-                      ></UncontrolledTooltip>
-                    </Col>
                   </Row>
                 </Col>
               </Row>
             </Container>
           </div>
-
-
-  
-
-
-
           <div
             className="subscribe-line subscribe-line-image"
             style={{
