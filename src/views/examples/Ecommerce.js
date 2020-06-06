@@ -55,7 +55,6 @@ function Ecommerce() {
       <ScrollTransparentNavbar />
       <div className="wrapper">
         <EcommerceHeader />
-        
         <div className="main">
           <div className="section">
             <Container>

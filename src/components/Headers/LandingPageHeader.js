@@ -12,10 +12,6 @@ import {
   Col
 } from "reactstrap";
 
-// reactstrap components
-
-
-// core components
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();
