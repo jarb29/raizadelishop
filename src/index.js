@@ -26,8 +26,6 @@ import "assets/demo/react-demo.css";
 import "assets/demo/nucleo-icons-page-styles.css";
 // pages
 import AboutUs from "views/examples/AboutUs.js";
-import BlogPost from "views/examples/BlogPost.js";
-import BlogPosts from "views/examples/BlogPosts.js";
 import ContactUs from "views/examples/ContactUs.js";
 import Ecommerce from "views/examples/Ecommerce.js";
 import Index from "views/Index.js";
@@ -46,8 +44,6 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/about-us" render={props => <AboutUs {...props} />} />
-      <Route path="/blog-post" render={props => <BlogPost {...props} />} />
-      <Route path="/blog-posts" render={props => <BlogPosts {...props} />} />
       <Route path="/contact-us" render={props => <ContactUs {...props} />} />
       <Route path="/e-commerce" render={props => <Ecommerce {...props} />} />
       <Route path="/index" render={props => <Index {...props} />} />
