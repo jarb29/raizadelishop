@@ -143,7 +143,7 @@ function FixedTransparentNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons design_image"
                   ></i>
-                  <p>Examples</p>
+                  <p>Categorias</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem tag={Link} to="/about-us">

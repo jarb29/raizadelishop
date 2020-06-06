@@ -179,7 +179,7 @@ function DropdownFixedNavbar() {
                     aria-hidden={true}
                     className="now-ui-icons design_image"
                   ></i>
-                  <p>Examples</p>
+                  <p>Categorias</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
                   <DropdownItem tag={Link} to="/about-us">
@@ -203,7 +203,7 @@ function DropdownFixedNavbar() {
                     <i className="now-ui-icons shopping_shop"></i>
                     Ecommerce Page
                   </DropdownItem>
-                  
+
                   <DropdownItem tag={Link} to="/e-commerce">
                     <i className="now-ui-icons shopping_shop"></i>
                     Ecommerce Page 2
