@@ -4,21 +4,12 @@ import {
   Button,
   Card,
   CardBody,
-  Collapse,
   FormGroup,
   Form,
   Input,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
-  Col,
-  Carousel,
-  CarouselItem,
-  CarouselIndicators
+  Col
 } from "reactstrap";
 
 // reactstrap components

@@ -200,6 +200,10 @@ function ScrollTransparentNavbar() {
                     <i className="now-ui-icons shopping_shop"></i>
                     Ecommerce Page
                   </DropdownItem>
+                  <DropdownItem tag={Link} to="/e-commerce">
+                    <i className="now-ui-icons shopping_shop"></i>
+                    Ecommerce Page 2
+                  </DropdownItem>
  
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>

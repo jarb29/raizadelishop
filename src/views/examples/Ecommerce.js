@@ -1,11 +1,8 @@
 import React from "react";
-// plugin that creates slider
-import Slider from "nouislider";
-// reactstrap components
+
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   CardTitle,
@@ -41,8 +38,7 @@ function Ecommerce() {
     }
   };
   // slider states and functions
-  const [sliderMin, setSliderMin] = React.useState(100);
-  const [sliderMax, setSliderMax] = React.useState(880);
+
   React.useEffect(() => {
    
 
