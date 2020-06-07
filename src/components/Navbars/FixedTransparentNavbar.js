@@ -91,15 +91,33 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <Button
+
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  data-toggle="dropdown"
+                  href="#pablo"
+                  id="navbarDropdownMenuLink"
+                  nav
+                  onClick={e => e.preventDefault()}
+                ><i className="now-ui-icons shopping_cart-simple"></i>
+                
+                  <p>Compras</p>
+                </DropdownToggle>
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
+          
+                <DropdownItem tag={Link} to="/e-commerce">
+                  <Button
                   className="nav-link btn-default"
                   color="neutral"
                   href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nuk-pro-react-fixed-transparent-navbar"
                   target="_blank"
                 ><i className="now-ui-icons shopping_cart-simple"></i>
                 </Button>
-              </NavItem>
+                </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Container>
