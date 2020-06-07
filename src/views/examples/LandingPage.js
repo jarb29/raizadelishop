@@ -20,6 +20,7 @@ import {
 import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
+import PresentationI from "./PresentationI";
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -263,6 +264,7 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
+        <PresentationI />
         <FooterDefault />
       </div>
     </>
