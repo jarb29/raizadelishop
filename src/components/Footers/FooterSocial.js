@@ -185,7 +185,7 @@ function FooterSocial() {
             </li>
           </ul>
           <div className="copyright pull-center" id="copyright">
-            Copyright © {new Date().getFullYear()} Creative Tim All Rights
+            Copyright © {new Date().getFullYear()} Jarb29 All Rights
             Reserved.
           </div>
         </Container>

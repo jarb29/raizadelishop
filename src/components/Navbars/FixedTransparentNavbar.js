@@ -51,17 +51,25 @@ function FixedTransparentNavbar() {
                   <p>Categorias</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
+                <DropdownItem tag={Link} to="/e-commerce">
+                    <i className="now-ui-icons shopping_shop"></i>
+                    Tortas
+                  </DropdownItem>
+                  <DropdownItem tag={Link} to="/e-commerce">
+                    <i className="now-ui-icons shopping_shop"></i>
+                    Salsas
+                  </DropdownItem>
                   <DropdownItem tag={Link} to="/about-us">
                     <i className="now-ui-icons business_bulb-63"></i>
-                    About-us
+                    Sobre Nosotros
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/contact-us">
                     <i className="now-ui-icons location_pin"></i>
-                    Contact Us
+                    Contactanos
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/landing-page">
                     <i className="now-ui-icons education_paper"></i>
-                    Landing Page
+                    Home
                   </DropdownItem>
                   <DropdownItem to="/index" tag={Link}>
                     <i className="now-ui-icons business_chart-pie-36"></i>
@@ -70,14 +78,6 @@ function FixedTransparentNavbar() {
                   <DropdownItem tag={Link} to="/login-page">
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/e-commerce">
-                    <i className="now-ui-icons shopping_shop"></i>
-                    Ecommerce Page
-                  </DropdownItem>
-                  <DropdownItem tag={Link} to="/e-commerce">
-                    <i className="now-ui-icons shopping_shop"></i>
-                    Ecommerce Page 2
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>

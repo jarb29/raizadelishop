@@ -4,5 +4,5 @@
 ### Original Release
 - Started project with create-react-app
 - Added Reactstrap as base framework
-- Added design from Now UI Kit by Creative Tim
+- Added design from Now UI Kit by Jarb29
 - Added React Hooks

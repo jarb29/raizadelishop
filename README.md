@@ -5,7 +5,7 @@
 
 ![Product Thumbnail](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-pro-react/opt_nukp_react_thumbnail.jpg)
 
-Now UI Kit PRO React is a premium Bootstrap 4 kit provided by Invision and Creative Tim. It is built over React, React Hooks and Reactstrap using Create React App. It is a beautiful cross-platform UI kit featuring over 1000 components, 34 sections and 11 example pages.
+Now UI Kit PRO React is a premium Bootstrap 4 kit provided by Invision and Jarb29. It is built over React, React Hooks and Reactstrap using Create React App. It is a beautiful cross-platform UI kit featuring over 1000 components, 34 sections and 11 example pages.
 
 Now UI Kit is one of the most popular UI Kits online, provided in PSD and Sketch formats by Invision. We wanted to find a way for developers worldwide to benefit from using it. We created the fully coded version of [Now UI Kit React](https://www.creative-tim.com/product/now-ui-kit-react?ref=nukp-react-readme) and based on the feedback that we've got from our users we've created the PRO version.
 
@@ -100,7 +100,7 @@ Let us know your thoughts below. And good luck with development!
 
 Quick start options:
 
-- Buy from [Creative Tim](https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nukp-react-readme)
+- Buy from [Jarb29](https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nukp-react-readme)
 
 
 ## Documentation
@@ -273,16 +273,16 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Licensing
 
-- Copyright 2019 Creative Tim (https://www.creative-tim.com?ref=nukp-react-readme)
-- Creative Tim [license](https://www.creative-tim.com/license?ref=nukp-react-readme)
+- Copyright 2019 Jarb29 (https://www.creative-tim.com?ref=nukp-react-readme)
+- Jarb29 [license](https://www.creative-tim.com/license?ref=nukp-react-readme)
 
 ## Useful Links
 
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref=nukp-react-readme) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=nukp-react-readme) from Jarb29
 
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
 
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=nukp-react-readme) from Creative Tim
+- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=nukp-react-readme) from Jarb29
 
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=nukp-react-readme) (earn money)
 

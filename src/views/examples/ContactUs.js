@@ -264,14 +264,6 @@ function ContactUs() {
             </Container>
           </div>
         </div>
-        <div className="big-map" id="contactUs2Map">
-          <MapWrapper
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `100%` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          />
-        </div>
         <Footer />
       </div>
     </>

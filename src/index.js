@@ -5,9 +5,9 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-kit-pro-react
-* Copyright 2019 Creative Tim (http://www.creative-tim.com)
+* Copyright 2019 Jarb29 (http://www.creative-tim.com)
 
-* Coded by Creative Tim
+* Coded by Jarb29
 
 =========================================================
 

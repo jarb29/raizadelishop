@@ -248,7 +248,7 @@ function Projects() {
                     <p className="card-description">
                       Now UI Kit React is a free Bootstrap 4, React, React Hooks
                       and Reactstrap UI Kit provided for free by Invision and
-                      Creative Tim. It is a beautiful cross-platform UI kit
+                      Jarb29. It is a beautiful cross-platform UI kit
                       featuring over 50 elements and 3 templates.
                     </p>
                   </CardBody>

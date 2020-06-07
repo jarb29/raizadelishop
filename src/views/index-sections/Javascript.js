@@ -166,7 +166,7 @@ function Javascript() {
                             href="http://www.creative-tim.com/?ref=nuk-pro-react-index"
                             target="_blank"
                           >
-                            Creative Tim
+                            Jarb29
                           </a>
                           . You can choose a social network or go for the
                           classic version, whatever works best for you.
@@ -193,7 +193,7 @@ function Javascript() {
                             href="http://www.creative-tim.com/?ref=nuk-pro-react-index"
                             target="_blank"
                           >
-                            Creative Tim
+                            Jarb29
                           </a>
                           . You can choose a social network or go for the
                           classic version, whatever works best for you.

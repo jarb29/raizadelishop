@@ -210,7 +210,7 @@ function RaizaFrontPage() {
                   <span className="navbar-toggler-bar bar3"></span>
                 </button>
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                  Creative Tim
+                  Jarb29
                 </NavbarBrand>
               </div>
               <Collapse navbar isOpen={navbarOpen1}>
@@ -344,7 +344,7 @@ function RaizaFrontPage() {
                   <span className="navbar-toggler-bar bar3"></span>
                 </button>
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                  Creative Tim
+                  Jarb29
                 </NavbarBrand>
               </div>
               <Collapse navbar isOpen={navbarOpen2}>
@@ -493,7 +493,7 @@ function RaizaFrontPage() {
                   <span className="navbar-toggler-bar bar3"></span>
                 </button>
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                  Creative Tim
+                  Jarb29
                 </NavbarBrand>
               </div>
               <Collapse navbar isOpen={navbarOpen3}>

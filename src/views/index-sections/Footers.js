@@ -37,7 +37,7 @@ function Footers() {
               <ul className="pull-center">
                 <li>
                   <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                    Creative Tim
+                    Jarb29
                   </NavLink>
                 </li>
                 <li>
@@ -101,7 +101,7 @@ function Footers() {
                       href="https://www.creative-tim.com?ref=nuk-pro-react-index"
                       target="_blank"
                     >
-                      Creative Tim
+                     Jarb29
                     </NavLink>
                   </li>
                   <li>
@@ -145,7 +145,7 @@ function Footers() {
                   href="https://www.creative-tim.com?ref=nuk-pro-react-index"
                   target="_blank"
                 >
-                  Creative Tim
+                  Jarb29
                 </a>
                 .
               </div>
@@ -232,7 +232,7 @@ function Footers() {
                   <Col md="4">
                     <h5>About Us</h5>
                     <p>
-                      Creative Tim is a startup that creates design tools that
+                      Jarb29 is a startup that creates design tools that
                       make the web development process faster and easier.
                     </p>
                     <p>
@@ -343,7 +343,7 @@ function Footers() {
                 </li>
               </ul>
               <div className="copyright pull-right">
-                Copyright © {new Date().getFullYear()} Creative Tim All Rights
+                Copyright © {new Date().getFullYear()} Jarb29 All Rights
                 Reserved.
               </div>
             </Container>
@@ -548,7 +548,7 @@ function Footers() {
               </div>
               <hr></hr>
               <div className="copyright">
-                Copyright © {new Date().getFullYear()} Creative Tim All Rights
+                Copyright © {new Date().getFullYear()} Jarb29 All Rights
                 Reserved.
               </div>
             </Container>
@@ -724,7 +724,7 @@ function Footers() {
                 </li>
               </ul>
               <div className="copyright pull-center">
-                Copyright © {new Date().getFullYear()} Creative Tim All Rights
+                Copyright © {new Date().getFullYear()} Jarb29 All Rights
                 Reserved.
               </div>
             </Container>

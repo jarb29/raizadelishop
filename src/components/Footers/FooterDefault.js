@@ -18,7 +18,7 @@ function FooterDefault() {
                   href="https://www.creative-tim.com?ref=nuk-pro-react-footer-default"
                   target="_blank"
                 >
-                  Creative Tim
+                  Jarb29
                 </a>
               </li>
               <li>
@@ -45,14 +45,14 @@ function FooterDefault() {
               href="https://www.invisionapp.com?ref=creativetim"
               target="_blank"
             >
-              Invision
+              Jarb29
             </a>
             . Coded by{" "}
             <a
               href="https://www.creative-tim.com?ref=nuk-pro-react-footer-default"
               target="_blank"
             >
-              Creative Tim
+              Jarb29
             </a>
             .
           </div>
