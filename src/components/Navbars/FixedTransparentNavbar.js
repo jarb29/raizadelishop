@@ -32,6 +32,7 @@ function FixedTransparentNavbar() {
       ) : null}
       <Navbar className="navbar-absolute navbar-transparent" expand="lg">
         <Container>
+     
           <Collapse isOpen={collapseOpen} navbar>
             <Nav className="ml-auto" id="ceva" navbar>
               <UncontrolledDropdown nav>
@@ -71,17 +72,18 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons education_paper"></i>
                     Home
                   </DropdownItem>
-                  <DropdownItem to="/index" tag={Link}>
-                    <i className="now-ui-icons business_chart-pie-36"></i>
-                    All components
-                  </DropdownItem>
                   <DropdownItem tag={Link} to="/login-page">
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
                   </DropdownItem>
+                
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>
                     Profile Page
+                  </DropdownItem>
+                  <DropdownItem tag={Link} to="/index">
+                    <i className="now-ui-icons location_pin"></i>
+                    Componentes
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/sign-up">
                     <i className="now-ui-icons tech_mobile"></i>
@@ -89,6 +91,15 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+                <Button
+                  className="nav-link btn-default"
+                  color="neutral"
+                  href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nuk-pro-react-fixed-transparent-navbar"
+                  target="_blank"
+                ><i className="now-ui-icons shopping_cart-simple"></i>
+                </Button>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>
