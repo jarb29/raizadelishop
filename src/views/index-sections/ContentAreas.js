@@ -373,6 +373,12 @@ function ContentAreas() {
                   </Card>
                 </Col>
               </Row>
+
+
+
+
+
+
               <Row>
                 <Col md="12">
                   <h4>
@@ -593,6 +599,17 @@ function ContentAreas() {
                   </Card>
                 </Col>
               </Row>
+
+
+
+
+
+
+
+
+
+
+              
             </div>
             <div className="space-50"></div>
             <div id="comments">
