@@ -22,9 +22,9 @@ import {
 } from "reactstrap";
 
 // core components
-import DropdownWhiteNavbar from "components/Navbars/DropdownWhiteNavbar.js";
 import ContactUsHeader from "components/Headers/ContactUsHeader.js";
 import Footer from "components/Footers/Footer.js";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 const MapWrapper = withScriptjs(
   withGoogleMap(props => (
@@ -129,7 +129,7 @@ function ContactUs() {
   });
   return (
     <>
-      <DropdownWhiteNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <ContactUsHeader />
         <div className="main">

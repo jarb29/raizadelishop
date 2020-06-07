@@ -21,9 +21,9 @@ import {
 } from "reactstrap";
 
 // core components
-import ScrollTransparentNavbar from "components/Navbars/ScrollTransparentNavbar.js";
 import EcommerceHeader from "components/Headers/EcommerceHeader.js";
 import Footer from "components/Footers/Footer.js";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function Ecommerce() {
   // focus for inputs
@@ -52,7 +52,7 @@ function Ecommerce() {
   });
   return (
     <>
-      <ScrollTransparentNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <EcommerceHeader />
         <div className="main">

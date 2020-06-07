@@ -22,9 +22,9 @@ import {
 } from "reactstrap";
 
 // core components
-import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import AboutUsHeader from "components/Headers/AboutUsHeader.js";
 import Footer from "components/Footers/Footer.js";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function AboutUs() {
   const [specialitySelect, setSpecialitySelect] = React.useState(null);
@@ -41,7 +41,7 @@ function AboutUs() {
   });
   return (
     <>
-      <DropdownFixedNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <AboutUsHeader />
         <div className="section">

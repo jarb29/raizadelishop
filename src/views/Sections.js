@@ -3,7 +3,6 @@ import React from "react";
 // reactstrap components
 
 // core components
-import WhiteNavbar from "components/Navbars/WhiteNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
 // sections for this page
@@ -16,6 +15,7 @@ import Pricing from "./sections-sections/Pricing.js";
 import Testimonials from "./sections-sections/Testimonials.js";
 import ContactUs from "./sections-sections/ContactUs.js";
 import RaizaFrontPage from "./sections-sections/RaizaFrontPage";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
 
 function Sections() {
   React.useEffect(() => {
@@ -40,7 +40,7 @@ function Sections() {
   });
   return (
     <>
-      <WhiteNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <div className="section-space"></div>
         <Headers />

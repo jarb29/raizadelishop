@@ -27,9 +27,9 @@ import {
 } from "reactstrap";
 
 // core components
-import ScrollTransparentNavbar from "components/Navbars/ScrollTransparentNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function ProfilePage() {
   const [pills, setPills] = React.useState("1");
@@ -46,7 +46,7 @@ function ProfilePage() {
   });
   return (
     <>
-      <ScrollTransparentNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <ProfilePageHeader />
         <div className="section">

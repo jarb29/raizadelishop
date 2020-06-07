@@ -17,9 +17,9 @@ import {
 } from "reactstrap";
 
 // core components
-import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -35,7 +35,7 @@ function LandingPage() {
   });
   return (
     <>
-      <DropdownFixedNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <LandingPageHeader />
         <div className="section section-about-us">

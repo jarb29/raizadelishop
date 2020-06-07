@@ -23,6 +23,7 @@ import {
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
+
 function SignupPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
@@ -38,7 +39,7 @@ function SignupPage() {
   });
   return (
     <>
-      <FixedTransparentNavbar />
+      <FixedTransparentNavbar/>
       <div className="page-header header-filter" filter-color="black">
         <div
           className="page-header-image"
