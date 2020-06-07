@@ -32,7 +32,6 @@ import Index from "views/Index.js";
 import LandingPage from "views/examples/LandingPage.js";
 import LoginPage from "views/examples/LoginPage.js";
 import NucleoIcons from "views/NucleoIcons.js";
-import Presentation from "views/Presentation.js";
 import Pricing from "views/examples/Pricing.js";
 import ProductPage from "views/examples/ProductPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
@@ -56,10 +55,6 @@ ReactDOM.render(
         path="/nucleo-icons"
         render={props => <NucleoIcons {...props} />}
       />
-      <Route
-        path="/presentation"
-        render={props => <Presentation {...props} />}
-      />
       <Route path="/pricing" render={props => <Pricing {...props} />} />
       <Route
         path="/product-page"
@@ -71,7 +66,7 @@ ReactDOM.render(
       />
       <Route path="/sections" render={props => <Sections {...props} />} />
       <Route path="/sign-up" render={props => <SignupPage {...props} />} />
-      <Redirect to="/presentation" />
+      <Redirect to="/landing-page" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

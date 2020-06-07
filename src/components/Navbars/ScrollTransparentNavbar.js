@@ -93,6 +93,10 @@ function ScrollTransparentNavbar() {
                     <i className="now-ui-icons education_paper"></i>
                     Landing Page
                   </DropdownItem>
+                  <DropdownItem to="/index" tag={Link}>
+                    <i className="now-ui-icons business_chart-pie-36"></i>
+                    All components
+                  </DropdownItem>
                   <DropdownItem tag={Link} to="/login-page">
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
@@ -117,16 +121,6 @@ function ScrollTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <Button
-                  className="nav-link btn-default"
-                  color={buyButtonColor}
-                  href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nuk-pro-react-scroll-transparent-navbar"
-                  target="_blank"
-                >
-                  <p>Buy Now</p>
-                </Button>
-              </NavItem>
             </Nav>
           </Collapse>
         </Container>

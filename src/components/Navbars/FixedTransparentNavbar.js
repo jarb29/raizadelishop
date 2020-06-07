@@ -63,6 +63,10 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons education_paper"></i>
                     Landing Page
                   </DropdownItem>
+                  <DropdownItem to="/index" tag={Link}>
+                    <i className="now-ui-icons business_chart-pie-36"></i>
+                    All components
+                  </DropdownItem>
                   <DropdownItem tag={Link} to="/login-page">
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
