@@ -22,7 +22,6 @@ import {
 } from "reactstrap";
 
 // core components
-import ScrollTransparentNavbar from "components/Navbars/ScrollTransparentNavbar.js";
 import ProductPageHeader from "components/Headers/ProductPageHeader.js";
 import FooterSocial from "components/Footers/FooterSocial.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";

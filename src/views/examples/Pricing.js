@@ -20,9 +20,9 @@ import {
 } from "reactstrap";
 
 // core components
-import ScrollTransparentNavbar from "components/Navbars/ScrollTransparentNavbar.js";
 import PricingHeader from "components/Headers/PricingHeader.js";
 import Footer from "components/Footers/Footer.js";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function Pricing() {
   const [firstNameFocus, setFirstNameFocus] = React.useState(false);
@@ -39,7 +39,7 @@ function Pricing() {
   });
   return (
     <>
-      <ScrollTransparentNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <PricingHeader />
         <div className="main">

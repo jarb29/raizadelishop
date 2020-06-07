@@ -3,7 +3,6 @@ import React from "react";
 // reactstrap components
 
 // core components
-import ScrollTransparentNavbar from "components/Navbars/ScrollTransparentNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import FooterBlack from "components/Footers/FooterBlack.js";
 
@@ -25,6 +24,7 @@ import Javascript from "./index-sections/Javascript.js";
 import FileUploader from "./index-sections/FileUploader.js";
 import Carousel from "./index-sections/Carousel.js";
 import NucleoIcons from "./index-sections/NucleoIcons.js";
+import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
 
 function Index() {
   React.useEffect(() => {
@@ -40,7 +40,7 @@ function Index() {
   });
   return (
     <>
-      <ScrollTransparentNavbar />
+      <FixedTransparentNavbar />
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
