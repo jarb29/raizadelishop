@@ -263,7 +263,6 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-
         <FooterDefault />
       </div>
     </>
