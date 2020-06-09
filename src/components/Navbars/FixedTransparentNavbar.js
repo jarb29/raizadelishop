@@ -16,6 +16,7 @@ import {
   Container,
   UncontrolledTooltip
 } from "reactstrap";
+import Carrito from "views/index-sections/Carrito";
 
 function FixedTransparentNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -107,14 +108,8 @@ function FixedTransparentNavbar() {
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
           
-                <DropdownItem tag={Link} to="/e-commerce">
-                  <Button
-                  className="nav-link btn-default"
-                  color="neutral"
-                  href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nuk-pro-react-fixed-transparent-navbar"
-                  target="_blank"
-                ><i className="now-ui-icons shopping_cart-simple"></i>
-                </Button>
+                <DropdownItem >
+                  <Carrito />
                 </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
