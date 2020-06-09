@@ -42,7 +42,7 @@ function LandingPageHeader() {
           <Container>
             <h1 className="title">Raiza's Deli Shop.</h1>
               <Row>
-                <Col className="ml-auto mr-auto" md="12">
+                <Col className="ml-auto mr-auto" md="12" >
                   <Card
                     className="card-raised card-form-horizontal card-plain"
                     data-background-color=""
@@ -50,13 +50,12 @@ function LandingPageHeader() {
                     <CardBody>
                       <Form action="" method="">
                         <Row>
-                          <Col md="3">
+                        <Col md="3">
                             <FormGroup>
                               <Input
-                                autoComplete="family-name"
-                                defaultValue=""
-                                placeholder="Full Name"
-                                type="text"
+                                autoComplete="nombre"
+                                placeholder=" Nombre"
+                                type="nombre"
                               ></Input>
                             </FormGroup>
                           </Col>
@@ -64,7 +63,7 @@ function LandingPageHeader() {
                             <FormGroup>
                               <Input
                                 autoComplete="email"
-                                placeholder="Your Email"
+                                placeholder=" Email"
                                 type="email"
                               ></Input>
                             </FormGroup>
@@ -73,7 +72,7 @@ function LandingPageHeader() {
                             <FormGroup>
                               <Input
                                 autoComplete="current-password"
-                                placeholder="Password"
+                                placeholder="Clave"
                                 type="password"
                               ></Input>
                             </FormGroup>
@@ -85,7 +84,7 @@ function LandingPageHeader() {
                               color="info"
                               type="button"
                             >
-                              Join Us
+                              Ingresa
                             </Button>
                           </Col>
                         </Row>
