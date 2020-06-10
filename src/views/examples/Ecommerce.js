@@ -382,7 +382,7 @@ function Ecommerce() {
           >
             <Container>
               <Row>
-                <Col className="ml-auto mr-auto" md="12">
+                <Col className="ml-auto mr-auto" md="6">
                   <div className="text-center">
                     <h4 className="title">Subscribete</h4>
                     <p className="description">
