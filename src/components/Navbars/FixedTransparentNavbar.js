@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import {
   Button,
   Collapse,
+  CardFooter,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -33,7 +34,17 @@ function FixedTransparentNavbar() {
       ) : null}
       <Navbar className="navbar-absolute navbar-transparent" expand="lg">
         <Container>
-     
+ 
+                      <div className="author" style ={{width:"120px", opacity: '0.7'}}>
+                        <img
+                          alt="..."
+                          className="avatar img-raised"
+                          src={require("assets/img/logo.jpg")}
+                        ></img>
+                        
+                      </div>
+                    
+          
           <Collapse isOpen={collapseOpen} navbar>
             <Nav className="ml-auto" id="ceva" navbar>
               <UncontrolledDropdown nav>
