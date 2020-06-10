@@ -36,7 +36,7 @@ function LoginPage() {
   return (
     <>
       <FixedTransparentNavbar />
-      <div className="page-header header-filter" filter-color="blue">
+      <div className="page-header header-filter" >
         <div
           className="page-header-image"
           style={{

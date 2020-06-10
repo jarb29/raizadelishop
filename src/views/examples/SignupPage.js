@@ -213,7 +213,7 @@ function SignupPage() {
                       <FormGroup check>
                         <Label check>
                           <Input type="checkbox"></Input>
-                          <span className="form-check-sign"></span>Aceoto los terminos{" "}
+                          <span className="form-check-sign"></span>Acepto los terminos{" "}
                           <a href="#pablo" onClick={e => e.preventDefault()}>
                             condiciones
                           </a>
