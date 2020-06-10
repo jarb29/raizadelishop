@@ -145,6 +145,7 @@ function SignupPage() {
                           onBlur={() => setLastFocus(false)}
                         ></Input>
                       </InputGroup>
+                      
                       <InputGroup
                         className={emailFocus ? "input-group-focus" : ""}
                       >
@@ -159,6 +160,38 @@ function SignupPage() {
                           type="text"
                           onFocus={() => setEmailFocus(true)}
                           onBlur={() => setEmailFocus(false)}
+                        ></Input>
+                      </InputGroup>
+                      <InputGroup
+                        className={lastFocus ? "input-group-focus" : ""}
+                      >
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="now-ui-icons text_caps-small"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input
+                          autoComplete="name"
+                          placeholder="Clave..."
+                          type="text"
+                          onFocus={() => setLastFocus(true)}
+                          onBlur={() => setLastFocus(false)}
+                        ></Input>
+                      </InputGroup>
+                      <InputGroup
+                        className={lastFocus ? "input-group-focus" : ""}
+                      >
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="now-ui-icons text_caps-small"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input
+                          autoComplete="name"
+                          placeholder="Confirmar clave..."
+                          type="text"
+                          onFocus={() => setLastFocus(true)}
+                          onBlur={() => setLastFocus(false)}
                         ></Input>
                       </InputGroup>
                       <FormGroup check>
