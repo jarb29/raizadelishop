@@ -60,7 +60,7 @@ function Ecommercee() {
             <Container>
               <h2 className="section-title">Encuentar los duclce que te guste</h2>
               <Row>
-                <Col md="3">
+                <Col md="12">
                   <div className="collapse-panel">
                     <CardBody>
                       <Card className="card-refine card-plain">
@@ -136,7 +136,7 @@ function Ecommercee() {
                     </CardBody>
                   </div>
                 </Col>
-                <Col md="9">
+                <Col md="12">
                   <Row>
                     <Col lg="4" md="6">
                       <Card className="card-product card-plain">
@@ -392,7 +392,7 @@ function Ecommercee() {
           >
             <Container>
               <Row>
-                <Col className="ml-auto mr-auto" md="6">
+                <Col className="ml-auto mr-auto" md="12">
                   <div className="text-center">
                     <h4 className="title">Subscribe to our Newsletter</h4>
                     <p className="description">
