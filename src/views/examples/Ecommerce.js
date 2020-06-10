@@ -60,19 +60,11 @@ function Ecommerce() {
             <Container>
               <h2 className="section-title">Encuentar el dulces que te guste</h2>
               <Row>
-                <Col md="3">
-                  <div className="collapse-panel">
+                <Col md="12">
                     <CardBody>
                       <Card className="card-refine card-plain">
                         <Collapse isOpen={collapses.includes(3)}>
                           <CardBody>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                All
-                              </Label>
-                            </FormGroup>
                             <FormGroup check>
                               <Label check>
                                 <Input type="checkbox"></Input>
@@ -133,9 +125,8 @@ function Ecommerce() {
                         </Collapse>
                       </Card>
                     </CardBody>
-                  </div>
                 </Col>
-                <Col md="9">
+                <Col md="12">
                   <Row>
                     <Col lg="4" md="6">
                       <Card className="card-product card-plain">
@@ -391,12 +382,11 @@ function Ecommerce() {
           >
             <Container>
               <Row>
-                <Col className="ml-auto mr-auto" md="6">
+                <Col className="ml-auto mr-auto" md="12">
                   <div className="text-center">
-                    <h4 className="title">Subscribe to our Newsletter</h4>
+                    <h4 className="title">Subscribete</h4>
                     <p className="description">
-                      Join our newsletter and get news in your inbox every week!
-                      We hate spam too, so no worries about this.
+                      Te informaremos de importantes ofertas.
                     </p>
                   </div>
                   <Card className="card-raised card-form-horizontal">
@@ -422,7 +412,7 @@ function Ecommerce() {
                           </Col>
                           <Col sm="4">
                             <Button block color="info" type="button">
-                              Subscribe
+                              Subscribete
                             </Button>
                           </Col>
                         </Row>
