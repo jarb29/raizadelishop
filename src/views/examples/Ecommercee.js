@@ -25,7 +25,7 @@ import EcommerceHeader from "components/Headers/EcommerceHeader.js";
 import Footer from "components/Footers/Footer.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
-function Ecommerce() {
+function Ecommercee() {
   // focus for inputs
   const [emailFocus, setEmailFocus] = React.useState(false);
   // collapse states and functions
@@ -58,7 +58,7 @@ function Ecommerce() {
         <div className="main">
           <div className="section">
             <Container>
-              <h2 className="section-title">Encuentar el dulces que te guste</h2>
+              <h2 className="section-title">Encuentar los duclce que te guste</h2>
               <Row>
                 <Col md="3">
                   <div className="collapse-panel">
@@ -70,7 +70,8 @@ function Ecommerce() {
                               <Label check>
                                 <Input type="checkbox"></Input>
                                 <span className="form-check-sign"></span>
-                                All
+                                All toodossssss
+                                
                               </Label>
                             </FormGroup>
                             <FormGroup check>
@@ -440,4 +441,4 @@ function Ecommerce() {
   );
 }
 
-export default Ecommerce;
+export default Ecommercee;

@@ -64,7 +64,7 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons shopping_shop"></i>
                     Tortas
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/e-commerce">
+                  <DropdownItem tag={Link} to="/e-commercee">
                     <i className="now-ui-icons shopping_shop"></i>
                     Salsas
                   </DropdownItem>
