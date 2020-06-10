@@ -213,10 +213,9 @@ function SignupPage() {
                       <FormGroup check>
                         <Label check>
                           <Input type="checkbox"></Input>
-                          <span className="form-check-sign"></span>I agree to
-                          the terms and{" "}
+                          <span className="form-check-sign"></span>Aceoto los terminos{" "}
                           <a href="#pablo" onClick={e => e.preventDefault()}>
-                            conditions
+                            condiciones
                           </a>
                           .
                         </Label>
@@ -229,7 +228,7 @@ function SignupPage() {
                           onClick={e => e.preventDefault()}
                           size="lg"
                         >
-                          Get Started
+                          Registrate
                         </Button>
                       </CardFooter>
                     </Form>

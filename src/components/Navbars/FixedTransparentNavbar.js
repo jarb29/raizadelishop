@@ -95,7 +95,7 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/sign-up">
                     <i className="now-ui-icons tech_mobile"></i>
-                    Signup Page
+                    Registrate
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
