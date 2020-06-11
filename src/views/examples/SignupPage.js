@@ -53,37 +53,12 @@ function SignupPage() {
               <Col className="ml-auto mr-auto" md="6" lg="4">
                 <div className="info info-horizontal">
                   <div className="icon icon-info">
-                    <i className="now-ui-icons media-2_sound-wave"></i>
+                  <i className="now-ui-icons media-2_sound-wave"></i>
                   </div>
                   <div className="description">
-                    <h5 className="info-title">Marketing</h5>
+                    <h5 className="info-title">Para ofrecer un mejor servicio</h5>
                     <p className="description">
-                      We've created the marketing campaign of the website. It
-                      was a very interesting collaboration.
-                    </p>
-                  </div>
-                </div>
-                <div className="info info-horizontal">
-                  <div className="icon icon-info">
-                    <i className="now-ui-icons media-1_button-pause"></i>
-                  </div>
-                  <div className="description">
-                    <h5 className="info-title">Fully Coded in React 16</h5>
-                    <p className="description">
-                      We've developed the website with React 16 and CSS3. The
-                      client has access to the code using GitHub.
-                    </p>
-                  </div>
-                </div>
-                <div className="info info-horizontal">
-                  <div className="icon icon-info">
-                    <i className="now-ui-icons users_single-02"></i>
-                  </div>
-                  <div className="description">
-                    <h5 className="info-title">Built Audience</h5>
-                    <p className="description">
-                      There is also a Fully Customizable CMS Admin Dashboard for
-                      this product.
+                      Por favor introduzca sus datos correctamente.
                     </p>
                   </div>
                 </div>
@@ -91,27 +66,13 @@ function SignupPage() {
               <Col className="mr-auto" md="6" lg="4">
                 <Card className="card-signup">
                   <CardBody>
-                    <CardTitle className="text-center" tag="h4">
-                      Register
-                    </CardTitle>
-                    <div className="social text-center">
-                      <Button
-                        className="btn-icon btn-round mr-2"
-                        color="twitter"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </Button>
-                      <Button
-                        className="btn-icon btn-round mr-2"
-                        color="dribbble"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </Button>
-                      <Button className="btn-icon btn-round" color="facebook">
-                        <i className="fab fa-facebook"></i>
-                      </Button>
-                      <h5 className="card-description">or be classical</h5>
-                    </div>
+                      <div className="author" >
+                       <img
+                         className="btn-icon btn-round mr-2"
+                          color="twitter"
+                           src={require("assets/img/logo.jpg")}
+                       ></img>
+                        </div>
                     <Form action="" className="form" method="">
                       <InputGroup
                         className={firstFocus ? "input-group-focus" : ""}
