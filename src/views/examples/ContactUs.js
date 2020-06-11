@@ -137,14 +137,14 @@ function ContactUs() {
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="5">
-                  <h2 className="title">Send us a message</h2>
+                  <h2 className="title">Envianos tus dudas</h2>
                   <p className="description">
-                    You can contact us with anything related to our Products.
-                    We'll get in touch with you as soon as possible. <br></br>
+                    Nos puedes contactar por cualquier cosa relacionada con nuestros productos.
+                    Nosotros responderemos tan pronto como podamos. <br></br>
                     <br></br>
                   </p>
                   <Form id="contact-form" method="post" role="form">
-                    <label>Your name</label>
+                    <label>Nombre</label>
                     <InputGroup
                       className={nameFocus ? "input-group-focus" : ""}
                     >
@@ -156,13 +156,13 @@ function ContactUs() {
                       <Input
                         aria-label="Your Name..."
                         autoComplete="name"
-                        placeholder="Your Name..."
+                        placeholder="Tu nombre Aqui..."
                         type="text"
                         onFocus={() => setNameFocus(true)}
                         onBlur={() => setNameFocus(false)}
                       ></Input>
                     </InputGroup>
-                    <label>Email address</label>
+                    <label>Email</label>
                     <InputGroup
                       className={emailFocus ? "input-group-focus" : ""}
                     >
@@ -174,13 +174,13 @@ function ContactUs() {
                       <Input
                         aria-label="Email Here..."
                         autoComplete="email"
-                        placeholder="Email Here..."
+                        placeholder="Email aqui..."
                         type="email"
                         onFocus={() => setEmailFocus(true)}
                         onBlur={() => setEmailFocus(false)}
                       ></Input>
                     </InputGroup>
-                    <label>Phone</label>
+                    <label>Telefono</label>
                     <InputGroup
                       className={numberFocus ? "input-group-focus" : ""}
                     >
@@ -191,14 +191,14 @@ function ContactUs() {
                       </InputGroupAddon>
                       <Input
                         autoComplete="number"
-                        placeholder="Number Here..."
+                        placeholder="Tu Numero..."
                         type="text"
                         onFocus={() => setNumberFocus(true)}
                         onBlur={() => setNumberFocus(false)}
                       ></Input>
                     </InputGroup>
                     <FormGroup>
-                      <label>Your message</label>
+                      <label>Mensaje</label>
                       <Input
                         id="message"
                         name="message"
@@ -213,7 +213,7 @@ function ContactUs() {
                         defaultValue="Contact Us"
                         type="submit"
                       >
-                        Contact Us
+                        Contactanos
                       </Button>
                     </div>
                   </Form>

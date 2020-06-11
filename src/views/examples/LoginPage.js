@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -109,24 +110,22 @@ function LoginPage() {
                     </CardFooter>
                     <div className="pull-left">
                       <h6>
-                        <a
+                        <Link
                           className="link footer-link"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
+                           tag={Link} to="/sign-up">
+                        <i className="now-ui-icons tech_mobile"></i>
                           Crear Cuenta
-                        </a>
+                        </Link>
                       </h6>
                     </div>
                     <div className="pull-right">
                       <h6>
-                        <a
+                        <Link
                           className="link footer-link"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Necesita Ayuda?
-                        </a>
+                         tag={Link} to="/contact-us">
+                          <i className="now-ui-icons location_pin"></i>
+                            Necesita Ayuda?
+                        </Link>
                       </h6>
                     </div>
                   </Form>
