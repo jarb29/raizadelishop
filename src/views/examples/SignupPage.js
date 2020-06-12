@@ -28,6 +28,15 @@ function SignupPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+  const [registerEmailState, setregisterEmailState] = React.useState("");
+  const [registerTelefonoState, setregisterTelefonoState] = React.useState("");
+  const [registerNombreState, setregisterNombreState] = React.useState("");
+  const [registerApellido, setregisterApellidoState] = React.useState("");
+  const [registerClave, setregisterClaveState] = React.useState("");
+  const [registerPassword, setregisterPassword] = React.useState("");
+  const [registerConfirmPasswordState, setregisterConfirmPasswordState] = React.useState(
+    ""
+  ); 
 
   React.useEffect(() => {
     document.body.classList.add("signup-page");
@@ -45,14 +54,26 @@ function SignupPage() {
     }
     return false;
   };
+  const verifyEmail = value => {
+    var emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (emailRex.test(value)) {
+      return true;
+    }
+    return false;
+  };
   const verifyLength = (value, length) => {
     if (value.length >= length) {
       return true;
     }
     return false;
   };
-  const [registerNombre, setregisterNombre] = React.useState("");
-  const [registerApellido, setregisterApellido] = React.useState("");
+
+  console.log(registerEmailState === "success")
+  console.log(registerTelefonoState==="success")
+  console.log(registerNombreState==="success")
+  console.log(registerApellido==="success")
+  console.log(registerConfirmPasswordState ==="success")
+
 
   return (
     <>
@@ -101,25 +122,15 @@ function SignupPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          success={registerNombre === "success"}
-                          error={registerNombre === "error"}
                           autoComplete="nombre"
                           placeholder="Nombre..."
                           type="text"
-                          formControlProps={{
-                            fullWidth: true
-                          }}
-                          inputProps={{
-                            onChange: event => {
-                              if (verifyNumber(event.target.value)) {
-                                setregisterNombre("success");
-                              } else {
-                                setregisterNombre("error");
-                              }
-                    
-                            },
-                            name: "nombre",
-                          }}
+                          onChange= { event => { 
+                            if (verifyLength(event.target.value, 4)) {
+                              setregisterNombreState("success");
+                            } else {
+                              setregisterNombreState("error");
+                            }}}
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -134,20 +145,13 @@ function SignupPage() {
                           autoComplete="apellido"
                           placeholder="Apellido..."
                           type="text"
-                          success={registerApellido === "success"}
-                          error={registerApellido === "error"}
-                          formControlProps={{
-                            fullWidth: true
-                          }}
-                          inputProps={{
-                            onChange: event => {
+                          onChange={ event => {
                               if (verifyLength(event.target.value, 4)) {
-                                setregisterApellido("success");
+                                setregisterApellidoState("success");
                               } else {
-                                setregisterApellido("error");
+                                setregisterApellidoState("error");
                               }
-                            },
-                            type: "apellido",
+                        
                           }}
                         ></Input>
                       </InputGroup>
@@ -164,8 +168,12 @@ function SignupPage() {
                           autoComplete="email"
                           placeholder="Email..."
                           type="text"
-                          onFocus={() => setEmailFocus(true)}
-                          onBlur={() => setEmailFocus(false)}
+                            onChange= { event => {
+                              if (verifyEmail(event.target.value)) {
+                                setregisterEmailState("success");
+                              } else {
+                                setregisterEmailState("error");
+                              }}}
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -177,11 +185,17 @@ function SignupPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          autoComplete="name"
+                          autoComplete="telefono"
                           placeholder="Telefono..."
-                          type="text"
-                          onFocus={() => setLastFocus(true)}
-                          onBlur={() => setLastFocus(false)}
+                          type="telefono"
+                       
+                            onChange={ event => {
+                              if (verifyNumber(event.target.value)) {
+                                setregisterTelefonoState("success");
+                              } else {
+                                setregisterTelefonoState("error");
+                              }
+                          }}
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -193,11 +207,18 @@ function SignupPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          autoComplete="name"
+                          autoComplete="clave"
                           placeholder="Clave..."
                           type="text"
-                          onFocus={() => setLastFocus(true)}
-                          onBlur={() => setLastFocus(false)}
+                         
+                            onChange={ event => {
+                              if (verifyNumber(event.target.value)) {
+                                setregisterClaveState("success");
+                              } else {
+                                setregisterClaveState("error");
+                              }
+                              setregisterPassword(event.target.value);
+                          }}
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -209,33 +230,36 @@ function SignupPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          autoComplete="name"
+                          autoComplete="clave"
                           placeholder="Confirmar clave..."
-                          type="text"
-                          onFocus={() => setLastFocus(true)}
-                          onBlur={() => setLastFocus(false)}
+                          type="clave"
+                          
+                            onChange={ event => {
+                              if (registerPassword === event.target.value) {
+                                setregisterConfirmPasswordState("success");
+                              } else {
+                                setregisterConfirmPasswordState("error");
+                              }
+                          }}
                         ></Input>
                       </InputGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox"></Input>
-                          <span className="form-check-sign"></span>Acepto los terminos{" "}
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            condiciones
-                          </a>
-                          .
-                        </Label>
-                      </FormGroup>
+                    
                       <CardFooter className="text-center">
+                      {
+                      (registerEmailState === "success" && 
+                      registerTelefonoState==="success"&& 
+                      registerNombreState==="success"&& 
+                      registerApellido==="success"&& 
+                      registerConfirmPasswordState ==="success")?
                         <Button
                           className="btn-round"
                           color="info"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
                           size="lg"
+                          
                         >
                           Registrate
-                        </Button>
+                        </Button>:null }
                       </CardFooter>
                     </Form>
                   </CardBody>
