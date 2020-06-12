@@ -13,7 +13,6 @@ import AboutUs from "views/examples/AboutUs.js";
 import ContactUs from "views/examples/ContactUs.js";
 import Ecommerce from "views/examples/Ecommerce.js";
 import Ecommercee from "views/examples/Ecommercee.js";
-import Index from "views/Index.js";
 import LandingPage from "views/examples/LandingPage.js";
 import LoginPage from "views/examples/LoginPage.js";
 import NucleoIcons from "views/NucleoIcons.js";
@@ -32,7 +31,6 @@ function App() {
       <Route path="/contact-us" render={props => <ContactUs {...props} />} />
       <Route path="/e-commerce" render={props => <Ecommerce {...props} />} />
       <Route path="/e-commercee" render={props => <Ecommercee {...props} />} />
-      <Route path="/index" render={props => <Index {...props} />} />
       <Route
         path="/landing-page"
         render={props => <LandingPage {...props} />}
