@@ -108,8 +108,19 @@ function SignupPage() {
                   <div className="description">
                     <h5 className="info-title">Registro</h5>
                     <p className="description">
-                      El Boton de registro aparece una vez validado los datos.
+                      El Boton de registro aparecera una vez validado los datos.
                       
+                    </p>
+                  </div>
+                </div>
+                <div className="info info-horizontal">
+                  <div className="icon icon-info">
+                    <i className="now-ui-icons users_single-02"></i>
+                  </div>
+                  <div className="description">
+                    <h5 className="info-title">Numero de Telefono</h5>
+                    <p className="description">
+                      El numero de telefono debe tener el formato +56957987634.
                     </p>
                   </div>
                 </div>
@@ -204,7 +215,7 @@ function SignupPage() {
                           type="telefono"
                        
                             onChange={ event => {
-                              if (verifyNumber(event.target.value)) {
+                              if (verifyLength(event.target.value, 12)) {
                                 setregisterTelefonoState("success");
                               } else {
                                 setregisterTelefonoState("error");
