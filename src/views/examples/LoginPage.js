@@ -54,9 +54,11 @@ function LoginPage() {
                       <div className="logo-container">
                         <img
                           alt="..."
-                          src={require("assets/img/now-logo.png")}
+                    
+                          src={require("assets/img/logo.jpg")}
                         ></img>
                       </div>
+    
                     </CardHeader>
                     <CardBody>
                       <InputGroup

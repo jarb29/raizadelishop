@@ -206,7 +206,7 @@ function SignupPage() {
                       >
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="now-ui-icons text_caps-small"></i>
+                          <i className="now-ui-icons tech_mobile"></i>
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
