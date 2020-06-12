@@ -103,7 +103,7 @@ function SignupPage() {
                 </div>
                 <div className="info info-horizontal">
                   <div className="icon icon-info">
-                  <i className="now-ui-icons media-2_sound-wave"></i>
+                  <i className="now-ui-icons media-1_button-pause"></i>
                   </div>
                   <div className="description">
                     <h5 className="info-title">Registro</h5>
