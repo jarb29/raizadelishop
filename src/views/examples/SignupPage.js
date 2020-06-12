@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
 
 // reactstrap components
 import {
@@ -6,9 +7,6 @@ import {
   Card,
   CardBody,
   CardFooter,
-  CardTitle,
-  Label,
-  FormGroup,
   Form,
   Input,
   InputGroupAddon,
@@ -19,12 +17,15 @@ import {
   Col
 } from "reactstrap";
 
+
 // core components
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
 import Footer from "components/Footers/Footer.js";
 
 
 function SignupPage() {
+
+  const { store, actions} = useContext(Context);
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
@@ -37,6 +38,7 @@ function SignupPage() {
   const [registerConfirmPasswordState, setregisterConfirmPasswordState] = React.useState(
     ""
   ); 
+  
 
   React.useEffect(() => {
     document.body.classList.add("signup-page");
@@ -155,7 +157,10 @@ function SignupPage() {
                               setregisterNombreState("success");
                             } else {
                               setregisterNombreState("error");
-                            }}}
+                            };
+                            actions.handlingInputs(event)
+                          }
+                        }
                         ></Input>
                       </InputGroup>
                       <InputGroup

@@ -20,7 +20,7 @@ const injectContext = PassedComponent => {
     );
 
     useEffect(() => {
-      state.actions.isAuthenticated();
+      //state.actions.isAuthenticated();
     }, []);
 
     return (
