@@ -25,7 +25,7 @@ import Footer from "components/Footers/Footer.js";
 
 function SignupPage() {
 
-  const { store, actions} = useContext(Context);
+  const { actions} = useContext(Context);
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
@@ -296,6 +296,7 @@ function SignupPage() {
                           color="info"
                           href="#pablo"
                           size="lg"
+                          onClick = {e => {actions.registroUsuario(e)}}
                         >
                           Registrate
                         </Button>:null }

@@ -3,10 +3,11 @@ const getState = ({ getStore, getActions, setStore }) => {
     // base datos Angel
     store: {
       /////URL
+      baseURL: "http://127.0.0.1:5000",
 
       // claves de usuario
       nombre: "",
-      appelido: "",
+      apellido: "",
       email: "",
       telefono:"",
       clave: "",
@@ -23,7 +24,6 @@ const getState = ({ getStore, getActions, setStore }) => {
         console.log(e.target.name);
         console.log(e.target.value);
         setStore({
-
           [e.target.name]: e.target.value
         });
       },
@@ -36,7 +36,9 @@ const getState = ({ getStore, getActions, setStore }) => {
         let data = {
           nombre: store.nombre,
           email: store.email,
-          clave: store.clave
+          clave: store.clave,
+          apellido: store.apellido,
+          telefono: store.telefono,
         };
         console.log(data, "datos en el flux");
 
