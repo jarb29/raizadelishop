@@ -18,7 +18,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 
     actions: {
       // autenticacion
+      isAuthenticated: () => {
+        if (sessionStorage.getItem("currentUser")) {
+          // Restaura el contenido al campo de texto
+          let currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+          let isAuthenticated = sessionStorage.getItem("isAuthenticated");
+          setStore({
+            currentUser: currentUser,
+            isAuthenticated: isAuthenticated
+          });
+        }
+      },
 
+// inputs
       handlingInputs: e => {
      
         console.log(e.target.name);
@@ -28,6 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
       },
 
+// Registro usuario
 
       registroUsuario: (e, history) => {
         e.preventDefault();
@@ -70,6 +83,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+// Login usuario
       logingUsuario: (e, history) => {
         //e.preventDefault();
         console.log(e, "evento");
@@ -107,8 +121,18 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(dato));
           sessionStorage.setItem("isAuthenticated", true);
-          history.push("/admin/dashboard");
+          history.push("/e-commerce");
         }
+      },
+
+      // Login out
+      logout: (e, history) => {
+        sessionStorage.removeItem("currentUser");
+        sessionStorage.removeItem("isAuthenticated");
+        setStore({
+          currentUser: null,
+          isAuthenticated: false
+        });
       }
 
 
