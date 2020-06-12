@@ -45,6 +45,12 @@ function SignupPage() {
     }
     return false;
   };
+  const verifyLength = (value, length) => {
+    if (value.length >= length) {
+      return true;
+    }
+    return false;
+  };
   const [registerNombre, setregisterNombre] = React.useState("");
   const [registerApellido, setregisterApellido] = React.useState("");
 
@@ -128,21 +134,20 @@ function SignupPage() {
                           autoComplete="apellido"
                           placeholder="Apellido..."
                           type="text"
-                          success={registerNombre === "success"}
-                          error={registerNombre === "error"}
+                          success={registerApellido === "success"}
+                          error={registerApellido === "error"}
                           formControlProps={{
                             fullWidth: true
                           }}
                           inputProps={{
                             onChange: event => {
-                              if (verifyNumber(event.target.value)) {
-                                setregisterNombre("success");
+                              if (verifyLength(event.target.value, 4)) {
+                                setregisterApellido("success");
                               } else {
-                                setregisterNombre("error");
+                                setregisterApellido("error");
                               }
-                    
                             },
-                            name: "nombre",
+                            type: "apellido",
                           }}
                         ></Input>
                       </InputGroup>
