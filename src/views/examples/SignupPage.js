@@ -97,10 +97,24 @@ function SignupPage() {
                     <h5 className="info-title">Para ofrecer un mejor servicio</h5>
                     <p className="description">
                       Por favor introduzca sus datos correctamente.
+
+                    </p>
+                  </div>
+                </div>
+                <div className="info info-horizontal">
+                  <div className="icon icon-info">
+                  <i className="now-ui-icons media-2_sound-wave"></i>
+                  </div>
+                  <div className="description">
+                    <h5 className="info-title">Registro</h5>
+                    <p className="description">
+                      El Boton de registro aparece una vez validado los datos.
+                      
                     </p>
                   </div>
                 </div>
               </Col>
+             
               <Col className="mr-auto" md="6" lg="4">
                 <Card className="card-signup">
                   <CardBody>
@@ -243,7 +257,6 @@ function SignupPage() {
                           }}
                         ></Input>
                       </InputGroup>
-                    
                       <CardFooter className="text-center">
                       {
                       (registerEmailState === "success" && 
@@ -256,7 +269,6 @@ function SignupPage() {
                           color="info"
                           href="#pablo"
                           size="lg"
-                          
                         >
                           Registrate
                         </Button>:null }
