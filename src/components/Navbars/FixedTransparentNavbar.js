@@ -34,7 +34,7 @@ function FixedTransparentNavbar() {
       ) : null}
       <Navbar className="navbar-absolute navbar-transparent" expand="lg">
         <Container>
-          <div className="author" style ={{width:"120px", opacity: '0.7', borderImage: '50 round'}}>
+          <div className="author" style ={{width:"110px", opacity: '0.7', borderImage: '50 round'}}>
             <img
             alt="..."
             className="avatar img-raised"
