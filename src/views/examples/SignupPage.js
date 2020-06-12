@@ -176,14 +176,16 @@ function SignupPage() {
                           autoComplete="apellido"
                           placeholder="Apellido..."
                           type="text"
+                          name="apellido"
                           onChange={ event => {
                               if (verifyLength(event.target.value, 4)) {
                                 setregisterApellidoState("success");
                               } else {
                                 setregisterApellidoState("error");
-                              }
-                        
-                          }}
+                              };
+                              actions.handlingInputs(event)
+                          }
+                        }
                         ></Input>
                       </InputGroup>
                       
@@ -199,12 +201,16 @@ function SignupPage() {
                           autoComplete="email"
                           placeholder="Email..."
                           type="text"
-                            onChange= { event => {
+                          name="email"
+                          onChange= { event => {
                               if (verifyEmail(event.target.value)) {
                                 setregisterEmailState("success");
                               } else {
                                 setregisterEmailState("error");
-                              }}}
+                              };
+                              actions.handlingInputs(event)
+                            }
+                          }
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -219,14 +225,16 @@ function SignupPage() {
                           autoComplete="telefono"
                           placeholder="Telefono..."
                           type="telefono"
-                       
-                            onChange={ event => {
+                          name="telefono"
+                          onChange={ event => {
                               if (verifyLength(event.target.value, 12)) {
                                 setregisterTelefonoState("success");
                               } else {
                                 setregisterTelefonoState("error");
-                              }
-                          }}
+                              };
+                              actions.handlingInputs(event)
+                          }
+                        }
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -264,14 +272,16 @@ function SignupPage() {
                           autoComplete="clave"
                           placeholder="Confirmar clave..."
                           type="clave"
-                          
+                          name="clave"
                             onChange={ event => {
                               if (registerPassword === event.target.value) {
                                 setregisterConfirmPasswordState("success");
                               } else {
                                 setregisterConfirmPasswordState("error");
                               }
-                          }}
+                              actions.handlingInputs(event)
+                          }
+                        }
                         ></Input>
                       </InputGroup>
                       <CardFooter className="text-center">
