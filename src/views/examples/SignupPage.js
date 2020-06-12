@@ -152,7 +152,8 @@ function SignupPage() {
                           autoComplete="nombre"
                           placeholder="Nombre..."
                           type="text"
-                          onChange= { event => { 
+                          name="nombre"
+                          onChange= {event => { 
                             if (verifyLength(event.target.value, 4)) {
                               setregisterNombreState("success");
                             } else {
