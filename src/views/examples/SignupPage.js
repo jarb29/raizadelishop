@@ -28,6 +28,7 @@ function SignupPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+
   React.useEffect(() => {
     document.body.classList.add("signup-page");
     document.body.classList.add("sidebar-collapse");
@@ -37,6 +38,16 @@ function SignupPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+  const verifyNumber = value => {
+    var numberRex = new RegExp("^[0-9]+$");
+    if (numberRex.test(value)) {
+      return true;
+    }
+    return false;
+  };
+  const [registerNombre, setregisterNombre] = React.useState("");
+  const [registerApellido, setregisterApellido] = React.useState("");
+
   return (
     <>
       <FixedTransparentNavbar/>
@@ -68,6 +79,7 @@ function SignupPage() {
                   <CardBody>
                       <div className="author" >
                        <img
+                        alt = "nothing"
                          className="btn-icon btn-round mr-2"
                           color="twitter"
                            src={require("assets/img/logo.jpg")}
@@ -83,11 +95,25 @@ function SignupPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          autoComplete="fullname"
+                          success={registerNombre === "success"}
+                          error={registerNombre === "error"}
+                          autoComplete="nombre"
                           placeholder="Nombre..."
                           type="text"
-                          onFocus={() => setFirstFocus(true)}
-                          onBlur={() => setFirstFocus(false)}
+                          formControlProps={{
+                            fullWidth: true
+                          }}
+                          inputProps={{
+                            onChange: event => {
+                              if (verifyNumber(event.target.value)) {
+                                setregisterNombre("success");
+                              } else {
+                                setregisterNombre("error");
+                              }
+                    
+                            },
+                            name: "nombre",
+                          }}
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -99,11 +125,25 @@ function SignupPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          autoComplete="name"
+                          autoComplete="apellido"
                           placeholder="Apellido..."
                           type="text"
-                          onFocus={() => setLastFocus(true)}
-                          onBlur={() => setLastFocus(false)}
+                          success={registerNombre === "success"}
+                          error={registerNombre === "error"}
+                          formControlProps={{
+                            fullWidth: true
+                          }}
+                          inputProps={{
+                            onChange: event => {
+                              if (verifyNumber(event.target.value)) {
+                                setregisterNombre("success");
+                              } else {
+                                setregisterNombre("error");
+                              }
+                    
+                            },
+                            name: "nombre",
+                          }}
                         ></Input>
                       </InputGroup>
                       
