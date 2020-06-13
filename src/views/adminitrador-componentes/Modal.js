@@ -62,12 +62,17 @@ function Javascript() {
                 </div>
           
                 </div>
-                <ModalFooter>
-                  <Button color="default" type="button">
-                    Nice Button
-                  </Button>
+                <ModalFooter style ={{margin:0}}>
                   <Button color="danger" onClick={() => setModalClassic(false)}>
-                    Close
+                    Cerrar
+                  </Button>
+                   <Button
+                    className="btn-round"
+                    color="info"
+                    type="button"
+                    >
+                    Comprar{" "}
+                    <i className="now-ui-icons arrows-1_minimal-right"></i>
                   </Button>
                 </ModalFooter>
               </Modal>

@@ -153,7 +153,7 @@ function Carrito() {
                             <td className="td-price">
                               <small>€</small>
                               2,346
-                            </td>
+                            </td>   
                           </tr>
                         </tbody>
                       </Table>
