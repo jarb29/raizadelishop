@@ -29,7 +29,7 @@ function Javascript() {
   return (
 
       <div >
-        <Container>
+        <Container style ={{marginTop: 0, marginBottom:'0px', paddingBottom:"10px"}}>
           <Row id="modals">
             <Col md="12">
               <Button
@@ -37,7 +37,7 @@ function Javascript() {
                 className="mr-1"
                 onClick={() => setModalClassic(true)}
               >
-                <i className="now-ui-icons files_single-copy-04"></i> Classic
+                <i className="now-ui-icons shopping_cart-simple"></i> Carrito
               </Button>
            
        
@@ -52,7 +52,7 @@ function Javascript() {
                     onClick={() => setModalClassic(false)}
                     type="button"
                   >
-                    <i className="now-ui-icons ui-1_simple-remove"></i>
+                   <i className="now-ui-icons shopping_cart-simple"></i>
                   </button>
                   <h4 className="title title-up">Modal title</h4>
                 </div>
