@@ -21,6 +21,8 @@ import ProductPage from "views/examples/ProductPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Sections from "views/Sections.js";
 import SignupPage from "views/examples/SignupPage.js";
+import Index from "views/Index";
+import Administrador from "views/Administrador";
 // others
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
       <Route path="/contact-us" render={props => <ContactUs {...props} />} />
       <Route path="/e-commerce" render={props => <Ecommerce {...props} />} />
       <Route path="/e-commercee" render={props => <Ecommercee {...props} />} />
+      <Route path="/administrador" render={props => <Administrador {...props} />} />
       <Route
         path="/landing-page"
         render={props => <LandingPage {...props} />}
@@ -39,6 +42,10 @@ function App() {
       <Route
         path="/nucleo-icons"
         render={props => <NucleoIcons {...props} />}
+      />
+      <Route
+        path="/index"
+        render={props => <Index {...props} />}
       />
       <Route path="/pricing" render={props => <Pricing {...props} />} />
       <Route

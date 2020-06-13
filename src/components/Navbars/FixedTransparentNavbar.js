@@ -72,6 +72,10 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons business_bulb-63"></i>
                     Sobre Nosotros
                   </DropdownItem>
+                  <DropdownItem tag={Link} to="/administrador">
+                    <i className="now-ui-icons business_bulb-63"></i>
+                    Administrador
+                  </DropdownItem>
                   <DropdownItem tag={Link} to="/contact-us">
                     <i className="now-ui-icons location_pin"></i>
                     Contactanos
@@ -110,11 +114,9 @@ function FixedTransparentNavbar() {
                   nav
                   onClick={e => e.preventDefault()}
                 ><i className="now-ui-icons shopping_cart-simple"></i>
-                
                   <p>Compras</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-          
                 <DropdownItem >
                   <Carrito />
                 </DropdownItem>
