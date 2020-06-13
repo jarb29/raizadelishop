@@ -122,11 +122,7 @@ function ContentAreas() {
                             <td className="text-right">€ 599.00</td>
                             <td className="text-right">€ 5,999</td>
                           </tr>
-                          <tr>
-                            <td colSpan="5"></td>
-                            <td className="td-total">Total</td>
-                            <td className="td-price">€ 35,999</td>
-                          </tr>
+                      
                         </tbody>
                       </Table>
                     </CardBody>

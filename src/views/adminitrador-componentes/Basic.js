@@ -28,13 +28,13 @@ function Basic() {
 
   return (
     <>
-      <div className="section section-basic" id="basic-elements" style = {{backgroundColor:"info"}}>
+      <div className="section section-basic" id="basic-elements" style = {{backgroundColor:"#EAECEE"}}>
         <Container >    
           <div id="inputs">
             <h4>Area de cargar el Producto Productos</h4>
             <p className="category">Tortas o Salsas</p>
             <Row>
-              <Col lg="3" sm="6">
+              <Col lg="6" sm="6">
                 <FormGroup>
                   <Input
                     defaultValue=""
@@ -43,7 +43,7 @@ function Basic() {
                   ></Input>
                 </FormGroup>
               </Col>
-              <Col lg="3" sm="6">
+              <Col lg="6" sm="6">
                 <FormGroup >
                   <Input
                     className="Precio"
@@ -52,7 +52,10 @@ function Basic() {
                   ></Input>
                 </FormGroup>
               </Col>
-               <Col lg="3" sm="6">
+
+            </Row>
+            <Row>
+               <Col lg="6" sm="6">
                     <UncontrolledDropdown>
                       <DropdownToggle
                         caret
@@ -76,12 +79,15 @@ function Basic() {
                         </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
-              </Col>
+                  </Col>
+                  <Col md="3">
+                    <FileUploader />
+                  </Col>
             </Row>
           </div>
           <div id="textareaTags">
             <Row>
-              <Col md="6">
+              <Col md="12">
                 <div className="title">
                   <h4>Descripcion del Producto</h4>
                 </div>
@@ -92,9 +98,6 @@ function Basic() {
                   type="textarea"
                   placeholder="Agregue la descripcion..."
                 ></Input>
-              </Col>
-              <Col md="6">
-              <FileUploader />
               </Col>
             </Row>
           </div>
