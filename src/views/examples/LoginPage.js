@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
+
 import { Link } from "react-router-dom";
 
 // reactstrap components
@@ -22,9 +24,15 @@ import {
 import Footer from "components/Footers/Footer.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
-function LoginPage() {
+function LoginPage(props) {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+  const [registerEmailState, setregisterEmailState] = React.useState("");
+  const [registerConfirmPasswordState, setregisterConfirmPasswordState] = React.useState(
+    ""
+  ); 
+  const { actions} = useContext(Context);
+
   React.useEffect(() => {
     document.body.classList.add("login-page");
     document.body.classList.add("sidebar-collapse");
@@ -34,6 +42,13 @@ function LoginPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+  const verifyEmail = value => {
+    var emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (emailRex.test(value)) {
+      return true;
+    }
+    return false;
+  };
   return (
     <>
       <FixedTransparentNavbar />
@@ -71,10 +86,19 @@ function LoginPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          placeholder="Email..."
-                          type="text"
-                          onFocus={() => setFirstFocus(true)}
-                          onBlur={() => setFirstFocus(false)}
+                            autoComplete="email"
+                            placeholder="Email..."
+                            type="text"
+                            name="email"
+                            onChange= { event => {
+                                if (verifyEmail(event.target.value)) {
+                                  setregisterEmailState("success");
+                                } else {
+                                  setregisterEmailState("error");
+                                };
+                                actions.handlingInputs(event)
+                              }
+                            }
                         ></Input>
                       </InputGroup>
                       <InputGroup
@@ -89,24 +113,36 @@ function LoginPage() {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
-                          placeholder="Clave..."
-                          type="text"
-                          onFocus={() => setLastFocus(true)}
-                          onBlur={() => setLastFocus(false)}
+                          autoComplete="clave"
+                          placeholder="Confirmar clave..."
+                          type="clave"
+                          name="clave"
+                            onChange={ event => {
+                              if (event.target.value) {
+                                setregisterConfirmPasswordState("success");
+                              } else {
+                                setregisterConfirmPasswordState("error");
+                              }
+                              actions.handlingInputs(event)
+                          }
+                        }
                         ></Input>
                       </InputGroup>
                     </CardBody>
                     <CardFooter className="text-center">
+                      {
+                         (registerEmailState === "success" && 
+                         registerConfirmPasswordState ==="success")?
                       <Button
                         block
                         className="btn-round"
                         color="info"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={e => actions.logingUsuario(e, props.history)}
                         size="lg"
                       >
                         Ingresar
-                      </Button>
+                      </Button>:null}
                     </CardFooter>
                     <div className="pull-left">
                       <h6>

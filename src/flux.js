@@ -87,9 +87,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       logingUsuario: (e, history) => {
         //e.preventDefault();
         console.log(e, "evento");
+        console.log(history, "history");
         const store = getStore();
         let data = {
-          nombre: store.nombre,
           email: store.email,
           clave: store.clave
         };

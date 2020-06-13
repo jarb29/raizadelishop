@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 import {
   Button,
@@ -13,8 +15,13 @@ import {
 } from "reactstrap";
 
 
-function LandingPageHeader() {
+function LandingPageHeader(props) {
   let pageHeader = React.createRef();
+  const [registerEmailState, setregisterEmailState] = React.useState("");
+  const [registerConfirmPasswordState, setregisterConfirmPasswordState] = React.useState(
+    ""
+  ); 
+  const { actions} = useContext(Context);
   React.useEffect(() => {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
@@ -28,6 +35,13 @@ function LandingPageHeader() {
       };
     }
   });
+  const verifyEmail = value => {
+    var emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (emailRex.test(value)) {
+      return true;
+    }
+    return false;
+  };
   return (
     <>
       <div className="page-header page-header-small">
@@ -62,18 +76,38 @@ function LandingPageHeader() {
                           <Col md="3">
                             <FormGroup>
                               <Input
-                                autoComplete="email"
-                                placeholder=" Email"
-                                type="email"
+                                 autoComplete="email"
+                                 placeholder="Email..."
+                                 type="text"
+                                 name="email"
+                                 onChange= { event => {
+                                     if (verifyEmail(event.target.value)) {
+                                       setregisterEmailState("success");
+                                     } else {
+                                       setregisterEmailState("error");
+                                     };
+                                     actions.handlingInputs(event)
+                                   }
+                                 }
                               ></Input>
                             </FormGroup>
                           </Col>
                           <Col md="3">
                             <FormGroup>
                               <Input
-                                autoComplete="current-password"
-                                placeholder="Clave"
-                                type="password"
+                                 autoComplete="clave"
+                                 placeholder="Confirmar clave..."
+                                 type="clave"
+                                 name="clave"
+                                   onChange={ event => {
+                                     if (event.target.value) {
+                                       setregisterConfirmPasswordState("success");
+                                     } else {
+                                       setregisterConfirmPasswordState("error");
+                                     }
+                                     actions.handlingInputs(event)
+                                 }
+                               }
                               ></Input>
                             </FormGroup>
                           </Col>
@@ -83,6 +117,7 @@ function LandingPageHeader() {
                               className="btn-round"
                               color="info"
                               type="button"
+                              onClick={e => actions.logingUsuario(e, props.history)}
                             >
                               Ingresa
                             </Button>
@@ -100,4 +135,4 @@ function LandingPageHeader() {
   );
 }
 
-export default LandingPageHeader;
+export default withRouter(LandingPageHeader);
