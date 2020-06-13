@@ -28,7 +28,7 @@ function Carrito() {
                 <Col md="12">
                   <Card className="card-plain">
                     <CardBody>
-                      <Table className="table">
+                      <Table >
                         <thead>
                           <tr>
                             <th className="text-center"></th>
@@ -40,15 +40,7 @@ function Carrito() {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>
-                              <div className="img-container">
-                                <img
-                                  alt="..."
-                                  src={require("assets/img/saint-laurent.jpg")}
-                                ></img>
-                              </div>
-                            </td>
+                          <tr>   
                             <td className="td-name">
                               <a
                                 href="#pablo"
@@ -59,7 +51,14 @@ function Carrito() {
                               <br></br>
                               <small>by Saint Laurent</small>
                             </td>
-                     
+                            <td>
+                              <div className="img-container">
+                                <img
+                                  alt="..."
+                                  src={require("assets/img/saint-laurent.jpg")}
+                                ></img>
+                              </div>
+                            </td>
                             <td className="td-number">
                               <small>€</small>
                               3,390
@@ -67,10 +66,10 @@ function Carrito() {
                             <td className="td-number">
                               1{" "}
                               <ButtonGroup>
-                                <Button color="info" size="sm">
+                                <Button color="info" >
                                   <i className="now-ui-icons ui-1_simple-delete"></i>
                                 </Button>
-                                <Button color="info" size="sm">
+                                <Button color="info">
                                   <i className="now-ui-icons ui-1_simple-add"></i>
                                 </Button>
                               </ButtonGroup>

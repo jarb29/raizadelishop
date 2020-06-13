@@ -10,7 +10,7 @@ import {
   ModalFooter
 } from "reactstrap";
 import Carrito from "views/index-sections/Carrito";
-import SimpleTable from "../index-sections/SimpleTable"
+
 
 // core components
 
