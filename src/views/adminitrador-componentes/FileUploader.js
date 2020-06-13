@@ -12,18 +12,12 @@ function FileUploader() {
       <div id="file-uploader">
         <Container>
           <div className="title">
-            <h4>File Uploader</h4>
+            <h4>Cargar Imagen</h4>
           </div>
           <Row>
-            <Col md="5" sm="8">
-              <h4>
-                <small>Regular Image</small>
-              </h4>
-              <ImageUpload />
-            </Col>
             <Col md="3" sm="4">
               <h4>
-                <small>Avatar</small>
+                <small>Imagen</small>
               </h4>
               <ImageUpload avatar />
             </Col>

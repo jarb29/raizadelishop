@@ -28,9 +28,6 @@ function Administrador() {
           <Tabs />
           <Basic />
           <ContentAreas />
-          <Javascript />
-          <FileUploader />
-          <Modal />
         </div>
       </div>
     </>

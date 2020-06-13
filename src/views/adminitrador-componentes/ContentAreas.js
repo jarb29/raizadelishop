@@ -20,13 +20,10 @@ function ContentAreas() {
   return (
       <div className="section">
         <Container>
-          <div className="space-70"></div>
           <div className="cd-section" id="contentAreas">
-            <h3 className="title">Content Areas</h3>
             <div id="tables">
-      
               <Row>
-                  <h6>Striped With Checkboxes</h6>
+                  <h6>Productos</h6>
                   <Card className="card-plain">
                     <CardHeader>
                       <CardTitle tag="h4"></CardTitle>
@@ -135,15 +132,6 @@ function ContentAreas() {
                     </CardBody>
                   </Card>    
               </Row>
-              
-            </div>
-            <div className="space-50"></div>
-            <div id="comments">
-              <div className="title">
-                <h3>
-                  <small>Comments</small>
-                </h3>
-              </div>
             </div>
           </div>
         </Container>
