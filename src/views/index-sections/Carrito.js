@@ -7,41 +7,30 @@ import {
   Card,
   CardBody,
   Table,
-  Container,
   Row,
-  Col,
-  UncontrolledTooltip
+  Container,
+  Col
 } from "reactstrap";
 
-// core components
 
 function Carrito() {
   return (
-    <div >
-    
+          <div >
+            <Container >
               <Row >
-                <Col md="12">
-                  <h4>
-                    <small>Compras</small>
-                  </h4>
-                </Col>
                 <Col md="12">
                   <Card className="card-plain">
                     <CardBody>
-                      <Table >
-                        <thead>
+                      <Table responsive striped>
+                        <thead colSpan="3">
                           <tr>
                             <th className="text-center"></th>
-                            <th>Product</th>
-                       
-                            <th className="text-right">Price</th>
-                            <th className="text-right">Qty</th>
-                            <th className="text-right">Amount</th>
+                            <td className="td-total">Compras</td>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>   
-                            <td className="td-name">
+                            <td className="td-name" colSpan="3">
                               <a
                                 href="#pablo"
                                 onClick={e => e.preventDefault()}
@@ -51,7 +40,7 @@ function Carrito() {
                               <br></br>
                               <small>by Saint Laurent</small>
                             </td>
-                            <td>
+                            <td  >
                               <div className="img-container">
                                 <img
                                   alt="..."
@@ -66,10 +55,10 @@ function Carrito() {
                             <td className="td-number">
                               1{" "}
                               <ButtonGroup>
-                                <Button color="info" >
+                                <Button color="info" size="sm">
                                   <i className="now-ui-icons ui-1_simple-delete"></i>
                                 </Button>
-                                <Button color="info">
+                                <Button color="info" size="sm">
                                   <i className="now-ui-icons ui-1_simple-add"></i>
                                 </Button>
                               </ButtonGroup>
@@ -78,34 +67,9 @@ function Carrito() {
                               <small>€</small>
                               549
                             </td>
-                            <td className="td-actions">
-                              <Button
-                                color="neutral"
-                                data-placement="left"
-                                id="tooltip109218971"
-                                type="button"
-                              >
-                                <i className="now-ui-icons ui-1_simple-remove"></i>
-                              </Button>
-                              <UncontrolledTooltip
-                                delay={0}
-                                placement="left"
-                                target="tooltip109218971"
-                              >
-                                Remove item
-                              </UncontrolledTooltip>
-                            </td>
                           </tr>
-                          <tr>
-                            <td>
-                              <div className="img-container">
-                                <img
-                                  alt="..."
-                                  src={require("assets/img/balmain.jpg")}
-                                ></img>
-                              </div>
-                            </td>
-                            <td className="td-name">
+                          <tr >
+                            <td className="td-name"  colSpan="3" >
                               <a
                                 href="#pablo"
                                 onClick={e => e.preventDefault()}
@@ -115,7 +79,14 @@ function Carrito() {
                               <br></br>
                               <small>by Balmain</small>
                             </td>
-                    
+                            <td>
+                              <div className="img-container">
+                                <img
+                                  alt="..."
+                                  src={require("assets/img/balmain.jpg")}
+                                ></img>
+                              </div>
+                            </td>
                             <td className="td-number">
                               <small>€</small>
                               499
@@ -135,34 +106,9 @@ function Carrito() {
                               <small>€</small>
                               998
                             </td>
-                            <td className="td-actions">
-                              <Button
-                                color="neutral"
-                                data-placement="left"
-                                id="tooltip230976474"
-                                type="button"
-                              >
-                                <i className="now-ui-icons ui-1_simple-remove"></i>
-                              </Button>
-                              <UncontrolledTooltip
-                                delay={0}
-                                placement="left"
-                                target="tooltip230976474"
-                              >
-                                Remove item
-                              </UncontrolledTooltip>
-                            </td>
                           </tr>
                           <tr>
-                            <td>
-                              <div className="img-container">
-                                <img
-                                  alt="..."
-                                  src={require("assets/img/prada.jpg")}
-                                ></img>
-                              </div>
-                            </td>
-                            <td className="td-name">
+                            <td className="td-name"  colSpan="3">
                               <a
                                 href="#pablo"
                                 onClick={e => e.preventDefault()}
@@ -172,7 +118,14 @@ function Carrito() {
                               <br></br>
                               <small>by Prada</small>
                             </td>
-                  
+                            <td>
+                              <div className="img-container">
+                                <img
+                                  alt="..."
+                                  src={require("assets/img/prada.jpg")}
+                                ></img>
+                              </div>
+                            </td>
                             <td className="td-number">
                               <small>€</small>
                               200
@@ -192,40 +145,14 @@ function Carrito() {
                               <small>€</small>
                               799
                             </td>
-                            <td className="td-actions">
-                              <Button
-                                color="neutral"
-                                data-placement="left"
-                                id="tooltip11104356"
-                                type="button"
-                              >
-                                <i className="now-ui-icons ui-1_simple-remove"></i>
-                              </Button>
-                              <UncontrolledTooltip
-                                delay={0}
-                                placement="left"
-                                target="tooltip11104356"
-                              >
-                                Remove item
-                              </UncontrolledTooltip>
-                            </td>
+                         
                           </tr>
                           <tr>
-                            <td colSpan="3"></td>
+                            <td colSpan="5"></td>
                             <td className="td-total">Total</td>
                             <td className="td-price">
                               <small>€</small>
                               2,346
-                            </td>
-                            <td className="text-right" colSpan="3">
-                              <Button
-                                className="btn-round"
-                                color="info"
-                                type="button"
-                              >
-                                Comprar{" "}
-                                <i className="now-ui-icons arrows-1_minimal-right"></i>
-                              </Button>
                             </td>
                           </tr>
                         </tbody>
@@ -234,6 +161,7 @@ function Carrito() {
                   </Card>
                 </Col>
               </Row>
+            </Container>
         </div>
   );
 }
