@@ -10,6 +10,7 @@ import {
   ModalFooter
 } from "reactstrap";
 import Carrito from "views/index-sections/Carrito";
+import SimpleTable from "../index-sections/SimpleTable"
 
 // core components
 
@@ -29,21 +30,21 @@ function Javascript() {
   return (
 
       <div >
-        <Container style ={{marginTop: 0, marginBottom:'0px', paddingBottom:"10px"}}>
-          <Row id="modals">
+        
+        <Container >
             <Col md="12">
               <Button
                 color="info"
                 className="mr-1"
+                style ={{marginTop: 0, marginBottom:'0px', paddingBottom:"10px"}}
                 onClick={() => setModalClassic(true)}
               >
                 <i className="now-ui-icons shopping_cart-simple"></i> Carrito
               </Button>
-           
-       
               <Modal
                 isOpen={modalClassic}
                 toggle={() => setModalClassic(false)}
+ 
               >
                 <div className="modal-header justify-content-center">
                   <button
@@ -54,12 +55,12 @@ function Javascript() {
                   >
                    <i className="now-ui-icons shopping_cart-simple"></i>
                   </button>
-                  <h4 className="title title-up">Modal title</h4>
                 </div>
                 <div className="modal-body">
-                  <p>
+               <div >
                     <Carrito />
-                  </p>
+                </div>
+          
                 </div>
                 <ModalFooter>
                   <Button color="default" type="button">
@@ -71,9 +72,6 @@ function Javascript() {
                 </ModalFooter>
               </Modal>
             </Col>
-            <br></br>
-            <br></br>
-          </Row>
         </Container>
       </div>
   );

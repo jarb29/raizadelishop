@@ -17,23 +17,23 @@ import {
 
 function Carrito() {
   return (
-        <Container >           
-              <Row>
+    <div >
+    
+              <Row >
                 <Col md="12">
                   <h4>
-                    <small>Shopping Cart Table</small>
+                    <small>Compras</small>
                   </h4>
                 </Col>
                 <Col md="12">
                   <Card className="card-plain">
                     <CardBody>
-                      <Table className="table-shopping" responsive>
+                      <Table className="table">
                         <thead>
                           <tr>
                             <th className="text-center"></th>
                             <th>Product</th>
-                            <th>Color</th>
-                            <th>Size</th>
+                       
                             <th className="text-right">Price</th>
                             <th className="text-right">Qty</th>
                             <th className="text-right">Amount</th>
@@ -59,8 +59,7 @@ function Carrito() {
                               <br></br>
                               <small>by Saint Laurent</small>
                             </td>
-                            <td>Black</td>
-                            <td>M</td>
+                     
                             <td className="td-number">
                               <small>€</small>
                               3,390
@@ -117,8 +116,7 @@ function Carrito() {
                               <br></br>
                               <small>by Balmain</small>
                             </td>
-                            <td>Black</td>
-                            <td>M</td>
+                    
                             <td className="td-number">
                               <small>€</small>
                               499
@@ -175,8 +173,7 @@ function Carrito() {
                               <br></br>
                               <small>by Prada</small>
                             </td>
-                            <td>Red</td>
-                            <td>M</td>
+                  
                             <td className="td-number">
                               <small>€</small>
                               200
@@ -238,7 +235,7 @@ function Carrito() {
                   </Card>
                 </Col>
               </Row>
-        </Container>
+        </div>
   );
 }
 

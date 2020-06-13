@@ -2,32 +2,22 @@ import React from "react";
 
 // reactstrap components
 import {
-  Button,
-  ButtonGroup,
   Card,
   CardHeader,
   CardBody,
   CardTitle,
   Label,
   FormGroup,
-  Form,
   Input,
-  Media,
-  Pagination,
-  PaginationItem,
-  PaginationLink,
   Table,
   Container,
-  Row,
-  Col,
-  UncontrolledTooltip
+  Row
 } from "reactstrap";
 
 // core components
 
 function ContentAreas() {
   return (
-    <>
       <div className="section">
         <Container>
           <div className="space-70"></div>
@@ -36,15 +26,6 @@ function ContentAreas() {
             <div id="tables">
       
               <Row>
-           
-
-
-
-                
-          
-
-
-
                   <h6>Striped With Checkboxes</h6>
                   <Card className="card-plain">
                     <CardHeader>
@@ -167,7 +148,6 @@ function ContentAreas() {
           </div>
         </Container>
       </div>
-    </>
   );
 }
 
