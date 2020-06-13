@@ -28,11 +28,10 @@ function Basic() {
 
   return (
     <>
-      <div className="section section-basic" id="basic-elements">
-        <Container>   
-          <div className="space-70"></div>
+      <div className="section section-basic" id="basic-elements" style = {{backgroundColor:"info"}}>
+        <Container >    
           <div id="inputs">
-            <h4>Cargar Productos</h4>
+            <h4>Area de cargar el Producto Productos</h4>
             <p className="category">Tortas o Salsas</p>
             <Row>
               <Col lg="3" sm="6">
