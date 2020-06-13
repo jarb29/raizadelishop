@@ -27,8 +27,8 @@ function Javascript() {
     }
   };
   return (
-    <>
-      <div className="section section-javascript" id="javascriptComponents">
+
+      <div >
         <Container>
           <Row id="modals">
             <Col md="12">
@@ -76,7 +76,6 @@ function Javascript() {
           </Row>
         </Container>
       </div>
-    </>
   );
 }
 

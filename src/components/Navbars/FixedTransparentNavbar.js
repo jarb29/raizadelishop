@@ -103,7 +103,6 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-             
                  <Modal />
             </Nav>
           </Collapse>
