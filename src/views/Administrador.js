@@ -2,11 +2,11 @@ import React from "react";
 
 import Basic from "./adminitrador-componentes/Basic";
 import Tabs from "./adminitrador-componentes//Tabs.js";
-import Pills from "./adminitrador-componentes/AminitradotPills.js";
 import ContentAreas from "./adminitrador-componentes/ContentAreas.js";
-import Javascript from "./adminitrador-componentes//Javascript.js";
+import Javascript from "./adminitrador-componentes/Javascript.js";
 import FileUploader from "./adminitrador-componentes/FileUploader.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
+import Modal from "./adminitrador-componentes/Modal";
 
 function Administrador() {
   React.useEffect(() => {
@@ -30,6 +30,7 @@ function Administrador() {
           <ContentAreas />
           <Javascript />
           <FileUploader />
+          <Modal />
         </div>
       </div>
     </>

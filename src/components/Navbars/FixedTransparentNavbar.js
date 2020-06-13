@@ -17,7 +17,7 @@ import {
   Container,
   UncontrolledTooltip
 } from "reactstrap";
-import Carrito from "views/index-sections/Carrito";
+import Modal from "views/adminitrador-componentes/Modal";
 
 function FixedTransparentNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -103,25 +103,8 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  id="navbarDropdownMenuLink"
-                  nav
-                  onClick={e => e.preventDefault()}
-                ><i className="now-ui-icons shopping_cart-simple"></i>
-                  <p>Compras</p>
-                </DropdownToggle>
-                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                <DropdownItem >
-                  <Carrito />
-                </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+             
+                 <Modal />
             </Nav>
           </Collapse>
         </Container>

@@ -23,6 +23,7 @@ import Sections from "views/Sections.js";
 import SignupPage from "views/examples/SignupPage.js";
 import Index from "views/Index";
 import Administrador from "views/Administrador";
+import { Modal } from "reactstrap";
 // others
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/e-commerce" render={props => <Ecommerce {...props} />} />
       <Route path="/e-commercee" render={props => <Ecommercee {...props} />} />
       <Route path="/administrador" render={props => <Administrador {...props} />} />
+ 
       <Route
         path="/landing-page"
         render={props => <LandingPage {...props} />}
