@@ -1,7 +1,8 @@
-import React from "react";
-
-
-
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 // reactstrap components
 import {
@@ -23,8 +24,17 @@ import FileUploader from "../adminitrador-componentes/FileUploader"
 // core components
 
 function Basic() {
-  const [awesomeFocus, setAwesomeFocus] = React.useState(false);
-  const [nucleoFocus, setNucleoFocus] = React.useState(false);
+  const { actions} = useContext(Context);
+  const [nombreProductoState, setregisterNombreProductoState] = React.useState(false);
+  const [registerPrecioState, setregisterPrecioState] = React.useState(false);
+
+
+  const verifyLength = (value, length) => {
+    if (value.length >= length) {
+      return true;
+    }
+    return false;
+  };
 
   return (
     <>
@@ -42,6 +52,16 @@ function Basic() {
                     defaultValue=""
                     placeholder="Nombre Producto"
                     type="text"
+                    name= "nombreProducto"
+                    onChange= { event => {
+                      if (verifyLength(event.target.value)) {
+                        setregisterNombreProductoState("success");
+                      } else {
+                        setregisterNombreProductoState("error");
+                      };
+                      actions.handlingInputs(event)
+                    }
+                  }
                   ></Input>
                 </FormGroup>
               </Col>
@@ -49,42 +69,43 @@ function Basic() {
                 <FormGroup >
                   <Input
                     className="Precio"
-                    defaultValue="Precio"
                     type="text"
+                    placeholder="Precio"
+                    name= "precio"
+                    onChange= { event => {
+                      if (verifyLength(event.target.value)) {
+                        setregisterPrecioState("success");
+                      } else {
+                        setregisterPrecioState("error");
+                      };
+                      actions.handlingInputs(event)
+                    }
+                  }
                   ></Input>
                 </FormGroup>
               </Col>
 
             </Row>
             <Row>
-               <Col lg="6" sm="6">
-                    <UncontrolledDropdown>
-                      <DropdownToggle
-                        caret
-                        className="btn-round btn-block mt-2"
-                        color="info"
-                      >
-                        Categoria
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Torta
-                        </DropdownItem>
-                        <DropdownItem
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Salsa
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </Col>
-                  <Col md="3">
-                    <FileUploader />
-                  </Col>
+              <Col lg="6" sm="6">
+                <FormControl >
+                  <InputLabel htmlFor="grouped-native-select" >Categoria</InputLabel>
+                    <Select 
+                    native defaultValue="" 
+                    id="grouped-native-select"
+                    name = 'categoria'
+                    onChange={e => actions.handlingInputs(e)}
+                    style ={{width: '400px'}}
+                    >
+                      <option aria-label="None" value="" />
+                        <option value="torta">Tortas</option>
+                        <option value='salsas'>Salsas</option>
+                    </Select>
+                  </FormControl>
+                </Col>
+                <Col md="3">
+                   <FileUploader />
+                </Col>
             </Row>
           </div>
           <div id="textareaTags">
@@ -99,6 +120,16 @@ function Basic() {
                   name="name"
                   type="textarea"
                   placeholder="Agregue la descripcion..."
+                  name= "descripcion"
+                    onChange= { event => {
+                      if (verifyLength(event.target.value)) {
+                        setregisterPrecioState("success");
+                      } else {
+                        setregisterPrecioState("error");
+                      };
+                      actions.handlingInputs(event)
+                    }
+                  }
                 ></Input>
               </Col>
             </Row>

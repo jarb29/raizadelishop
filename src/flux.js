@@ -42,10 +42,17 @@ const getState = ({ getStore, getActions, setStore }) => {
      
         console.log(e.target.name);
         console.log(e.target.value);
+        console.log(e);
         setStore({
           [e.target.name]: e.target.value
         });
       },
+// imagen
+        handleChangeFile: e => {
+          setStore({
+            [e.target.name]: e.target.files[0]
+          })
+        },
 
 // Registro usuario
 
