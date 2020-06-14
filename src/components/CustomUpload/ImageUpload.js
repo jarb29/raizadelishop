@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
 // used for making the prop types of this component
 import PropTypes from "prop-types";
 
@@ -8,6 +9,7 @@ import defaultImage from "assets/img/image_placeholder.jpg";
 import defaultAvatar from "assets/img/placeholder.jpg";
 
 function ImageUpload(props) {
+  const { actions} = useContext(Context);
   const [file, setFile] = React.useState(null);
   const [imagePreviewUrl, setImagePreviewUrl] = React.useState(
     props.avatar ? defaultAvatar : defaultImage
@@ -17,6 +19,8 @@ function ImageUpload(props) {
     e.preventDefault();
     let reader = new FileReader();
     let file = e.target.files[0];
+    //let name = 'avatar'
+    actions.handleChangeFile(e);
     reader.onloadend = () => {
       setFile(file);
       setImagePreviewUrl(reader.result);
