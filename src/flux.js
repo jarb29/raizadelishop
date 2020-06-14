@@ -14,6 +14,13 @@ const getState = ({ getStore, getActions, setStore }) => {
       currentUser: null,
       isAuthenticated: false,
       error: null,  
+       // Nombre Producto
+
+       avatar: '',
+       nombreProducto: '',
+       precio: '',
+       categoria: '',
+       descripcion: ''
     },
 
     actions: {
@@ -133,7 +140,50 @@ const getState = ({ getStore, getActions, setStore }) => {
           currentUser: null,
           isAuthenticated: false
         });
-      }
+      },
+
+      // Agregando Productos
+
+      handleSubmitProducto: (e, history) => {
+				e.preventDefault();
+				const store = getStore();
+				let formData = new FormData();
+				formData.append("nombreProducto", store.nombreProducto);
+				formData.append("descripcion", store.descripcion);
+				formData.append("precio", store.precio);
+				formData.append("categoria", store.categoria);
+				if (store.avatar !== ' ') {
+					formData.append("avatar", store.avatar)
+
+				} else { setStore({ error: { "msg": "Por favor agregar foto" } }) };
+				console.log(store.avatar);
+
+
+
+				getActions().register('/api/administrador', formData, history)
+			},
+
+			register: async (url, data, history) => {
+				const store = getStore();
+				const { baseURL } = store;
+				const resp = await fetch(baseURL + url, {
+					method: 'POST',
+					body: data
+				})
+				const info = await resp.json();
+				console.log(info)
+
+				if (info.msg) {
+					setStore({
+						error: null,
+						productoAgregado: info.msg,
+						isAuthenticated: true,
+					})
+					sessionStorage.getItem('isAuthenticated', true)
+				}
+				console.log(store.productoAgregado)
+			},
+
 
 
 

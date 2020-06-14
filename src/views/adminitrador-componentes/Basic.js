@@ -64,7 +64,7 @@ function Basic() {
                         className="btn-round btn-block mt-2"
                         color="info"
                       >
-                        Seleccione
+                        Categoria
                       </DropdownToggle>
                       <DropdownMenu>
                         <DropdownItem
