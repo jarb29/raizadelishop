@@ -442,6 +442,9 @@ function Basic() {
               </Col>
             </Row>
           </div>
+          
+          
+          
           <div className="space-70"></div>
           <div id="inputs">
             <h4>Inputs</h4>
@@ -506,6 +509,10 @@ function Basic() {
               </Col>
             </Row>
           </div>
+
+
+
+          
           <div className="space-70"></div>
           <div className="select">
             <Row>

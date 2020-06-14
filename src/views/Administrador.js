@@ -1,12 +1,10 @@
 import React from "react";
 
-import Basic from "./adminitrador-componentes/Basic";
+import BasicForm from "./adminitrador-componentes/BasicForm";
 import Tabs from "./adminitrador-componentes//Tabs.js";
 import ContentAreas from "./adminitrador-componentes/ContentAreas.js";
-import Javascript from "./adminitrador-componentes/Javascript.js";
-import FileUploader from "./adminitrador-componentes/FileUploader.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
-import Modal from "./adminitrador-componentes/Modal";
+
 
 function Administrador() {
   React.useEffect(() => {
@@ -25,8 +23,8 @@ function Administrador() {
     <FixedTransparentNavbar />
       <div className="wrapper">
         <div className="main">
+          <BasicForm />
           <Tabs />
-          <Basic />
           <ContentAreas />
         </div>
       </div>

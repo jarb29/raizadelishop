@@ -139,6 +139,9 @@ function SignupPage() {
                            src={require("assets/img/logo.jpg")}
                        ></img>
                         </div>
+
+
+                        
                     <Form action="" className="form" method="">
                       <InputGroup
                         className={firstFocus ? "input-group-focus" : ""}

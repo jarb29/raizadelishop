@@ -3,30 +3,26 @@ import { Context } from '../../AppContext';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
 
 // reactstrap components
 import {
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
   FormGroup,
   Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
-  Col
+  Col,
+  Button,
 } from "reactstrap";
-import FileUploader from "../adminitrador-componentes/FileUploader"
+import FileUploader from "./FileUploader"
 
 // core components
 
-function Basic() {
+function BasicForm() {
   const { actions} = useContext(Context);
   const [nombreProductoState, setregisterNombreProductoState] = React.useState(false);
   const [registerPrecioState, setregisterPrecioState] = React.useState(false);
+
 
 
   const verifyLength = (value, length) => {
@@ -38,9 +34,9 @@ function Basic() {
 
   return (
     <>
-    <div className="space-50"></div>
-      <div className="section section-basic" id="basic-elements" style = {{backgroundColor:"#EAECEE"}}>
-        <Container >    
+    <div className="space-50" ></div>
+      <div className="section section-basic" style = {{backgroundColor:"#B2BABB"}}>
+        <Container > 
           <div id="inputs">
             <br></br>
             <h4>Area de cargar el Producto</h4>
@@ -54,7 +50,8 @@ function Basic() {
                     type="text"
                     name= "nombreProducto"
                     onChange= { event => {
-                      if (verifyLength(event.target.value)) {
+                      event.preventDefault();
+                      if (verifyLength(event.target.value), 10) {
                         setregisterNombreProductoState("success");
                       } else {
                         setregisterNombreProductoState("error");
@@ -73,7 +70,8 @@ function Basic() {
                     placeholder="Precio"
                     name= "precio"
                     onChange= { event => {
-                      if (verifyLength(event.target.value)) {
+                      event.preventDefault();
+                      if (verifyLength(event.target.value), 10) {
                         setregisterPrecioState("success");
                       } else {
                         setregisterPrecioState("error");
@@ -94,7 +92,12 @@ function Basic() {
                     native defaultValue="" 
                     id="grouped-native-select"
                     name = 'categoria'
-                    onChange={e => actions.handlingInputs(e)}
+                    
+                    onChange={e => {
+                      e.preventDefault();
+                      actions.handlingInputs(e);
+                      
+                    }}
                     style ={{width: '400px'}}
                     >
                       <option aria-label="None" value="" />
@@ -103,12 +106,7 @@ function Basic() {
                     </Select>
                   </FormControl>
                 </Col>
-                <Col md="3">
-                   <FileUploader />
-                </Col>
-            </Row>
-          </div>
-          <div id="textareaTags">
+                <div id="textareaTags">
             <Row>
               <Col md="12">
                 <div className="title">
@@ -120,9 +118,10 @@ function Basic() {
                   name="name"
                   type="textarea"
                   placeholder="Agregue la descripcion..."
-                  name= "descripcion"
+                  name = "descripcion"
                     onChange= { event => {
-                      if (verifyLength(event.target.value)) {
+                      event.preventDefault();
+                      if (verifyLength(event.target.value), 10) {
                         setregisterPrecioState("success");
                       } else {
                         setregisterPrecioState("error");
@@ -132,12 +131,27 @@ function Basic() {
                   }
                 ></Input>
               </Col>
+              
             </Row>
+           </div>
+                <Col md="3">
+                   <FileUploader />
+                </Col>
+              </Row>
           </div>
+                <Button
+                className="btn-round"
+                color="info"
+                href="#pablo"
+                size="lg"
+                onClick = {e => {actions.handleSubmitProducto(e)}}
+                >
+                Ingresar Producto
+              </Button>
         </Container>
       </div>
     </>
   );
 }
 
-export default Basic;
+export default BasicForm;

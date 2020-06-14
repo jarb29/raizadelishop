@@ -39,7 +39,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 // inputs
       handlingInputs: e => {
-     
+        e.preventDefault();
         console.log(e.target.name);
         console.log(e.target.value);
         setStore({
@@ -48,9 +48,10 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 // imagen
         handleChangeFile: e => {
+          e.preventDefault();
           console.log(e, "foto")
           setStore({
-            [e.target.name]: e.target.files[0]
+            avatar: e.target.files[0]
           })
         },
 
@@ -172,7 +173,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			register: async (url, data, history) => {
 				const store = getStore();
-				const { baseURL } = store;
+        const { baseURL } = store;
+        console.log(data, "para ver")
 				const resp = await fetch(baseURL + url, {
 					method: 'POST',
 					body: data
@@ -189,12 +191,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					sessionStorage.getItem('isAuthenticated', true)
 				}
 				console.log(store.productoAgregado)
-			},
-
-
-
-
-      
+			}
     }
   };
 };
