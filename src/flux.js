@@ -20,7 +20,10 @@ const getState = ({ getStore, getActions, setStore }) => {
        nombreProducto: '',
        precio: '',
        categoria: '',
-       descripcion: ''
+       descripcion: '',
+       // Productos para la tienda
+       tiendaSeleccionada: [],
+       tiendatotal: [],
     },
 
     actions: {
@@ -191,7 +194,51 @@ const getState = ({ getStore, getActions, setStore }) => {
 					sessionStorage.getItem('isAuthenticated', true)
 				}
 				console.log(store.productoAgregado)
-			}
+      },
+
+
+
+
+      store: (e, id) => {
+				const store = getStore();
+
+				getActions().tienda(`/api/tienda`);
+			},
+
+			tienda: async (url) => {
+
+				const store = getStore();
+				const { baseURL } = store;
+				const resp = await fetch(baseURL + url, {
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+
+				})
+				const dato = await resp.json();
+				console.log(dato)
+				if (dato.msg) {
+					setStore({
+						error: dato
+					})
+				} else {
+					setStore({
+						tiendaSeleccionada: dato,
+						tiendatotal: dato,
+					});
+				}
+			},
+
+      
+
+
+
+
+
+
+
+      
     }
   };
 };

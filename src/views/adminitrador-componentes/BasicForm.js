@@ -34,7 +34,7 @@ function BasicForm() {
 
   return (
     <>
-    <div className="space-50" ></div>
+    <div className="space-50" style = {{backgroundColor:"#B2BABB"}}></div>
       <div className="section section-basic" style = {{backgroundColor:"#B2BABB"}}>
         <Container > 
           <div id="inputs">

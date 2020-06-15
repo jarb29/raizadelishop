@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext,  useEffect }  from "react";
+import { Context } from '../../AppContext';
 
 import {
   Button,
@@ -6,9 +7,6 @@ import {
   CardBody,
   CardFooter,
   CardTitle,
-  Collapse,
-  Label,
-  FormGroup,
   Form,
   Input,
   InputGroupAddon,
@@ -26,6 +24,7 @@ import Footer from "components/Footers/Footer.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function Ecommerce() {
+  const { store, actions } = useContext(Context);
   // focus for inputs
   const [emailFocus, setEmailFocus] = React.useState(false);
   // collapse states and functions
@@ -38,10 +37,14 @@ function Ecommerce() {
     }
   };
   // slider states and functions
+  useEffect(() => {
+    actions.store();
+  }, []);
+
+  
 
   React.useEffect(() => {
    
-
     document.body.classList.add("ecommerce-page");
    
     document.documentElement.classList.remove("nav-open");
@@ -61,314 +64,58 @@ function Ecommerce() {
               <h2 className="section-title">Encuentar el dulces que te guste</h2>
               <Row>
                 <Col md="12">
-                    <CardBody>
-                      <Card className="card-refine card-plain">
-                        <Collapse isOpen={collapses.includes(3)}>
-                          <CardBody>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                Polo Ralph Lauren
-                              </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                Wooyoungmi
-                              </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                Alexander McQueen
-                              </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                Tom Ford
-                              </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                AMI
-                              </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                Berena
-                              </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                Thom Sweeney
-                              </Label>
-                            </FormGroup>
-                            <FormGroup check>
-                              <Label check>
-                                <Input type="checkbox"></Input>
-                                <span className="form-check-sign"></span>
-                                Calvin Klein
-                              </Label>
-                            </FormGroup>
-                          </CardBody>
-                        </Collapse>
-                      </Card>
-                    </CardBody>
-                </Col>
-                <Col md="12">
                   <Row>
-                    <Col lg="4" md="6">
-                      <Card className="card-product card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
+
+                  {   
+                            store.tiendaSeleccionada.map((producto, i) => {
+                              let img = store.baseURL + `/api/tienda/` + producto.avatar
+                                return (
+                          
+                        <Col lg="4" md="6" key ={i}>
+                        <Card className="card-product card-plain">
+                          <div className="card-image">
+                            <a href="#pablo" onClick={e => e.preventDefault()}>
+                              <img
                               alt="..."
-                              src={require("assets/img/polo.jpg")}
+                              src={img}
                             ></img>
                           </a>
                         </div>
+                        
                         <CardBody>
                           <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <CardTitle tag="h4">Polo Ralph Lauren</CardTitle>
+                                <CardTitle tag="h4">{producto.nombre}</CardTitle>
                           </a>
                           <p className="card-description">
-                            Impeccably tailored in Italy from lightweight navy
-                            wool.
+                            {producto.descripcion}
                           </p>
                           <CardFooter>
                             <div className="price-container">
-                              <span className="price">€ 300</span>
+                                <span className="price">$ {producto.precio}</span>
                             </div>
                             <Button
                               className="btn-neutral btn-icon btn-round pull-right"
-                              color="danger"
+                              color="success"
                               data-placement="left"
-                              id="tooltip719224088"
+                              id={`tooltip${i}`}
                             >
-                              <i className="now-ui-icons ui-2_favourite-28"></i>
+                            <i className="now-ui-icons shopping_cart-simple"></i>
                             </Button>
                             <UncontrolledTooltip
-                              delay={0}
+                              delay={i}
                               placement="left"
-                              target="tooltip719224088"
+                              target={`tooltip${i}`}
                             >
-                              Remove from wishlist
+                              Agregar al Carrito
                             </UncontrolledTooltip>
                           </CardFooter>
                         </CardBody>
                       </Card>
                     </Col>
-                    <Col lg="4" md="6">
-                      <Card className="card-product card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              src={require("assets/img/tom-ford.jpg")}
-                            ></img>
-                          </a>
-                        </div>
-                        <CardBody>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <CardTitle tag="h4">Tom Ford</CardTitle>
-                          </a>
-                          <p className="card-description">
-                            Immaculate tailoring is TOM FORD's forte.
-                          </p>
-                          <CardFooter>
-                            <div className="price-container">
-                              <span className="price">€ 879</span>
-                            </div>
-                            <Button
-                              className="btn-neutral btn-icon btn-round pull-right"
-                              color="default"
-                              data-placement="left"
-                              id="tooltip44332731"
-                            >
-                              <i className="now-ui-icons ui-2_favourite-28"></i>
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              placement="left"
-                              target="tooltip44332731"
-                            >
-                              Add to wishlist
-                            </UncontrolledTooltip>
-                          </CardFooter>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4" md="6">
-                      <Card className="card-product card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              src={require("assets/img/wooyoungmi.jpg")}
-                            ></img>
-                          </a>
-                        </div>
-                        <CardBody>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <CardTitle tag="h4">Wooyoungmi</CardTitle>
-                          </a>
-                          <p className="card-description">
-                            Dark-grey slub wool, pintucked notch lapels.
-                          </p>
-                          <CardFooter>
-                            <div className="price-container">
-                              <span className="price">€ 555</span>
-                            </div>
-                            <Button
-                              className="btn-neutral btn-icon btn-round pull-right"
-                              color="default"
-                              data-placement="left"
-                              id="tooltip601285753"
-                            >
-                              <i className="now-ui-icons ui-2_favourite-28"></i>
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              placement="left"
-                              target="tooltip601285753"
-                            >
-                              Add to wishlist
-                            </UncontrolledTooltip>
-                          </CardFooter>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4" md="6">
-                      <Card className="card-product card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              src={require("assets/img/sweeney.jpg")}
-                            ></img>
-                          </a>
-                        </div>
-                        <CardBody>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <CardTitle tag="h4">Thom Sweeney</CardTitle>
-                          </a>
-                          <p className="card-description">
-                            It's made from lightweight grey wool woven.
-                          </p>
-                          <CardFooter>
-                            <div className="price-container">
-                              <span className="price">€ 680</span>
-                            </div>
-                            <Button
-                              className="btn-neutral btn-icon btn-round pull-right"
-                              color="default"
-                              data-placement="left"
-                              id="tooltip931109693"
-                            >
-                              <i className="now-ui-icons ui-2_favourite-28"></i>
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              placement="left"
-                              target="tooltip931109693"
-                            >
-                              Add to wishlist
-                            </UncontrolledTooltip>
-                          </CardFooter>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4" md="6">
-                      <Card className="card-product card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              src={require("assets/img/kingsman.jpg")}
-                            ></img>
-                          </a>
-                        </div>
-                        <CardBody>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <CardTitle tag="h4">Kingsman</CardTitle>
-                          </a>
-                          <p className="card-description">
-                            Crafted from khaki cotton and fully canvassed.
-                          </p>
-                          <CardFooter>
-                            <div className="price-container">
-                              <span className="price">€ 725</span>
-                            </div>
-                            <Button
-                              className="btn-neutral btn-icon btn-round pull-right"
-                              color="default"
-                              data-placement="left"
-                              id="tooltip512086450"
-                            >
-                              <i className="now-ui-icons ui-2_favourite-28"></i>
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              placement="left"
-                              target="tooltip512086450"
-                            >
-                              Remove from wishlist
-                            </UncontrolledTooltip>
-                          </CardFooter>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4" md="6">
-                      <Card className="card-product card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              src={require("assets/img/boglioli.jpg")}
-                            ></img>
-                          </a>
-                        </div>
-                        <CardBody>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <CardTitle tag="h4">Boglioli</CardTitle>
-                          </a>
-                          <p className="card-description">
-                            Masterfully crafted in Northern Italy.
-                          </p>
-                          <CardFooter>
-                            <div className="price-container">
-                              <span className="price">€ 699</span>
-                            </div>
-                            <Button
-                              className="btn-neutral btn-icon btn-round pull-right"
-                              color="default"
-                              data-placement="left"
-                              id="tooltip867244968"
-                            >
-                              <i className="now-ui-icons ui-2_favourite-28"></i>
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              placement="left"
-                              target="tooltip867244968"
-                            >
-                              Add to wishlist
-                            </UncontrolledTooltip>
-                          </CardFooter>
-                        </CardBody>
-                      </Card>
-                    </Col>
+                        )
+                        })
+                    }   
+
                   </Row>
                 </Col>
               </Row>
