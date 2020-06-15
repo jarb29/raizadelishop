@@ -14,6 +14,7 @@ import {
 import Carrito from "views/index-sections/Carrito";
 import Ecommerce from "views/examples/Ecommerce";
 import TablaTorta from "views/examples/TablaTorta";
+import TablaSalsas from "views/examples/TablaSalsas";
 
 // core components
 
@@ -68,12 +69,7 @@ function AdministradorPills() {
                       <TablaTorta />
                       </TabPane>
                       <TabPane tabId="iconVerticalTabs2">
-                        Efficiently unleash cross-media information without
-                        cross-media value. Quickly maximize timely deliverables
-                        for real-time schemas. <br></br>
-                        <br></br>
-                        Dramatically maintain clicks-and-mortar solutions
-                        without functional solutions.
+                       <TablaSalsas />
                       </TabPane>
                     </TabContent>
                   </Col>

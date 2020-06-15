@@ -10,11 +10,11 @@ import {
 } from "reactstrap";
 
 
-function TablaTorta() {
+function TablaSalsas() {
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
-    actions.store();
+    actions.salsas();
   }, []);
 
   
@@ -37,7 +37,7 @@ function TablaTorta() {
                   <Row colSpan="12">
 
                   {   
-                            store.tiendaSeleccionada.map((producto, i) => {
+                            store.tiendaSalsa.map((producto, i) => {
                               let img = store.baseURL + `/api/tienda/` + producto.avatar
                                 return (
 
@@ -86,4 +86,4 @@ function TablaTorta() {
   );
 }
 
-export default TablaTorta;
+export default TablaSalsas;
