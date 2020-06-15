@@ -365,6 +365,67 @@ const getState = ({ getStore, getActions, setStore }) => {
 					carrito: newCarrito,
 					totalCarrito: newtotalCarrito
 				})
+      },
+      
+      // Compra de Productos
+
+
+			productoComprado: (e) => {
+				const store = getStore();
+
+				store.carrito.map(ItemCarrito => {
+					store.tiendaSeleccionada.map(ItemTienda => {
+
+							store.ItemProductoCompradoId.push(ItemTienda.id);
+							store.CantidaProductoComprado.push(ItemCarrito.cantidad);
+							store.precioProductoSeleccionado.push(ItemTienda.precio);
+							store.productosComprados.push({nombre:ItemTienda.nombre, precio:ItemTienda.precio, cantidad: ItemCarrito.cantidad, total: store.total, nombreTiendaselec: store.nombreTiendaSeleccionada})
+							
+						
+						return ' '
+					})
+					return ' '
+				});
+			
+
+				let data = {
+					"usuario_id": store.currentUser.Usuario.id,
+					"ItemProductoCompradoId": store.ItemProductoCompradoId,
+					"CantidaProductoComprado": store.CantidaProductoComprado,
+					"precioProductoSeleccionado": store.precioProductoSeleccionado,
+					"totalFactura":store.total,
+					"totalProductosComprados": store.productosComprados,
+					"usuarioActual":store.currentUser,
+					"emailTiendaSeleccionada":store.emailTiendaSeleccionada,
+
+				}
+				console.log(store.ItemProductoCompradoId, "comprado")
+				console.log(store.CantidaProductoComprado, "cantidad")
+				console.log(store.precioProductoSeleccionado, "Precio")
+
+				getActions().productosComprados(`/api/checkout/`, data);
+			},
+
+			productosComprados: async (url, data, history) => {
+				const store = getStore();
+				const { baseURL } = store;
+				const resp = await fetch(baseURL + url, {
+					method: 'PUT',
+					body: JSON.stringify(data),
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				})
+				const dato = await resp.json();
+				console.log(dato)
+				if (dato.msg) {
+					setStore({
+						error: dato
+					})
+				} else {
+					setStore({productosActualizados: dato})
+
+				}
 			},
 
       
