@@ -10,6 +10,7 @@ import {
   ModalFooter
 } from "reactstrap";
 import Carrito from "views/index-sections/Carrito";
+import ModalCompra from "./ModalCompra";
 
 
 // core components
@@ -66,14 +67,8 @@ function Javascript() {
                   <Button color="danger" onClick={() => setModalClassic(false)}>
                     Cerrar
                   </Button>
-                   <Button
-                    className="btn-round"
-                    color="info"
-                    type="button"
-                    >
-                    Comprar{" "}
-                    <i className="now-ui-icons arrows-1_minimal-right"></i>
-                  </Button>
+   
+                  <ModalCompra  />
                 </ModalFooter>
               </Modal>
             </Col>

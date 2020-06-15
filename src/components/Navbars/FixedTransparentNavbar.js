@@ -4,19 +4,14 @@ import { Context } from '../../AppContext';
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
-  Button,
   Collapse,
-  CardFooter,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
-  NavbarBrand,
   Navbar,
-  NavItem,
   Nav,
   Container,
-  UncontrolledTooltip
 } from "reactstrap";
 import Modal from "views/adminitrador-componentes/Modal";
 

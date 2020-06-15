@@ -206,7 +206,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 // Tienda salsas
       store: (e, id) => {
-				const store = getStore();
 
 				getActions().tienda(`/api/tienda`);
 			},
@@ -237,7 +236,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       
       salsas: (e, id) => {
-				const store = getStore();
 
 				getActions().tiendaSalsa(`/api/salsas`);
 			},
