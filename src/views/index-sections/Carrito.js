@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext,  useEffect }  from "react";
+import { Context } from '../../AppContext';
 
 // reactstrap components
 import {
@@ -13,7 +14,14 @@ import {
 } from "reactstrap";
 
 
+
 function Carrito() {
+  const { store, actions } = useContext(Context);
+ // const [carrito, setCarrito] = React.useState([]);
+ console.log(store.carrito, "dentro del componente")
+
+
+
   return (
           <div >
             <Container >
@@ -21,38 +29,59 @@ function Carrito() {
                 <Col md="12">
                   <Card className="card-plain">
                     <CardBody>
-                      <Table responsive striped>
-                        <thead colSpan="3">
+                      <Table striped>
+                      <thead>
                           <tr>
-                            <th className="text-center"></th>
-                            <td className="td-total">Compras</td>
+                            <th>
+                              <small>Nombre</small>
+                            </th>
+                            <th>
+                              <small>foto</small>
+                            </th>
+                              <th className="text-center">
+                             <small>descripcion</small>
+                            </th>
+                            <th className="text-right">
+                              <small> Precio</small>
+                            </th>
+                            <th className="text-right">
+                              <small> Cantidad</small>
+                            </th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>   
-                            <td className="td-name" colSpan="3">
-                              <a
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                              >
-                                Suede Biker Jacket
-                              </a>
-                              <br></br>
-                              <small>by Saint Laurent</small>
-                            </td>
-                            <td  >
+
+                        <tbody >
+                        {   
+                            store.carrito.map((producto, i) => {
+                              let img = store.baseURL + `/api/tienda/` + producto.producto.avatar
+                              console.log(producto, "dentro del map del carrito")
+                             
+                                return (  
+                        
+                        <tr key ={i} >
+                          <td >
+                            <small>{producto.producto.nombre}</small>
+                          </td>
+                          <td>
                               <div className="img-container">
-                                <img
-                                  alt="..."
-                                  src={require("assets/img/saint-laurent.jpg")}
-                                ></img>
+                                  <img
+                                    alt="..."
+                                    src={img}
+                                    style ={{width:"50px"}}
+                                  ></img>
                               </div>
-                            </td>
-                            <td className="td-number">
-                              <small>€</small>
-                              3,390
-                            </td>
-                            <td className="td-number">
+                          </td>
+                          <td >
+                            <small>
+                                {producto.producto.descripcion}
+                            </small>
+                          </td>
+                          <td >
+                            <small>
+                                {producto.producto.precio}
+                            </small>
+                          </td>
+                          <td className="td-number">
                               1{" "}
                               <ButtonGroup>
                                 <Button color="info" size="sm">
@@ -63,99 +92,10 @@ function Carrito() {
                                 </Button>
                               </ButtonGroup>
                             </td>
-                            <td className="td-number">
-                              <small>€</small>
-                              549
-                            </td>
                           </tr>
-                          <tr >
-                            <td className="td-name"  colSpan="3" >
-                              <a
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                              >
-                                Jersey T-Shirt
-                              </a>
-                              <br></br>
-                              <small>by Balmain</small>
-                            </td>
-                            <td>
-                              <div className="img-container">
-                                <img
-                                  alt="..."
-                                  src={require("assets/img/balmain.jpg")}
-                                ></img>
-                              </div>
-                            </td>
-                            <td className="td-number">
-                              <small>€</small>
-                              499
-                            </td>
-                            <td className="td-number">
-                              2{" "}
-                              <ButtonGroup>
-                                <Button color="info" size="sm">
-                                  <i className="now-ui-icons ui-1_simple-delete"></i>
-                                </Button>
-                                <Button color="info" size="sm">
-                                  <i className="now-ui-icons ui-1_simple-add"></i>
-                                </Button>
-                              </ButtonGroup>
-                            </td>
-                            <td className="td-number">
-                              <small>€</small>
-                              998
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="td-name"  colSpan="3">
-                              <a
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                              >
-                                Slim-Fit Swim Short
-                              </a>
-                              <br></br>
-                              <small>by Prada</small>
-                            </td>
-                            <td>
-                              <div className="img-container">
-                                <img
-                                  alt="..."
-                                  src={require("assets/img/prada.jpg")}
-                                ></img>
-                              </div>
-                            </td>
-                            <td className="td-number">
-                              <small>€</small>
-                              200
-                            </td>
-                            <td className="td-number">
-                              1{" "}
-                              <ButtonGroup>
-                                <Button color="info" size="sm">
-                                  <i className="now-ui-icons ui-1_simple-delete"></i>
-                                </Button>
-                                <Button color="info" size="sm">
-                                  <i className="now-ui-icons ui-1_simple-add"></i>
-                                </Button>
-                              </ButtonGroup>
-                            </td>
-                            <td className="td-number">
-                              <small>€</small>
-                              799
-                            </td>
-                         
-                          </tr>
-                          <tr>
-                            <td colSpan="5"></td>
-                            <td className="td-total">Total</td>
-                            <td className="td-price">
-                              <small>€</small>
-                              2,346
-                            </td>   
-                          </tr>
-                        </tbody>
+                           );}
+                           )}   
+                     </tbody>
                       </Table>
                     </CardBody>
                   </Card>

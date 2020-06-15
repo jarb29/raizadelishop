@@ -26,6 +26,10 @@ const getState = ({ getStore, getActions, setStore }) => {
        tiendatotal: [],
        tiendaSalsa: [],
        tiendatotalsalsa: [],
+
+       // Carrito
+       carrito: [],
+			 totalCarrito: [],
     },
 
     actions: {
@@ -266,12 +270,12 @@ const getState = ({ getStore, getActions, setStore }) => {
       // Logica para el carro
       
       addToCart: producto => {
-				const store = getStore();
+        const store = getStore();
 				let { carrito } = store;
 				let existe = false;
 				let newtotalCarrito = 0;
-				console.log(producto);
-				console.log(carrito);
+				console.log(producto, "lo que esta llegando del producto");
+				console.log(carrito, "lo que hay en carrito");
 				let newCarrito = carrito.map((item) => {
 					if (JSON.stringify(item.producto) === JSON.stringify(producto)) {
 						item.cantidad += 1;
@@ -292,7 +296,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 				setStore({
 					carrito: newCarrito,
-					total: newtotalCarrito
+					totalCarrito: newtotalCarrito
 				})
 			},
 

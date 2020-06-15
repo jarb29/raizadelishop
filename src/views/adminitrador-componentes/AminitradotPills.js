@@ -11,8 +11,6 @@ import {
   Row,
   Col
 } from "reactstrap";
-import Carrito from "views/index-sections/Carrito";
-import Ecommerce from "views/examples/Ecommerce";
 import TablaTorta from "views/examples/TablaTorta";
 import TablaSalsas from "views/examples/TablaSalsas";
 
