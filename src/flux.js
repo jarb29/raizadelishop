@@ -267,10 +267,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
       },
 
-      // Logica para el carro
+      // Logica para el carrito
       
       addToCart: producto => {
         const store = getStore();
+
 				let { carrito } = store;
 				let existe = false;
 				let newtotalCarrito = 0;
@@ -298,15 +299,75 @@ const getState = ({ getStore, getActions, setStore }) => {
 					carrito: newCarrito,
 					totalCarrito: newtotalCarrito
 				})
-			},
+      },
+      // Agregando items desde el carrito
 
+      addToCartI: producto => {
+        const store = getStore();
+
+				let { carrito } = store;
+				let existe = false;
+				let newtotalCarrito = 0;
+				console.log(producto, "lo que esta llegando del producto");
+				console.log(carrito, "lo que hay en carrito");
+				let newCarrito = carrito.map((item) => {
+					if (JSON.stringify(item.producto) === JSON.stringify(producto.producto)) {
+						item.cantidad += 1;
+						existe = true;
+						return item;
+					}
+					return item;
+				})
+				if (!existe) {
+					newCarrito.push({
+						id: carrito.length + 1,
+						producto: producto,
+						cantidad: 1
+					})
+				}
+				newCarrito.map(item => {
+					return newtotalCarrito = newtotalCarrito + (item.cantidad * item.producto.precio);
+				})
+				setStore({
+					carrito: newCarrito,
+					totalCarrito: newtotalCarrito
+				})
+      },
       
+      // Borradno itenes desde el carrito
 
+      addToCartII: producto => {
+        const store = getStore();
 
-
-
-
-
+				let { carrito } = store;
+				let existe = false;
+				let newtotalCarrito = 0;
+				console.log(producto, "lo que esta llegando del producto");
+				console.log(carrito, "lo que hay en carrito");
+				let newCarrito = carrito.map((item) => {
+					if (JSON.stringify(item.producto) === JSON.stringify(producto.producto)) {
+						item.cantidad -= 1;
+            existe = true;
+						return item;
+					}
+					return item;
+        })
+        const isCero = (element) => element.cantidad === 0;
+        let index = carrito.findIndex(isCero);
+        console.log(index, "index en el retroceso")
+        
+        if (index !==-1) {
+          newCarrito.splice(index, 1)
+        }
+        console.log(newCarrito, "carrito sin el ultimo")
+				newCarrito.map(item => {
+					return newtotalCarrito = newtotalCarrito + (item.cantidad * item.producto.precio);
+				})
+				setStore({
+					carrito: newCarrito,
+					totalCarrito: newtotalCarrito
+				})
+			},
 
       
     }

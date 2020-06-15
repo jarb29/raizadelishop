@@ -10,7 +10,7 @@ import {
   Table,
   Row,
   Container,
-  Col
+  Col,
 } from "reactstrap";
 
 
@@ -18,7 +18,7 @@ import {
 function Carrito() {
   const { store, actions } = useContext(Context);
  // const [carrito, setCarrito] = React.useState([]);
- console.log(store.totalCarrito, "dentro del componente")
+
 
 
 
@@ -29,6 +29,7 @@ function Carrito() {
                 <Col md="12">
                   <Card className="card-plain">
                     <CardBody>
+                      <p> Sus compras </p>
                       <Table striped>
                       <thead>
                           <tr>
@@ -38,14 +39,17 @@ function Carrito() {
                             <th>
                               <small>foto</small>
                             </th>
-                              <th className="text-center">
-                             <small>descripcion</small>
-                            </th>
                             <th className="text-right">
                               <small> Precio</small>
                             </th>
                             <th className="text-right">
                               <small> Cantidad</small>
+                            </th>
+                            <th className="text-right">
+                                <small>  {"  "} </small>
+                            </th>
+                            <th className="text-right">
+                              <small>Total/Unidad</small>
                             </th>
                           </tr>
                         </thead>
@@ -59,10 +63,10 @@ function Carrito() {
                                 return (  
                         
                         <tr key ={i} >
-                          <td >
+                          <td className="text-center">
                             <small>{producto.producto.nombre}</small>
                           </td>
-                          <td>
+                          <td className="text-center">
                               <div className="img-container">
                                   <img
                                     alt="..."
@@ -71,27 +75,36 @@ function Carrito() {
                                   ></img>
                               </div>
                           </td>
-                          <td >
-                            <small>
-                                {producto.producto.descripcion}
-                            </small>
+                          <td className="text-center">
+                                $ {producto.producto.precio} 
                           </td>
-                          <td >
-                            <small>
-                                {producto.producto.precio}
-                            </small>
+                          <td className="text-center">
+                               {producto.cantidad}
                           </td>
                           <td className="td-number">
-                              1{" "}
+                                {" "}
                               <ButtonGroup>
-                                <Button color="info" size="sm">
+                                <Button 
+                                color="info" 
+                                size="sm"
+                                onClick={() => actions.addToCartII(producto)}
+                                >
                                   <i className="now-ui-icons ui-1_simple-delete"></i>
                                 </Button>
-                                <Button color="info" size="sm">
+                                <Button 
+                                color="info" 
+                                size="sm"
+                                onClick={() => actions.addToCartI(producto)}
+                                >
                                   <i className="now-ui-icons ui-1_simple-add"></i>
                                 </Button>
                               </ButtonGroup>
                             </td>
+                            <td className="text-center">
+                         
+                          $ {producto.cantidad*producto.producto.precio} <small> CLP </small> 
+                       
+                          </td>
                           </tr>
                            );}
                            )} 
@@ -100,7 +113,7 @@ function Carrito() {
                       </Table>
                       <Table>
                           <tr className="td-number">
-                             <td >
+                             <td className="text-right">
                              <small>Total a pagar:  </small>{" "}{store.totalCarrito} CLP
                             </td>
                           </tr>
