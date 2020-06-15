@@ -29,7 +29,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
        // Carrito
        carrito: [],
-			 totalCarrito: [],
+       totalCarrito: [],
+       
+       // Productos comprados
+       ItemProductoCompradoId: [],
+       CantidaProductoComprado: [],
+       precioProductoSeleccionado: [],
+       cantidadProductoSeleccionado: [],
     },
 
     actions: {
@@ -273,8 +279,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let { carrito } = store;
 				let existe = false;
 				let newtotalCarrito = 0;
-				console.log(producto, "lo que esta llegando del producto");
-				console.log(carrito, "lo que hay en carrito");
 				let newCarrito = carrito.map((item) => {
 					if (JSON.stringify(item.producto) === JSON.stringify(producto)) {
 						item.cantidad += 1;
@@ -306,8 +310,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let { carrito } = store;
 				let existe = false;
 				let newtotalCarrito = 0;
-				console.log(producto, "lo que esta llegando del producto");
-				console.log(carrito, "lo que hay en carrito");
+
 				let newCarrito = carrito.map((item) => {
 					if (JSON.stringify(item.producto) === JSON.stringify(producto.producto)) {
 						item.cantidad += 1;
@@ -340,8 +343,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let { carrito } = store;
 				let existe = false;
 				let newtotalCarrito = 0;
-				console.log(producto, "lo que esta llegando del producto");
-				console.log(carrito, "lo que hay en carrito");
 				let newCarrito = carrito.map((item) => {
 					if (JSON.stringify(item.producto) === JSON.stringify(producto.producto)) {
 						item.cantidad -= 1;
@@ -352,12 +353,11 @@ const getState = ({ getStore, getActions, setStore }) => {
         })
         const isCero = (element) => element.cantidad === 0;
         let index = carrito.findIndex(isCero);
-        console.log(index, "index en el retroceso")
+
         
         if (index !==-1) {
           newCarrito.splice(index, 1)
         }
-        console.log(newCarrito, "carrito sin el ultimo")
 				newCarrito.map(item => {
 					return newtotalCarrito = newtotalCarrito + (item.cantidad * item.producto.precio);
 				})
@@ -371,37 +371,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 			productoComprado: (e) => {
-				const store = getStore();
+        const store = getStore();
+        console.log(store.carrito, "cuando se va a comprar")
 
 				store.carrito.map(ItemCarrito => {
-					store.tiendaSeleccionada.map(ItemTienda => {
-
-							store.ItemProductoCompradoId.push(ItemTienda.id);
+							store.ItemProductoCompradoId.push(ItemCarrito.producto.id);
 							store.CantidaProductoComprado.push(ItemCarrito.cantidad);
-							store.precioProductoSeleccionado.push(ItemTienda.precio);
-							store.productosComprados.push({nombre:ItemTienda.nombre, precio:ItemTienda.precio, cantidad: ItemCarrito.cantidad, total: store.total, nombreTiendaselec: store.nombreTiendaSeleccionada})
-							
-						
-						return ' '
-					})
+              store.precioProductoSeleccionado.push(ItemCarrito.producto.precio);							
 					return ' '
 				});
 			
 
 				let data = {
-					"usuario_id": store.currentUser.Usuario.id,
+					//"usuario_id": store.currentUser.Usuario.id,
 					"ItemProductoCompradoId": store.ItemProductoCompradoId,
 					"CantidaProductoComprado": store.CantidaProductoComprado,
 					"precioProductoSeleccionado": store.precioProductoSeleccionado,
-					"totalFactura":store.total,
-					"totalProductosComprados": store.productosComprados,
+					"totalFactura":store.totalCarrito,
 					"usuarioActual":store.currentUser,
-					"emailTiendaSeleccionada":store.emailTiendaSeleccionada,
 
 				}
-				console.log(store.ItemProductoCompradoId, "comprado")
-				console.log(store.CantidaProductoComprado, "cantidad")
-				console.log(store.precioProductoSeleccionado, "Precio")
+				console.log(data, "comprado")
+
 
 				getActions().productosComprados(`/api/checkout/`, data);
 			},
@@ -423,8 +414,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						error: dato
 					})
 				} else {
-					setStore({productosActualizados: dato})
-
+          setStore({productosActualizados: dato})
+          history.push("/e-commerce");
 				}
 			},
 

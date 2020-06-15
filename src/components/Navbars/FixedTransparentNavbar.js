@@ -20,7 +20,7 @@ function FixedTransparentNavbar() {
   const { actions, store} = useContext(Context);
 
 
-  console.log(store.carrito.length, "que hay")
+
   return (
     <>
       {collapseOpen ? (

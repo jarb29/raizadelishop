@@ -1,52 +1,23 @@
-/*eslint-disable*/
-import React from "react";
-// react plugin used to create datetimepicker
-import ReactDatetime from "react-datetime";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 // reactstrap components
 import {
   Button,
-  Card,
-  CardHeader,
-  CardBody,
-  Collapse,
-  FormGroup,
   Container,
-  Row,
-  Col,
-  UncontrolledTooltip,
-  PopoverBody,
-  PopoverHeader,
-  UncontrolledPopover,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Modal,
   ModalFooter
 } from "reactstrap";
 
 // core components
 
-function ModalCompra() {
-  // focus states and functions for login modal
-  const [nameFocus, setNameFocus] = React.useState(false);
-  const [passwordFocus, setPasswordFocus] = React.useState(false);
-  // modals states and functions
-  const [modalClassic, setModalClassic] = React.useState(false);
+function ModalCompra(props) {
+    
+    const { actions} = useContext(Context);
+
   const [modalMini, setModalMini] = React.useState(false);
-  const [modalNotice, setModalNotice] = React.useState(false);
-  const [modalLogin, setModalLogin] = React.useState(false);
-  // collapse states and functions
-  const [collapses, setCollapses] = React.useState([1]);
-  const changeCollapse = collapse => {
-    if (collapses.includes(collapse)) {
-      setCollapses(collapses.filter(prop => prop !== collapse));
-    } else {
-      setCollapses([...collapses, collapse]);
-    }
-  };
+
   return (
     <>
         <Container>
@@ -86,7 +57,14 @@ function ModalCompra() {
                   >
                     Cerrar
                   </Button>
-                  <Button className="btn-neutral" color="link" type="button">
+                  <Button 
+                  className="btn-neutral" 
+                  color="link" 
+                  type="button"
+                  
+                  onClick={(e) => actions.productoComprado(e, props.history)}
+                  
+                  >
                     Comprar
                   </Button>
                 
@@ -97,4 +75,4 @@ function ModalCompra() {
   );
 }
 
-export default ModalCompra;
+export default withRouter(ModalCompra);
