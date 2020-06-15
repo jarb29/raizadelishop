@@ -1,5 +1,6 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -21,6 +22,10 @@ import Modal from "views/adminitrador-componentes/Modal";
 
 function FixedTransparentNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const { actions, store} = useContext(Context);
+
+
+  console.log(store.carrito.length, "que hay")
   return (
     <>
       {collapseOpen ? (
@@ -103,9 +108,7 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-        
-                 <Modal 
-                 />
+              {store.carrito.length !== 0? <Modal />: null}
             </Nav>
           </Collapse>
         </Container>
