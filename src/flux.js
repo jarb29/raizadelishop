@@ -116,14 +116,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 // Login usuario
       logingUsuario: (e, history) => {
         //e.preventDefault();
-        console.log(e, "evento");
-        console.log(history, "history");
+
         const store = getStore();
         let data = {
           email: store.email,
           clave: store.clave
         };
-        console.log(data, "en el loging");
+
         getActions().loging("/api/loging", data, history);
       },
 
@@ -379,11 +378,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 							store.CantidaProductoComprado.push(ItemCarrito.cantidad);
               store.precioProductoSeleccionado.push(ItemCarrito.producto.precio);							
 					return ' '
-				});
+        });
+      
 			
 
 				let data = {
-					//"usuario_id": store.currentUser.Usuario.id,
+          
+          
+					"usuario_id": store.currentUser.Usuario.id,
 					"ItemProductoCompradoId": store.ItemProductoCompradoId,
 					"CantidaProductoComprado": store.CantidaProductoComprado,
 					"precioProductoSeleccionado": store.precioProductoSeleccionado,
