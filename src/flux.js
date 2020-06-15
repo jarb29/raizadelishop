@@ -24,6 +24,8 @@ const getState = ({ getStore, getActions, setStore }) => {
        // Productos para la tienda
        tiendaSeleccionada: [],
        tiendatotal: [],
+       tiendaSalsa: [],
+       tiendatotalsalsa: [],
     },
 
     actions: {
@@ -198,7 +200,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-
+// Tienda salsas
       store: (e, id) => {
 				const store = getStore();
 
@@ -226,6 +228,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({
 						tiendaSeleccionada: dato,
 						tiendatotal: dato,
+					});
+				}
+      },
+      
+      salsas: (e, id) => {
+				const store = getStore();
+
+				getActions().tiendaSalsa(`/api/salsas`);
+			},
+
+			tiendaSalsa: async (url) => {
+
+				const store = getStore();
+				const { baseURL } = store;
+				const resp = await fetch(baseURL + url, {
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+
+				})
+				const dato = await resp.json();
+				console.log(dato)
+				if (dato.msg) {
+					setStore({
+						error: dato
+					})
+				} else {
+					setStore({
+						tiendaSalsa: dato,
+						tiendatotalsalsa: dato,
 					});
 				}
 			},

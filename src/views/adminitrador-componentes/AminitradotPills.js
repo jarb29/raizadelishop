@@ -11,6 +11,9 @@ import {
   Row,
   Col
 } from "reactstrap";
+import Carrito from "views/index-sections/Carrito";
+import Ecommerce from "views/examples/Ecommerce";
+import TablaTorta from "views/examples/TablaTorta";
 
 // core components
 
@@ -62,12 +65,7 @@ function AdministradorPills() {
                       activeTab={"iconVerticalTabs" + iconVerticalTabs}
                     >
                       <TabPane tabId="iconVerticalTabs1">
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C
-                        users after installed base benefits. <br></br>
-                        <br></br>
-                        Dramatically visualize customer directed convergence
-                        without revolutionary ROI.
+                      <TablaTorta />
                       </TabPane>
                       <TabPane tabId="iconVerticalTabs2">
                         Efficiently unleash cross-media information without

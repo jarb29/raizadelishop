@@ -27,15 +27,7 @@ function Ecommerce() {
   const { store, actions } = useContext(Context);
   // focus for inputs
   const [emailFocus, setEmailFocus] = React.useState(false);
-  // collapse states and functions
-  const [collapses, setCollapses] = React.useState([1]);
-  const changeCollapse = collapse => {
-    if (collapses.includes(collapse)) {
-      setCollapses(collapses.filter(prop => prop !== collapse));
-    } else {
-      setCollapses([...collapses, collapse]);
-    }
-  };
+
   // slider states and functions
   useEffect(() => {
     actions.store();
@@ -61,7 +53,7 @@ function Ecommerce() {
         <div className="main">
           <div className="section">
             <Container>
-              <h2 className="section-title">Encuentar el dulces que te guste</h2>
+              <h2 className="section-title">Encuentar el dulces que te gusten</h2>
               <Row>
                 <Col md="12">
                   <Row>
