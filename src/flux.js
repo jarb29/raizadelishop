@@ -261,6 +261,39 @@ const getState = ({ getStore, getActions, setStore }) => {
 						tiendatotalsalsa: dato,
 					});
 				}
+      },
+
+      // Logica para el carro
+      
+      addToCart: producto => {
+				const store = getStore();
+				let { carrito } = store;
+				let existe = false;
+				let newtotalCarrito = 0;
+				console.log(producto);
+				console.log(carrito);
+				let newCarrito = carrito.map((item) => {
+					if (JSON.stringify(item.producto) === JSON.stringify(producto)) {
+						item.cantidad += 1;
+						existe = true;
+						return item;
+					}
+					return item;
+				})
+				if (!existe) {
+					newCarrito.push({
+						id: carrito.length + 1,
+						producto: producto,
+						cantidad: 1
+					})
+				}
+				newCarrito.map(item => {
+					return newtotalCarrito = newtotalCarrito + (item.cantidad * item.producto.precio);
+				})
+				setStore({
+					carrito: newCarrito,
+					total: newtotalCarrito
+				})
 			},
 
       

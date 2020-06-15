@@ -90,6 +90,7 @@ function Ecommerce() {
                               color="success"
                               data-placement="left"
                               id={`tooltip${i}`}
+                              onClick={() => actions.addToCart(producto)}
                             >
                             <i className="now-ui-icons shopping_cart-simple"></i>
                             </Button>
