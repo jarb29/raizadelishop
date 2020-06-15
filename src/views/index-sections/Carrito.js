@@ -18,7 +18,7 @@ import {
 function Carrito() {
   const { store, actions } = useContext(Context);
  // const [carrito, setCarrito] = React.useState([]);
- console.log(store.carrito, "dentro del componente")
+ console.log(store.totalCarrito, "dentro del componente")
 
 
 
@@ -94,8 +94,16 @@ function Carrito() {
                             </td>
                           </tr>
                            );}
-                           )}   
-                     </tbody>
+                           )} 
+                         
+                        </tbody>
+                      </Table>
+                      <Table>
+                          <tr className="td-number">
+                             <td >
+                             <small>Total a pagar:  </small>{" "}{store.totalCarrito} CLP
+                            </td>
+                          </tr>
                       </Table>
                     </CardBody>
                   </Card>
