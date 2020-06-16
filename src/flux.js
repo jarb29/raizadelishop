@@ -38,6 +38,10 @@ const getState = ({ getStore, getActions, setStore }) => {
        cantidadProductoSeleccionado: [],
        // retorno productos comprados
        productosActualizados: [],
+
+       // datos del retorno para el admintrador
+       factura: [],
+       detalleFactura: [],
     },
 
     actions: {
@@ -90,7 +94,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         getActions().registroUsuarioEmpresa("/api/tienda/register", data, history);
       },
 
-      registroUsuarioEmpresa: async (url, data) => {
+      registroUsuarioEmpresa: async (url, data, history) => {
         const store = getStore();
         const { baseURL } = store;
         const resp = await fetch(baseURL + url, {
@@ -112,6 +116,9 @@ const getState = ({ getStore, getActions, setStore }) => {
             isAuthenticated: true,
             error: null
           });
+          sessionStorage.setItem("currentUser", JSON.stringify(dato));
+          sessionStorage.setItem("isAuthenticated", true);
+          history.push("/e-commerce");
         }
       },
 
@@ -206,8 +213,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						productoAgregado: info.msg,
 						isAuthenticated: true,
 					})
-					sessionStorage.getItem('isAuthenticated', true)
-				}
+          sessionStorage.getItem('isAuthenticated', true)
+          
+        }
+        history.push("/administrador");
 				console.log(store.productoAgregado)
       },
 
@@ -496,7 +505,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         getActions().registroUsuarioAdminidtrador("/api/administrador/register", data, history);
       },
 
-      registroUsuarioAdminidtrador: async (url, data) => {
+      registroUsuarioAdminidtrador: async (url, data, history) => {
         const store = getStore();
         const { baseURL } = store;
         const resp = await fetch(baseURL + url, {
@@ -518,7 +527,40 @@ const getState = ({ getStore, getActions, setStore }) => {
             isAuthenticated: true,
             error: null
           });
+          sessionStorage.setItem("currentUser", JSON.stringify(dato));
+          sessionStorage.setItem("isAuthenticated", true);
+          history.push("/administrador");
         }
+      },
+
+      orders: (e, id) => {
+
+				getActions().tiendaOrders(`/api/admi/orders`);
+			},
+
+			tiendaOrders: async (url) => {
+
+				const store = getStore();
+				const { baseURL } = store;
+				const resp = await fetch(baseURL + url, {
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+
+				})
+				const dato = await resp.json();
+				console.log(dato, "lo que regresa del back")
+				if (dato.msg) {
+					setStore({
+						error: dato
+					})
+				} else {
+					setStore({
+						factura: dato[0],
+						detalleFactura: dato[1],
+					});
+				}
       },
 
 

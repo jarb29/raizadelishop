@@ -32,12 +32,8 @@ function Ecommerce(props) {
 
   // slider states and functions
 
-
   useEffect(() => {
     actions.store();
-  }, []);
-
-  useEffect(() => {
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
 

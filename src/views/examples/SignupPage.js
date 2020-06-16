@@ -24,7 +24,7 @@ import FooterDefault from "components/Footers/FooterDefault";
 
 
 
-function SignupPage() {
+function SignupPage(props) {
 
   const { actions} = useContext(Context);
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -300,7 +300,7 @@ function SignupPage() {
                           color="info"
                           href="#pablo"
                           size="lg"
-                          onClick = {e => {actions.registroUsuario(e)}}
+                          onClick = {e => {actions.registroUsuario(e, props.history)}}
                         >
                           Registrate
                         </Button>:null }

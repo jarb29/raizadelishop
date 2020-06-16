@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router";
 
 // reactstrap components
 import {
@@ -78,4 +79,4 @@ function AdministradorPills() {
   );
 }
 
-export default AdministradorPills;
+export default withRouter(AdministradorPills);

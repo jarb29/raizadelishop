@@ -3,6 +3,7 @@ import { Context } from '../../AppContext';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { withRouter } from "react-router";
 
 
 // reactstrap components
@@ -18,7 +19,7 @@ import FileUploader from "./FileUploader"
 
 // core components
 
-function BasicForm() {
+function BasicForm(props) {
   const { actions} = useContext(Context);
   const [nombreProductoState, setregisterNombreProductoState] = React.useState(false);
   const [registerPrecioState, setregisterPrecioState] = React.useState(false);
@@ -144,7 +145,7 @@ function BasicForm() {
                 color="info"
                 href="#pablo"
                 size="lg"
-                onClick = {e => {actions.handleSubmitProducto(e)}}
+                onClick = {e => {actions.handleSubmitProducto(e, props.history)}}
                 >
                 Ingresar Producto
               </Button>
@@ -154,4 +155,4 @@ function BasicForm() {
   );
 }
 
-export default BasicForm;
+export default withRouter(BasicForm);

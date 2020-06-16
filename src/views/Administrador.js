@@ -10,11 +10,17 @@ import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js
 
 function Administrador(props) {
   const { store, actions } = useContext(Context);
+  
 
   useEffect(() => {
+    
     if(!store.isAuthenticated) props.history.push('/admi/login');
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
+    actions.salsas();
+    actions.store();
+    actions.orders();
+
   }, []);
 
 

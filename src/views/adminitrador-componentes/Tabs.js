@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
 
 // reactstrap components
 import {
@@ -21,6 +22,10 @@ import AdministradorPills from "./AminitradotPills";
 function Tabs() {
   const [iconTabs, setIconTabs] = React.useState("1");
   const [tabs, setTabs] = React.useState("1");
+  const { store } = useContext(Context);
+
+  console.log(store.factura, "facturas")
+  console.log(store.detalleFactura, "detalles factura")
   return (
     <>
       <div className="section section-tabs">

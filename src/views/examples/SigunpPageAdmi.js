@@ -24,7 +24,7 @@ import FooterDefault from "components/Footers/FooterDefault";
 
 
 
-function SignupPageAdmi() {
+function SignupPageAdmi(props) {
 
   const { actions} = useContext(Context);
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -300,7 +300,7 @@ function SignupPageAdmi() {
                           color="info"
                           href="#pablo"
                           size="lg"
-                          onClick = {e => {actions.registroAdministrador(e)}}
+                          onClick = {e => {actions.registroAdministrador(e, props.history)}}
                         >
                           Registrate
                         </Button>:null }
