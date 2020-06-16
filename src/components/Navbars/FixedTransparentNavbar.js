@@ -88,10 +88,11 @@ function FixedTransparentNavbar(props) {
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
                   </DropdownItem> : null}
+                  { !store.isAuthenticated ? 
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>
                     Profile Page
-                  </DropdownItem>
+                  </DropdownItem>: null}
                   <DropdownItem tag={Link} to="/index">
                     <i className="now-ui-icons location_pin"></i>
                     Componentes
@@ -103,20 +104,24 @@ function FixedTransparentNavbar(props) {
                   </DropdownItem>: null}
                 </DropdownMenu>
               </UncontrolledDropdown>
-              {store.carrito.length !==0? <ButtonCarrito />: null}
               { store.isAuthenticated ?
-              <NavItem>
-                <Button
-                  className="nav-link btn-default"
-                  color="neutral"
-                  target="_blank"
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  data-toggle="dropdown"
+                  href="#pablo"
+                  id="navbarDropdownMenuLink"
+                  nav
                   onClick={(e) => {
                     actions.logout(e, props.history)
                   }}
                 >
-                  <p>Cerrar Cesion</p>
-                </Button>
-              </NavItem>: null}
+                  <i className="now-ui-icons users_circle-08"></i>
+                  <p>Cerrar sesion</p>
+                </DropdownToggle>
+              </UncontrolledDropdown> :null}
+              {store.carrito.length !==0? <ButtonCarrito />: null}
             </Nav>
           </Collapse>
         </Container>

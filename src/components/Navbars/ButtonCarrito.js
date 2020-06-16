@@ -91,8 +91,9 @@ export default function ButtonCarrito() {
                 className="btn-round"
                 color="success"
                 type="button"
+                onClose={handleClose}
               >
-                 <Link to="/login-page">
+                 <Link to="/login-page" >
                     <i className="now-ui-icons users_circle-08"></i>
                 Ingresar
                 </Link>
