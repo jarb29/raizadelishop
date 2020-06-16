@@ -43,8 +43,12 @@ function Ecommercee(props) {
     };
   });
 
+  console.log(store.currentUser, "para ver que est esto?")
+
   useEffect(() => {
     actions.salsas();
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
   return (
     <>
@@ -61,7 +65,7 @@ function Ecommercee(props) {
 
                   {   
                             store.tiendaSalsa.map((producto, i) => {
-                              let img = store.baseURL + `/api/tienda/` + producto.avatar
+                              let img = store.baseURL + `/api/tienda/tienda/` + producto.avatar
                                 return (
                           
                         <Col lg="4" md="6" key ={i}>

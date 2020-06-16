@@ -12,9 +12,9 @@ function Administrador(props) {
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
-    if(!store.isAuthenticated) props.history.push('/login-page');
+    if(!store.isAuthenticated) props.history.push('/admi/login');
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('admi')) props.history.push('/administrador');
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
 
 

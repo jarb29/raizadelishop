@@ -305,12 +305,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       addToCartI: producto => {
         const store = getStore();
+        console.log(producto, "que esta pasando")
 
 				let { carrito } = store;
 				let existe = false;
 				let newtotalCarrito = 0;
 
 				let newCarrito = carrito.map((item) => {
+          console.log(item.producto, "item en flux");
+          console.log(producto.producto, "producto en flux")
 					if (JSON.stringify(item.producto) === JSON.stringify(producto.producto)) {
 						item.cantidad += 1;
 						existe = true;
@@ -334,7 +337,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
       },
       
-      // Borradno itenes desde el carrito
+      // Borrando itenes desde el carrito
 
       addToCartII: producto => {
         const store = getStore();

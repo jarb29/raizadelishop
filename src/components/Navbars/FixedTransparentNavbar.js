@@ -14,6 +14,7 @@ import {
   Container,
 } from "reactstrap";
 import Modali from "views/adminitrador-componentes/Modali";
+import Carrito from "views/index-sections/Carrito";
 
 function FixedTransparentNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -98,7 +99,27 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              {store.carrito.length !== 0? <Modali />: null}
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  data-toggle="dropdown"
+                  href="#pablo"
+                  id="navbarDropdownMenuLink"
+                  nav
+                  onClick={e => e.preventDefault()}
+                >
+                  <i className="now-ui-icons shopping_cart-simple"></i>
+                  <p>carrito</p>
+                </DropdownToggle>
+                <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
+                  <DropdownItem 
+                  preventDefault >
+                    <i className="now-ui-icons shopping_box"></i>
+                    <Carrito />
+                  </DropdownItem>
+                  </DropdownMenu>
+               </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Container>

@@ -37,7 +37,7 @@ function TablaSalsas() {
 
                   {   
                             store.tiendaSalsa.map((producto, i) => {
-                              let img = store.baseURL + `/api/tienda/` + producto.avatar
+                              let img = store.baseURL + `/api/tienda/tienda/` + producto.avatar
                                 return (
 
                           

@@ -17,7 +17,7 @@ function ModalCompra(props) {
     const { store, actions} = useContext(Context);
     useEffect(() => {
       if(!store.isAuthenticated) props.history.push('/login-page');
-  }, []);
+  });
 
 
   const [modalMini, setModalMini] = React.useState(false);

@@ -17,9 +17,6 @@ import {
 
 function Carrito() {
   const { store, actions } = useContext(Context);
- // const [carrito, setCarrito] = React.useState([]);
-
-
 
 
   return (
@@ -57,7 +54,7 @@ function Carrito() {
                         <tbody >
                         {   
                             store.carrito.map((producto, i) => {
-                              let img = store.baseURL + `/api/tienda/` + producto.producto.avatar
+                              let img = store.baseURL + `/api/tienda/tienda/` + producto.producto.avatar
                               console.log(producto, "dentro del map del carrito")
                              
                                 return (  
