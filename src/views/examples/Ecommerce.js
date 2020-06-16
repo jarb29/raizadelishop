@@ -23,7 +23,7 @@ import {
 import EcommerceHeader from "components/Headers/EcommerceHeader.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 import FooterDefault from "components/Footers/FooterDefault";
-import Carrito from "views/index-sections/Carrito";
+
 
 function Ecommerce(props) {
   const { store, actions } = useContext(Context);
@@ -38,7 +38,6 @@ function Ecommerce(props) {
   }, []);
 
   useEffect(() => {
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
 
@@ -119,7 +118,6 @@ function Ecommerce(props) {
                     }   
 
                   </Row>
-                  <Carrito />
                 </Col>
               </Row>
             </Container>

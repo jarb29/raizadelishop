@@ -1,11 +1,13 @@
-/*eslint-disable*/
 import React, { useContext }  from "react";
 import { Context } from '../../AppContext';
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 // reactstrap components
 import {
   Collapse,
   DropdownToggle,
+  Button,
+  NavItem,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
@@ -13,11 +15,10 @@ import {
   Nav,
   Container,
 } from "reactstrap";
-import Modali from "views/adminitrador-componentes/Modali";
-import Carrito from "views/index-sections/Carrito";
+
 import ButtonCarrito from "./ButtonCarrito";
 
-function FixedTransparentNavbar() {
+function FixedTransparentNavbar(props) {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const { actions, store} = useContext(Context);
 
@@ -82,10 +83,11 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons education_paper"></i>
                     Home
                   </DropdownItem>
+                  { !store.isAuthenticated ?
                   <DropdownItem tag={Link} to="/login-page">
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
-                  </DropdownItem>
+                  </DropdownItem> : null}
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>
                     Profile Page
@@ -94,13 +96,27 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons location_pin"></i>
                     Componentes
                   </DropdownItem>
+                  { !store.isAuthenticated ? 
                   <DropdownItem tag={Link} to="/sign-up">
                     <i className="now-ui-icons tech_mobile"></i>
                     Registrate
-                  </DropdownItem>
+                  </DropdownItem>: null}
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <ButtonCarrito />
+              {store.carrito.length !==0? <ButtonCarrito />: null}
+              { store.isAuthenticated ?
+              <NavItem>
+                <Button
+                  className="nav-link btn-default"
+                  color="neutral"
+                  target="_blank"
+                  onClick={(e) => {
+                    actions.logout(e, props.history)
+                  }}
+                >
+                  <p>Cerrar Cesion</p>
+                </Button>
+              </NavItem>: null}
             </Nav>
           </Collapse>
         </Container>
@@ -109,4 +125,4 @@ function FixedTransparentNavbar() {
   );
 }
 
-export default FixedTransparentNavbar;
+export default withRouter(FixedTransparentNavbar);

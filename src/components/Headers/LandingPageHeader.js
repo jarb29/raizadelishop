@@ -21,7 +21,7 @@ function LandingPageHeader(props) {
   const [registerConfirmPasswordState, setregisterConfirmPasswordState] = React.useState(
     ""
   ); 
-  const { actions} = useContext(Context);
+  const { store, actions} = useContext(Context);
   React.useEffect(() => {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
@@ -55,6 +55,7 @@ function LandingPageHeader(props) {
         <div className="content-center">
           <Container>
             <h1 className="title">Raiza's Deli Shop.</h1>
+            { !store.isAuthenticated ?
               <Row>
                 <Col className="ml-auto mr-auto" md="12" >
                   <Card
@@ -127,7 +128,7 @@ function LandingPageHeader(props) {
                     </CardBody>
                   </Card>
                 </Col>
-              </Row>
+              </Row>: null}
           </Container>
         </div>
       </div>

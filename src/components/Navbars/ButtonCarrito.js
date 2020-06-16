@@ -1,10 +1,15 @@
-import React from 'react';
+/*eslint-disable*/
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
+import { Link } from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Carrito from 'views/index-sections/Carrito';
+import ModalCompra from "views/adminitrador-componentes/ModalCompra";
+
 
 
 const StyledMenu = withStyles({
@@ -40,6 +45,7 @@ const StyledMenuItem = withStyles((theme) => ({
 
 export default function ButtonCarrito() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const { actions, store} = useContext(Context);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -74,7 +80,26 @@ export default function ButtonCarrito() {
               <Carrito />
           </ListItemIcon>
         </StyledMenuItem>
-      </StyledMenu>
+        { store.isAuthenticated ? 
+          <div className="text-center">
+            <ModalCompra  />
+          </div>   
+            :  
+              <div className="text-center">
+            "Para poder ingresar su pedido debe ingresar."
+            <Button
+                className="btn-round"
+                color="success"
+                type="button"
+              >
+                 <Link to="/login-page">
+                    <i className="now-ui-icons users_circle-08"></i>
+                Ingresar
+                </Link>
+              </Button>
+            </div>
+            }
+      </StyledMenu>          
     </div>
   );
 }

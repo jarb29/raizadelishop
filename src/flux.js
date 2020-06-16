@@ -36,6 +36,8 @@ const getState = ({ getStore, getActions, setStore }) => {
        CantidaProductoComprado: [],
        precioProductoSeleccionado: [],
        cantidadProductoSeleccionado: [],
+       // retorno productos comprados
+       productosActualizados: [],
     },
 
     actions: {
@@ -156,12 +158,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       // Login out
       logout: (e, history) => {
+        console.log(history, "historia al logout")
         sessionStorage.removeItem("currentUser");
         sessionStorage.removeItem("isAuthenticated");
         setStore({
           currentUser: null,
           isAuthenticated: false
         });
+        history.push("/landing-page");
       },
 
       // Agregando Productos
@@ -372,7 +376,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       // Compra de Productos
 
 
-			productoComprado: (e) => {
+			productoComprado: (e, history) => {
         const store = getStore();
         console.log(store.carrito, "cuando se va a comprar")
 
@@ -383,12 +387,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return ' '
         });
       
-			
 
 				let data = {
           
           
-					"usuario_id": store.currentUser.Usuario.id,
+					"usuario_id": store.currentUser.tienda.id,
 					"ItemProductoCompradoId": store.ItemProductoCompradoId,
 					"CantidaProductoComprado": store.CantidaProductoComprado,
 					"precioProductoSeleccionado": store.precioProductoSeleccionado,
@@ -399,7 +402,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(data, "comprado")
 
 
-				getActions().productosComprados(`/api/tienda/checkout/`, data);
+				getActions().productosComprados(`/api/tienda/checkout/`, data, history);
 			},
 
 			productosComprados: async (url, data, history) => {
@@ -413,14 +416,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				})
 				const dato = await resp.json();
-				console.log(dato)
+				console.log(dato, )
 				if (dato.msg) {
-					setStore({
+
+          setStore({
+            productosActualizados: dato,
+            carrito:[],
+            totalCarrito:[]
+          });
+          console.log(history, "historia")
+          history.push("/landing-page");
+			
+				} else {
+          setStore({
 						error: dato
 					})
-				} else {
-          setStore({productosActualizados: dato})
-          history.push("/e-commerce");
+      
 				}
       },
 

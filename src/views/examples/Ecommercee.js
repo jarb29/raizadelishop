@@ -47,7 +47,6 @@ function Ecommercee(props) {
 
   useEffect(() => {
     actions.salsas();
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
   return (

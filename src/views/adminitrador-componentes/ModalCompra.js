@@ -15,9 +15,7 @@ import {
 function ModalCompra(props) {
     
     const { store, actions} = useContext(Context);
-    useEffect(() => {
-      if(!store.isAuthenticated) props.history.push('/login-page');
-  });
+
 
 
   const [modalMini, setModalMini] = React.useState(false);
@@ -67,7 +65,10 @@ function ModalCompra(props) {
                   color="link" 
                   type="button"
                   
-                  onClick={(e) => actions.productoComprado(e, props.history)}
+                  onClick={(e) => {
+                    actions.productoComprado(e, props.history)
+                    setModalMini(false)
+                  }}
                   
                   >
                     Comprar
