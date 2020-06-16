@@ -88,7 +88,7 @@ function FixedTransparentNavbar(props) {
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
                   </DropdownItem> : null}
-                  { !store.isAuthenticated ? 
+                  { store.isAuthenticated ? 
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>
                     Profile Page
