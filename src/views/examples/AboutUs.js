@@ -1,21 +1,11 @@
 import React from "react";
-// react plugin used to create DropdownMenu for selecting items
-import Select from "react-select";
 
 // reactstrap components
 import {
   Badge,
-  Button,
   Card,
   CardBody,
-  CardFooter,
   CardTitle,
-  FormGroup,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col
@@ -23,13 +13,11 @@ import {
 
 // core components
 import AboutUsHeader from "components/Headers/AboutUsHeader.js";
-import Footer from "components/Footers/Footer.js";
+
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
+import FooterDefault from "components/Footers/FooterDefault";
 
 function AboutUs() {
-  const [specialitySelect, setSpecialitySelect] = React.useState(null);
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [emailFocus, setEmailFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.add("about-us");
     document.body.classList.add("sidebar-collapse");
@@ -290,7 +278,7 @@ function AboutUs() {
             </Container>
           </div>
         </div>
-        <Footer />
+        <FooterDefault />
       </div>
     </>
   );

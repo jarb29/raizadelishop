@@ -2,8 +2,6 @@ import React from "react";
 
 // reactstrap components
 
-// core components
-import Footer from "components/Footers/Footer.js";
 
 // sections for this page
 import Headers from "./sections-sections/Headers.js";
@@ -52,7 +50,6 @@ function Sections() {
         <Pricing />
         <Testimonials />
         <ContactUs />
-        <Footer />
       </div>
     </>
   );

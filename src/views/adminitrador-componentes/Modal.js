@@ -4,7 +4,6 @@ import React from "react";
 import {
   Button,
   Container,
-  Row,
   Col,
   Modal,
   ModalFooter

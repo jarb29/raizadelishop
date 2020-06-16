@@ -21,7 +21,6 @@ import {
 
 // core components
 import PricingHeader from "components/Headers/PricingHeader.js";
-import Footer from "components/Footers/Footer.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function Pricing() {
@@ -363,7 +362,6 @@ function Pricing() {
             </Container>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

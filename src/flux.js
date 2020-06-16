@@ -85,7 +85,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         console.log(data, "datos en el flux");
 
-        getActions().registroUsuarioEmpresa("/api/register", data, history);
+        getActions().registroUsuarioEmpresa("/api/tienda/register", data, history);
       },
 
       registroUsuarioEmpresa: async (url, data) => {
@@ -123,7 +123,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           clave: store.clave
         };
 
-        getActions().loging("/api/loging", data, history);
+        getActions().loging("/api/tienda/loging", data, history);
       },
 
       loging: async (url, data, history) => {
@@ -182,7 +182,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-				getActions().register('/api/administrador', formData, history)
+				getActions().register('/api/admi/administrador', formData, history)
 			},
 
 			register: async (url, data, history) => {
@@ -212,7 +212,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 // Tienda salsas
       store: (e, id) => {
 
-				getActions().tienda(`/api/tienda`);
+				getActions().tienda(`/api/tienda/tienda`);
 			},
 
 			tienda: async (url) => {
@@ -242,7 +242,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       
       salsas: (e, id) => {
 
-				getActions().tiendaSalsa(`/api/salsas`);
+				getActions().tiendaSalsa(`/api/tienda/salsas`);
 			},
 
 			tiendaSalsa: async (url) => {
@@ -396,7 +396,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(data, "comprado")
 
 
-				getActions().productosComprados(`/api/checkout/`, data);
+				getActions().productosComprados(`/api/tienda/checkout/`, data);
 			},
 
 			productosComprados: async (url, data, history) => {

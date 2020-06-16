@@ -1,6 +1,6 @@
 import React, { useContext }  from "react";
 import { Context } from '../../AppContext';
-
+import { withRouter } from "react-router";
 // reactstrap components
 import {
   Button,
@@ -20,7 +20,8 @@ import {
 
 // core components
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
-import Footer from "components/Footers/Footer.js";
+import FooterDefault from "components/Footers/FooterDefault";
+
 
 
 function SignupPage() {
@@ -311,10 +312,10 @@ function SignupPage() {
             </Row>
           </Container>
         </div>
-        <Footer />
+        <FooterDefault />
       </div>
     </>
   );
 }
 
-export default SignupPage;
+export default withRouter(SignupPage);

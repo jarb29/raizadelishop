@@ -23,8 +23,8 @@ import {
 
 // core components
 import ProductPageHeader from "components/Headers/ProductPageHeader.js";
-import FooterSocial from "components/Footers/FooterSocial.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
+import FooterDefault from "components/Footers/FooterDefault";
 
 const items = [
   {
@@ -690,7 +690,7 @@ function ProductPage() {
             </Row>
           </Container>
         </div>
-        <FooterSocial />
+        <FooterDefault />
       </div>
     </>
   );

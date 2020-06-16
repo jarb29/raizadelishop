@@ -7,6 +7,8 @@ import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js
 
 
 function Administrador() {
+
+  
   React.useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");

@@ -1,5 +1,6 @@
 import React, { useContext,  useEffect }  from "react";
 import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 import {
   Button,
@@ -20,15 +21,20 @@ import {
 
 // core components
 import EcommerceHeader from "components/Headers/EcommerceHeader.js";
-import Footer from "components/Footers/Footer.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
+import FooterDefault from "components/Footers/FooterDefault";
 
-function Ecommerce() {
+function Ecommerce(props) {
   const { store, actions } = useContext(Context);
   // focus for inputs
   const [emailFocus, setEmailFocus] = React.useState(false);
 
   // slider states and functions
+  useEffect(() => {
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('admi')) props.history.push('/administrador');
+  }, []);
+
   useEffect(() => {
     actions.store();
   }, []);
@@ -164,10 +170,10 @@ function Ecommerce() {
             </Container>
           </div>
         </div>
-        <Footer />
+        <FooterDefault />
       </div>
     </>
   );
 }
 
-export default Ecommerce;
+export default withRouter(Ecommerce);

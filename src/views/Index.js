@@ -4,7 +4,6 @@ import React from "react";
 
 // core components
 import IndexHeader from "components/Headers/IndexHeader.js";
-import FooterBlack from "components/Footers/FooterBlack.js";
 
 // sections for this page
 import Images from "./index-sections/Images.js";
@@ -14,8 +13,6 @@ import Tabs from "./index-sections/Tabs.js";
 import Pills from "./index-sections/Pills.js";
 import Pagination from "./index-sections/Pagination.js";
 import Notifications from "./index-sections/Notifications.js";
-import PreFooter from "./index-sections/PreFooter.js";
-import Footers from "./index-sections/Footers.js";
 import Typography from "./index-sections/Typography.js";
 import ContentAreas from "./index-sections/ContentAreas.js";
 import Cards from "./index-sections/Cards.js";
@@ -51,8 +48,6 @@ function Index() {
           <Pills />
           <Pagination />
           <Notifications />
-          <PreFooter />
-          <Footers />
           <Typography />
           <ContentAreas />
           <Cards />
@@ -61,7 +56,6 @@ function Index() {
           <FileUploader />
           <Carousel />
           <NucleoIcons />
-          <FooterBlack />
         </div>
       </div>
     </>

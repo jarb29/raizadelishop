@@ -24,7 +24,7 @@ import {
 
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
-function LoginPage(props) {
+function LoginPageAdmi(props) {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [registerEmailState, setregisterEmailState] = React.useState("");
@@ -154,16 +154,6 @@ function LoginPage(props) {
                         </Link>
                       </h6>
                     </div>
-                    <div className="pull-right">
-                      <h6>
-                        <Link
-                          className="link footer-link"
-                         tag={Link} to="/contact-us">
-                          <i className="now-ui-icons location_pin"></i>
-                            Necesita Ayuda?
-                        </Link>
-                      </h6>
-                    </div>
                   </Form>
                 </Card>
               </Col>
@@ -175,4 +165,4 @@ function LoginPage(props) {
   );
 }
 
-export default withRouter(LoginPage);
+export default withRouter(LoginPageAdmi);

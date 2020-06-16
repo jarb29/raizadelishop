@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext,  useEffect }  from "react";
+import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 // reactstrap components
 import {
@@ -21,9 +23,14 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
-function LandingPage() {
+function LandingPage(props) {
+  const { store, actions } = useContext(Context);
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+  useEffect(() => {
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('admi')) props.history.push('/administrador');
+  }, []);
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -205,4 +212,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default withRouter(LandingPage);

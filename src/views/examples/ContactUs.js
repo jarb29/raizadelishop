@@ -23,8 +23,9 @@ import {
 
 // core components
 import ContactUsHeader from "components/Headers/ContactUsHeader.js";
-import Footer from "components/Footers/Footer.js";
+
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
+import FooterDefault from "components/Footers/FooterDefault";
 
 
 
@@ -178,7 +179,7 @@ function ContactUs() {
             </Container>
           </div>
         </div>
-        <Footer />
+        <FooterDefault />
       </div>
     </>
   );
