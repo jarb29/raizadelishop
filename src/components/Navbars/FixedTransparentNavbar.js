@@ -13,7 +13,7 @@ import {
   Nav,
   Container,
 } from "reactstrap";
-import Modal from "views/adminitrador-componentes/Modal";
+import Modali from "views/adminitrador-componentes/Modali";
 
 function FixedTransparentNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -72,10 +72,6 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons business_bulb-63"></i>
                     Sobre Nosotros
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/administrador">
-                    <i className="now-ui-icons business_bulb-63"></i>
-                    Administrador
-                  </DropdownItem>
                   <DropdownItem tag={Link} to="/contact-us">
                     <i className="now-ui-icons location_pin"></i>
                     Contactanos
@@ -88,7 +84,6 @@ function FixedTransparentNavbar() {
                     <i className="now-ui-icons users_circle-08"></i>
                     Login Page
                   </DropdownItem>
-                
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="now-ui-icons users_single-02"></i>
                     Profile Page
@@ -103,7 +98,7 @@ function FixedTransparentNavbar() {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              {store.carrito.length !== 0? <Modal />: null}
+              {store.carrito.length !== 0? <Modali />: null}
             </Nav>
           </Collapse>
         </Container>

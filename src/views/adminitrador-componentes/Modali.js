@@ -1,5 +1,5 @@
-/*eslint-disable*/
-import React from "react";
+import React, { useContext, useEffect }  from "react";
+import { Context } from '../../AppContext';
 
 import {
   Button,
@@ -14,19 +14,13 @@ import ModalCompra from "./ModalCompra";
 
 // core components
 
-function Javascript() {
+function Modali(props) {
+  const { store} = useContext(Context);
 
   const [modalClassic, setModalClassic] = React.useState(false);
 
-  // collapse states and functions
-  const [collapses, setCollapses] = React.useState([1]);
-  const changeCollapse = collapse => {
-    if (collapses.includes(collapse)) {
-      setCollapses(collapses.filter(prop => prop !== collapse));
-    } else {
-      setCollapses([...collapses, collapse]);
-    }
-  };
+
+
   return (
 
       <div >
@@ -76,4 +70,4 @@ function Javascript() {
   );
 }
 
-export default Javascript;
+export default Modali;

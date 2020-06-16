@@ -17,12 +17,14 @@ function FooterDefault() {
               <li>
                   <Link
                       className="link footer-link"
-                      tag={Link} to="/admi/login">
+                      tag={Link} to="/admi/login"
+                      color="default">
                     Jarb29
                   </Link>
               </li>
               <li>
                 <a
+                color="default"
                 
                 >
                   Con Cariño
@@ -30,14 +32,16 @@ function FooterDefault() {
               </li>
             </ul>
           </nav>
-          <div className="copyright" id="copyright">
+          <div className="copyright" id="copyright" color="default">
             © {new Date().getFullYear()}, Designed by{" "}
             <a
+            color="default"
             >
               Jarb29
             </a>
             . Coded by{" "}
             <a
+            color="default"
           
             >
               Jarb29

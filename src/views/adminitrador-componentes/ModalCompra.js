@@ -1,4 +1,4 @@
-import React, { useContext }  from "react";
+import React, { useContext,  useEffect}  from "react";
 import { Context } from '../../AppContext';
 import { withRouter } from "react-router";
 
@@ -14,7 +14,11 @@ import {
 
 function ModalCompra(props) {
     
-    const { actions} = useContext(Context);
+    const { store, actions} = useContext(Context);
+    useEffect(() => {
+      if(!store.isAuthenticated) props.history.push('/login-page');
+  }, []);
+
 
   const [modalMini, setModalMini] = React.useState(false);
 
@@ -50,13 +54,14 @@ function ModalCompra(props) {
                   <p>Esta seguro de realizar su compra?</p>
                 </div>
                 <ModalFooter>
-               <Button
+                <Button
                     className="btn-link"
                     color="neutral"
                     onClick={() => setModalMini(false)}
                   >
                     Cerrar
                   </Button>
+                
                   <Button 
                   className="btn-neutral" 
                   color="link" 
@@ -66,7 +71,7 @@ function ModalCompra(props) {
                   
                   >
                     Comprar
-                  </Button>
+                  </Button> 
                 
                 </ModalFooter>
               </Modal>

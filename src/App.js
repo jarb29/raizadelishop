@@ -24,6 +24,7 @@ import SignupPage from "views/examples/SignupPage.js";
 import Index from "views/Index";
 import Administrador from "views/Administrador";
 import LoginPageAdmi from "views/examples/LoginPageAdmi"
+import SignupPageAdmi from "views/examples/SigunpPageAdmi"
 
 // others
 
@@ -44,6 +45,10 @@ function App() {
       <Route
         path="/admi/login"
         render={props => <LoginPageAdmi {...props} />}
+      />
+      <Route
+        path="/admi/sign-up"
+        render={props => <SignupPageAdmi {...props} />}
       />
       <Route path="/login-page" render={props => <LoginPage {...props} />} />
       <Route

@@ -30,10 +30,7 @@ function Ecommerce(props) {
   const [emailFocus, setEmailFocus] = React.useState(false);
 
   // slider states and functions
-  useEffect(() => {
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('admi')) props.history.push('/administrador');
-  }, []);
+
 
   useEffect(() => {
     actions.store();

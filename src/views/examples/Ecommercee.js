@@ -28,10 +28,7 @@ function Ecommercee(props) {
   const { store, actions } = useContext(Context);
   // focus for inputs
   const [emailFocus, setEmailFocus] = React.useState(false);
-  useEffect(() => {
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('admi')) props.history.push('/administrador');
-  }, []);
+ 
 
 
   React.useEffect(() => {

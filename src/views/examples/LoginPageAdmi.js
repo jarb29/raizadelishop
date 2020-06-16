@@ -138,7 +138,7 @@ function LoginPageAdmi(props) {
                         className="btn-round"
                         color="info"
                         href="#pablo"
-                        onClick={e => actions.logingUsuario(e, props.history)}
+                        onClick={e => actions.logingAdministrador(e, props.history)}
                         size="lg"
                       >
                         Ingresar
@@ -148,7 +148,7 @@ function LoginPageAdmi(props) {
                       <h6>
                         <Link
                           className="link footer-link"
-                           tag={Link} to="/sign-up">
+                           tag={Link} to="/admi/sign-up">
                         <i className="now-ui-icons tech_mobile"></i>
                           Crear Cuenta
                         </Link>

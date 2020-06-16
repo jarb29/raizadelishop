@@ -419,7 +419,95 @@ const getState = ({ getStore, getActions, setStore }) => {
           setStore({productosActualizados: dato})
           history.push("/e-commerce");
 				}
-			},
+      },
+
+
+// Login administrador
+      logingAdministrador: (e, history) => {
+        //e.preventDefault();
+
+        const store = getStore();
+        let data = {
+          email: store.email,
+          clave: store.clave
+        };
+
+        getActions().logingAdmi("/api/admini/loging", data, history);
+      },
+
+      logingAdmi: async (url, data, history) => {
+        const store = getStore();
+        const { baseURL } = store;
+        const resp = await fetch(baseURL + url, {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        const dato = await resp.json();
+        console.log(dato, "retorno del loging");
+        if (dato.msg) {
+          setStore({
+            error: dato
+          });
+        } else {
+          setStore({
+            currentUser: dato,
+            isAuthenticated: true,
+            error: null
+          });
+          sessionStorage.setItem("currentUser", JSON.stringify(dato));
+          sessionStorage.setItem("isAuthenticated", true);
+          history.push("/administrador");
+        }
+      },
+
+
+      // Registro usuario
+
+      registroAdministrador: (e, history) => {
+        e.preventDefault();
+        const store = getStore();
+
+        let data = {
+          nombre: store.nombre,
+          email: store.email,
+          clave: store.clave,
+          apellido: store.apellido,
+          telefono: store.telefono,
+        };
+        console.log(data, "datos en el flux");
+
+        getActions().registroUsuarioAdminidtrador("/api/administrador/register", data, history);
+      },
+
+      registroUsuarioAdminidtrador: async (url, data) => {
+        const store = getStore();
+        const { baseURL } = store;
+        const resp = await fetch(baseURL + url, {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        const dato = await resp.json();
+        console.log(dato, "del retorno del back");
+        if (dato.msg) {
+          setStore({
+            error: dato
+          });
+        } else {
+          setStore({
+            currentUser: dato,
+            isAuthenticated: true,
+            error: null
+          });
+        }
+      },
+
+
 
       
     }
