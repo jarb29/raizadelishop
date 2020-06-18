@@ -34,49 +34,54 @@ function TablaTorta() {
               <Row>
                 <Col md="12">
                   <Row colSpan="12">
-
-                  {   
-                            store.tiendaSeleccionada.map((producto, i) => {
-                              let img = store.baseURL + `/api/tienda/tienda/` + producto.avatar
-                                return (
-
-                          
-                        
-                        <Table responsive striped colSpan="3">
-                        
+                  <Table responsive striped colSpan="3">
+                      <thead>
+                          <tr>
+                            <th>
+                              Nombre
+                            </th>
+                            <th>
+                              Foto
+                            </th>
+                            <th>
+                              descripcion
+                            </th>
+                            <th >
+                                Precio
+                            </th>
+                          </tr>
+                        </thead>
                         <tbody >
-                        <tr >
-                        <td >
-                       {producto.nombre}
-                        </td>
-                        <td> 
-                        <div >         
-                            <div className="img-container">
-                                <img
-                                  alt="..."
-                                  src={img}
-                                  style ={{width:"50px"}}
-                                ></img>
-                            </div>
-                        </div>
-                        </td>
-                        <td >
-                       
-                            {producto.descripcion}
-                        
-                        </td>
-                        <td >
-                       
+                           {store.tiendaSeleccionada.map((producto, i) => {
+                            let img = store.baseURL + `/api/tienda/tienda/` + producto.avatar
+                        return (
+                              
+                              <tr >
+                              <td >
+                            {producto.nombre}
+                              </td>
+                              <td> 
+                              <div >         
+                                  <div className="img-container">
+                                      <img
+                                        alt="..."
+                                        src={img}
+                                        style ={{width:"50px"}}
+                                      ></img>
+                                  </div>
+                              </div>
+                              </td>
+                              <td >
+                                  {producto.descripcion}
+                              </td>
+                              <td >
                                 {producto.precio}
-                        
-                        </td>
-                       </tr>
-                      </tbody>
+                              </td>
+                            </tr>
+                            )}
+                            )}  
+                          </tbody> 
                     </Table >
-                        )
-                        })
-                    }   
-
                   </Row>
                 </Col>
               </Row>
