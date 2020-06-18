@@ -6,8 +6,6 @@ import { withRouter } from "react-router";
 import {
   Collapse,
   DropdownToggle,
-  Button,
-  NavItem,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,

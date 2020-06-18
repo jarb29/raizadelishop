@@ -1,7 +1,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Col } from "reactstrap";
 
 // core components
 import ImageUpload from "components/CustomUpload/ImageUpload.js";
