@@ -47,7 +47,7 @@ function TablaTorta() {
                         <tbody >
                         <tr >
                         <td >
-                        <small>{producto.nombre}</small>
+                       {producto.nombre}
                         </td>
                         <td> 
                         <div >         
@@ -61,14 +61,14 @@ function TablaTorta() {
                         </div>
                         </td>
                         <td >
-                        <small>
+                       
                             {producto.descripcion}
-                        </small>
+                        
                         </td>
                         <td >
-                        <small>
+                       
                                 {producto.precio}
-                        </small>
+                        
                         </td>
                        </tr>
                       </tbody>

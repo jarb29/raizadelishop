@@ -3,8 +3,6 @@ import { Context } from '../../AppContext';
 
 // reactstrap components
 import {
-  Button,
-  ButtonGroup,
   CardBody,
   Table,
   Row,
@@ -14,7 +12,7 @@ import {
 
 
 function TablasFactura() {
-  const { store, actions } = useContext(Context);
+  const { store} = useContext(Context);
 
 
   return (
@@ -26,25 +24,25 @@ function TablasFactura() {
                       <thead>
                           <tr>
                             <th>
-                              <small>Fecha/Factura</small>
+                              Fecha
                             </th>
                             <th>
-                              <small>Factura</small>
+                              Factura
                             </th>
                             <th>
-                              <small>Apellido</small>
+                              Apellido
                             </th>
-                            <th className="text-right">
-                              <small> Nombre</small>
+                            <th >
+                               Nombre
                             </th>
-                            <th className="text-right">
-                              <small>Email</small>
+                            <th >
+                              Email
                             </th>
-                            <th className="text-right">
-                                <small>Telefono</small>
+                            <th >
+                                Telefono
                             </th>
-                            <th className="text-right">
-                              <small>Total/Factura</small>
+                            <th >
+                              Total/Factura
                             </th>
                           </tr>
                         </thead>
@@ -57,25 +55,25 @@ function TablasFactura() {
                                 return (  
                         <tr key ={i} >
                           <td className="text-center">
-                            <small>{a}</small>
+                            {a}
                           </td>
                           <td className="text-center">
-                            <small>{producto.factura_id}</small>
+                            {producto.factura_id}
                           </td>
                           <td className="text-center">
-                          <small>{producto.usuario_apellido}</small>
+                          {producto.usuario_apellido}
                           </td>
                           <td className="text-center">
-                          <small>{producto.usuario_nombre}</small>
+                          {producto.usuario_nombre}
                           </td>
                           <td className="text-center">
-                          <small>{producto.usuario_email}</small>
+                          {producto.usuario_email}
                           </td>
                           <td className="text-center">
-                          <small>{producto.usuario_telefono}</small>
+                          {producto.usuario_telefono}
                           </td>
                           <td className="text-center">
-                          <small>{producto.total}</small>
+                          {producto.total}
                           </td>
                           </tr>
                            );}
