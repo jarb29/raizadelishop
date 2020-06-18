@@ -4,10 +4,7 @@ import { withRouter } from "react-router";
 
 import BasicForm from "./adminitrador-componentes/BasicForm";
 import Tabs from "./adminitrador-componentes//Tabs.js";
-import ContentAreas from "./adminitrador-componentes/ContentAreas.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
-import TablasFactura from "./adminitrador-componentes/TablasFactura";
-import TablaDetalleFactura from "./adminitrador-componentes/TablaDetalleFactura";
 
 
 function Administrador(props) {
@@ -48,7 +45,6 @@ function Administrador(props) {
         <div className="main">
           <BasicForm />
           <Tabs />
-          <ContentAreas />
         </div>
       </div>
     </>
