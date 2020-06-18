@@ -6,6 +6,9 @@ import {
   Row,
   Table,
   Col,
+  Label,
+  FormGroup,
+  Input
 } from "reactstrap";
 
 
@@ -38,6 +41,12 @@ function TablaSalsas() {
                         <thead>
                           <tr>
                             <th>
+                              Producto Id
+                            </th>
+                            <th className="text-center">
+                              A / D
+                            </th>
+                            <th>
                               Nombre
                             </th>
                             <th>
@@ -57,6 +66,15 @@ function TablaSalsas() {
                         return (
                         
                         <tr >
+                          <td className="text-center">{producto.id}</td>
+                            <td className="text-center">
+                              <FormGroup check>
+                                <Label check>
+                                  <Input type="checkbox"></Input>
+                                  <span className="form-check-sign"></span>
+                                </Label>
+                              </FormGroup>
+                            </td>
                           <td >
                           {producto.nombre}
                           </td>

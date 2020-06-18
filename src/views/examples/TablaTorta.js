@@ -6,6 +6,9 @@ import {
   Row,
   Table,
   Col,
+  Label,
+  FormGroup,
+  Input
 } from "reactstrap";
 
 
@@ -37,6 +40,12 @@ function TablaTorta() {
                   <Table responsive striped colSpan="3">
                       <thead>
                           <tr>
+                          <th>
+                              Producto Id
+                            </th>
+                            <th className="text-center">
+                              A / D
+                            </th>
                             <th>
                               Nombre
                             </th>
@@ -57,11 +66,20 @@ function TablaTorta() {
                         return (
                               
                               <tr >
-                              <td >
-                            {producto.nombre}
-                              </td>
-                              <td> 
-                              <div >         
+                                <td className="text-center">{producto.id}</td>
+                                  <td className="text-center">
+                                    <FormGroup check>
+                                      <Label check>
+                                        <Input type="checkbox"></Input>
+                                        <span className="form-check-sign"></span>
+                                      </Label>
+                                    </FormGroup>
+                                  </td>
+                                  <td >
+                                      {producto.nombre}
+                                  </td>
+                                  <td> 
+                                  <div >         
                                   <div className="img-container">
                                       <img
                                         alt="..."
