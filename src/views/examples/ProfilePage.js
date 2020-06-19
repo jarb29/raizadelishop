@@ -51,44 +51,7 @@ function ProfilePage() {
         <ProfilePageHeader />
         <div className="section">
           <Container>
-            <div className="button-container">
-              <Button
-                className="btn-round mr-1"
-                color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-                size="lg"
-              >
-                Follow
-              </Button>
-              <Button
-                className="btn-round btn-icon mr-1"
-                color="default"
-                href="#pablo"
-                id="tooltip871723210"
-                onClick={e => e.preventDefault()}
-                size="lg"
-              >
-                <i className="fab fa-twitter"></i>
-              </Button>
-              <UncontrolledTooltip delay={0} target="tooltip871723210">
-                Follow me on Twitter
-              </UncontrolledTooltip>
-              <Button
-                className="btn-round btn-icon"
-                color="default"
-                href="#pablo"
-                id="tooltip259363830"
-                onClick={e => e.preventDefault()}
-                size="lg"
-              >
-                <i className="fab fa-instagram"></i>
-              </Button>
-              <UncontrolledTooltip delay={0} target="tooltip259363830">
-                Follow me on Instagram
-              </UncontrolledTooltip>
-            </div>
-            <h3 className="title">About me</h3>
+            <h3 className="title">Sus compras</h3>
             <h5 className="description text-center">
               An artist of considerable range, Ryan — the name taken by
               Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs

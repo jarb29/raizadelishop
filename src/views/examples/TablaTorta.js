@@ -75,7 +75,10 @@ function TablaTorta(props) {
                                     <FormGroup check>
                                       <Label check>
                                         <Input type="checkbox"
-                                        onClick = {e =>{actions.activarDesactivarProducto(e, producto.id, producto.status, props.history)}}
+                                        onClick = {e =>{
+                                          e.preventDefault();
+                                          actions.activarDesactivarProducto(e, producto.id, producto.status, props.history)
+                                        }}
                                         ></Input>
                                         <span className="form-check-sign"></span>
                                       </Label>

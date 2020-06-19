@@ -15,11 +15,7 @@ import Ecommerce from "views/examples/Ecommerce.js";
 import Ecommercee from "views/examples/Ecommercee.js";
 import LandingPage from "views/examples/LandingPage.js";
 import LoginPage from "views/examples/LoginPage.js";
-import NucleoIcons from "views/NucleoIcons.js";
-import Pricing from "views/examples/Pricing.js";
-import ProductPage from "views/examples/ProductPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
-import Sections from "views/Sections.js";
 import SignupPage from "views/examples/SignupPage.js";
 import Administrador from "views/Administrador";
 import LoginPageAdmi from "views/examples/LoginPageAdmi"
@@ -50,20 +46,11 @@ function App() {
         render={props => <SignupPageAdmi {...props} />}
       />
       <Route path="/login-page" render={props => <LoginPage {...props} />} />
-      <Route
-        path="/nucleo-icons"
-        render={props => <NucleoIcons {...props} />}
-      />
-      <Route path="/pricing" render={props => <Pricing {...props} />} />
-      <Route
-        path="/product-page"
-        render={props => <ProductPage {...props} />}
-      />
+
       <Route
         path="/profile-page"
         render={props => <ProfilePage {...props} />}
       />
-      <Route path="/sections" render={props => <Sections {...props} />} />
       <Route path="/sign-up" render={props => <SignupPage {...props} />} />
       <Redirect to="/landing-page"  />
     </Switch>

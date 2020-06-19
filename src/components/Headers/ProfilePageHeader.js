@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext }  from "react";
+import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 // reactstrap components
 import { Container } from "reactstrap";
 
 // core components
 
-function ProfilePageHeader() {
+function ProfilePageHeader(props) {
+  const { store, actions} = useContext(Context);
   let pageHeader = React.createRef();
   React.useEffect(() => {
     if (window.innerWidth > 991) {
@@ -20,43 +23,33 @@ function ProfilePageHeader() {
       };
     }
   });
+  console.log(store.currentUser, "para ver que llega")
+
+
   return (
     <>
       <div
         className="page-header clear-filter page-header-small"
-        filter-color="blue"
+        //filter-color="blue"
       >
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg5.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/profile.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
+        {store.currentUser?
         <Container>
-          <div className="photo-container">
-            <img alt="..." src={require("assets/img/ryan.jpg")}></img>
-          </div>
-          <h3 className="title">Ryan Scheinder</h3>
-          <p className="category">Photographer</p>
-          <div className="content">
+            <h3 className="title">{store.currentUser.Usuario.nombre}, {store.currentUser.Usuario.apellido}</h3>
             <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
+              <p className="category">{store.currentUser.Usuario.email}</p>
+              <p className="category">{store.currentUser.Usuario.telefono}</p>
             </div>
-            <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
-            </div>
-            <div className="social-description">
-              <h2>48</h2>
-              <p>Bookmarks</p>
-            </div>
-          </div>
-        </Container>
+        </Container>: null }
       </div>
     </>
   );
 }
 
-export default ProfilePageHeader;
+export default withRouter(ProfilePageHeader);
