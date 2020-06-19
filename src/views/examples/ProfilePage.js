@@ -61,7 +61,7 @@ function ProfilePage() {
                       <Col className="ml-auto mr-auto" md="12">
                         <Card>
                           <CardBody>
-                            <CardTitle tag="h2">Pedidos</CardTitle>
+                            <CardTitle tag="h2">Historial de Pedidos</CardTitle>
                             <TablaProfile />
                           </CardBody>
                         </Card>
