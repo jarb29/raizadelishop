@@ -21,7 +21,6 @@ import ProductPage from "views/examples/ProductPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Sections from "views/Sections.js";
 import SignupPage from "views/examples/SignupPage.js";
-import Index from "views/Index";
 import Administrador from "views/Administrador";
 import LoginPageAdmi from "views/examples/LoginPageAdmi"
 import SignupPageAdmi from "views/examples/SigunpPageAdmi"
@@ -55,10 +54,6 @@ function App() {
         path="/nucleo-icons"
         render={props => <NucleoIcons {...props} />}
       />
-      <Route
-        path="/index"
-        render={props => <Index {...props} />}
-      />
       <Route path="/pricing" render={props => <Pricing {...props} />} />
       <Route
         path="/product-page"
@@ -70,7 +65,7 @@ function App() {
       />
       <Route path="/sections" render={props => <Sections {...props} />} />
       <Route path="/sign-up" render={props => <SignupPage {...props} />} />
-      <Redirect to="/landing-page" />
+      <Redirect to="/landing-page"  />
     </Switch>
   </BrowserRouter>
 )};
