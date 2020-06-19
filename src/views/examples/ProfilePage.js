@@ -1,20 +1,13 @@
-import React from "react";
+import React, { useContext, useEffect }  from "react";
+import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 // reactstrap components
 import {
   Badge,
-  Button,
   Card,
-  CardHeader,
   CardBody,
   CardTitle,
-  Label,
-  FormGroup,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   NavItem,
   NavLink,
   Nav,
@@ -22,8 +15,7 @@ import {
   TabPane,
   Container,
   Row,
-  Col,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
 
 // core components
@@ -32,6 +24,7 @@ import FooterDefault from "components/Footers/FooterDefault.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function ProfilePage() {
+  const { store, actions} = useContext(Context);
   const [pills, setPills] = React.useState("1");
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
@@ -44,6 +37,14 @@ function ProfilePage() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+
+  useEffect(() =>{
+    actions.profilePage()
+  }, [])
+
+ 
+
+
   return (
     <>
       <FixedTransparentNavbar />
@@ -278,4 +279,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default withRouter(ProfilePage);

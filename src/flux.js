@@ -42,6 +42,8 @@ const getState = ({ getStore, getActions, setStore }) => {
        // datos del retorno para el admintrador
        factura: [],
        detalleFactura: [],
+       // Variables profile Page
+       profile: [],
     },
 
     actions: {
@@ -405,7 +407,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
 
 				let data = {  
-					"usuario_id": store.currentUser.Usuario.id ,
+					"usuario_id": store.currentUser.Usuario.id,
 					"ItemProductoCompradoId": store.ItemProductoCompradoId,
 					"CantidaProductoComprado": store.CantidaProductoComprado,
 					"precioProductoSeleccionado": store.precioProductoSeleccionado,
@@ -599,7 +601,31 @@ const getState = ({ getStore, getActions, setStore }) => {
           getActions().store();
           getActions().salsas()
 				}
+      },
+      
+      profilePage: async (url) => {
+				const store = getStore();
+				const { baseURL } = store;
+				const resp = await fetch(baseURL + `/api/admin/${store.currentUser.Usuario.id}`, {
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+
+				})
+        const dato = await resp.json();
+        console.log(dato, "paa ver que llega del profile")
+				if (dato.msg) {
+					setStore({
+						error: dato
+					})
+				} else {
+					setStore({
+						profile: [...dato],
+					});
+				}
 			},
+
 
 
 
