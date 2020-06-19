@@ -85,6 +85,7 @@ function Ecommercee(props) {
                           <p className="card-description">
                             {producto.descripcion}
                           </p>
+                          {producto.status==='active'?
                           <CardFooter>
                             <div className="price-container">
                                 <span className="price">$ {producto.precio}</span>
@@ -105,7 +106,10 @@ function Ecommercee(props) {
                             >
                               Agregar al Carrito
                             </UncontrolledTooltip>
-                          </CardFooter>
+                          </CardFooter>:null}
+
+
+
                         </CardBody>
                       </Card>
                     </Col>

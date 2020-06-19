@@ -1,5 +1,6 @@
 import React, { useContext,  useEffect }  from "react";
 import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 import {
   Container,
@@ -12,7 +13,7 @@ import {
 } from "reactstrap";
 
 
-function TablaSalsas() {
+function TablaSalsas(props) {
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
@@ -58,6 +59,9 @@ function TablaSalsas() {
                             <th >
                                 Precio
                             </th>
+                            <th >
+                                Estado
+                            </th>
                           </tr>
                         </thead>
                         <tbody responsive striped colSpan="3">
@@ -71,7 +75,7 @@ function TablaSalsas() {
                               <FormGroup check>
                                 <Label check>
                                   <Input type="checkbox"
-                                  onClick = {e =>{console.log('clicked')}}
+                                  onClick = {e =>{actions.activarDesactivarProducto(e, producto.id, producto.status, props.history)}}
                                   ></Input>
                                   <span className="form-check-sign"></span>
                                 </Label>
@@ -97,6 +101,9 @@ function TablaSalsas() {
                             <td >
                                     {producto.precio}
                             </td>
+                            <td >
+                                    {producto.status}
+                            </td>
                           </tr>
                       )}
                         )}   
@@ -110,4 +117,4 @@ function TablaSalsas() {
   );
 }
 
-export default TablaSalsas;
+export default withRouter(TablaSalsas);

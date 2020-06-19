@@ -1,5 +1,6 @@
 import React, { useContext,  useEffect }  from "react";
 import { Context } from '../../AppContext';
+import { withRouter } from "react-router";
 
 import {
   Container,
@@ -12,7 +13,7 @@ import {
 } from "reactstrap";
 
 
-function TablaTorta() {
+function TablaTorta(props) {
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
@@ -58,6 +59,9 @@ function TablaTorta() {
                             <th >
                                 Precio
                             </th>
+                            <th >
+                                Estado
+                            </th>
                           </tr>
                         </thead>
                         <tbody >
@@ -70,7 +74,9 @@ function TablaTorta() {
                                   <td className="text-center">
                                     <FormGroup check>
                                       <Label check>
-                                        <Input type="checkbox"></Input>
+                                        <Input type="checkbox"
+                                        onClick = {e =>{actions.activarDesactivarProducto(e, producto.id, producto.status, props.history)}}
+                                        ></Input>
                                         <span className="form-check-sign"></span>
                                       </Label>
                                     </FormGroup>
@@ -95,6 +101,9 @@ function TablaTorta() {
                               <td >
                                 {producto.precio}
                               </td>
+                              <td >
+                                {producto.status}
+                            </td>
                             </tr>
                             )}
                             )}  
@@ -108,4 +117,4 @@ function TablaTorta() {
   );
 }
 
-export default TablaTorta;
+export default withRouter(TablaTorta);

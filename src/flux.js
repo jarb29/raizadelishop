@@ -240,7 +240,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				})
 				const dato = await resp.json();
-				console.log(dato)
+				console.log(dato, "las tortas")
 				if (dato.msg) {
 					setStore({
 						error: dato
@@ -270,7 +270,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				})
 				const dato = await resp.json();
-				console.log(dato)
+				console.log(dato, "las salsas")
 				if (dato.msg) {
 					setStore({
 						error: dato
@@ -500,7 +500,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           apellido: store.apellido,
           telefono: store.telefono,
         };
-        console.log(data, "datos en el flux");
 
         getActions().registroUsuarioAdminidtrador("/api/administrador/register", data, history);
       },
@@ -562,6 +561,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 				}
       },
+
+      activarDesactivarProducto: async (e, id, status, history) => {
+        e.preventDefault();
+        console.log(id, status, "en el flux")
+        const store = getStore();
+        if (status === 'active') {status ='desactive'} else {status = 'active'};
+        console.log(id, status, "en el flux 2")
+        let data = {
+          newStatus: status
+        }
+
+				const { baseURL } = store;
+				const resp = await fetch(baseURL + `/api/editar/producto/${id}`, {
+					method: 'PUT',
+					body: JSON.stringify(data),
+          headers: {
+						'Content-Type': 'application/json',
+					},
+				})
+				const dato = await resp.json();
+				console.log(dato)
+				if (dato.msg) {
+					setStore({
+						productoEditado: dato.msg
+          });
+          //history.push("/administrador");
+          getActions().store();
+          getActions().salsas()
+				}
+			},
 
 
 
