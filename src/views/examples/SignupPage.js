@@ -71,12 +71,6 @@ function SignupPage(props) {
     return false;
   };
 
-  console.log(registerEmailState === "success")
-  console.log(registerTelefonoState==="success")
-  console.log(registerNombreState==="success")
-  console.log(registerApellido==="success")
-  console.log(registerConfirmPasswordState ==="success")
-
 
   return (
     <>

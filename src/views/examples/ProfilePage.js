@@ -22,6 +22,7 @@ import {
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
+import TablaProfile from "./TablaProfile";
 
 function ProfilePage() {
   const { store, actions} = useContext(Context);
@@ -52,113 +53,18 @@ function ProfilePage() {
         <ProfilePageHeader />
         <div className="section">
           <Container>
-            <h3 className="title">Sus compras</h3>
-            <h5 className="description text-center">
-              An artist of considerable range, Ryan — the name taken by
-              Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-              and records all of his own music, giving it a warm, intimate feel
-              with a solid groove structure. An artist of considerable range.
-            </h5>
             <Row>
               <Col md="12">
-                <h4 className="title text-center">My Portfolio</h4>
-                <div className="nav-align-center">
-                  <Nav
-                    className="nav-pills-info nav-pills-just-icons"
-                    pills
-                    role="tablist"
-                  >
-                    <NavItem>
-                      <NavLink
-                        onClick={e => {
-                          e.preventDefault();
-                          setPills("1");
-                        }}
-                        className={pills === "1" ? "active" : ""}
-                        role="tablist"
-                        href="#pablo"
-                      >
-                        <i className="now-ui-icons design_image"></i>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        onClick={e => {
-                          e.preventDefault();
-                          setPills("2");
-                        }}
-                        className={pills === "2" ? "active" : ""}
-                        role="tablist"
-                        href="#pablo"
-                      >
-                        <i className="now-ui-icons location_world"></i>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        onClick={e => {
-                          e.preventDefault();
-                          setPills("3");
-                        }}
-                        className={pills === "3" ? "active" : ""}
-                        role="tablist"
-                        href="#pablo"
-                      >
-                        <i className="now-ui-icons design-2_ruler-pencil"></i>
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </div>
                 <TabContent className="gallery" activeTab={"pills" + pills}>
                   <TabPane tabId="pills1">
                     <Row>
-                      <Col className="ml-auto mr-auto" md="5">
-                        <Card
-                          className="card-background card-background-product card-raised"
-                          style={{
-                            backgroundImage:
-                              "url(" + require("assets/img/bg23.jpg") + ")"
-                          }}
-                        >
+                      <Col className="ml-auto mr-auto" md="12">
+                        <Card>
                           <CardBody>
-                            <CardTitle tag="h2">Chair remake.</CardTitle>
-                            <p className="card-description text-white">
-                              Trello’s boards, lists, and cards enable you to
-                              organize and prioritize your projects in a fun,
-                              flexible and rewarding way. It was a great project
-                              and I would be more than happy to do it again.
-                            </p>
-                            <Badge className="badge-neutral">Trello</Badge>
+                            <CardTitle tag="h2">Pedidos</CardTitle>
+                            <TablaProfile />
                           </CardBody>
                         </Card>
-                      </Col>
-                      <Col md="5">
-                        <div className="info info-horizontal">
-                          <div className="icon icon-warning">
-                            <i className="now-ui-icons users_single-02"></i>
-                          </div>
-                          <div className="description">
-                            <h5 className="info-title">Work With Any Team</h5>
-                            <p className="description">
-                              Whether it’s for work or even the next family
-                              vacation, Trello helps your team.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="info info-horizontal">
-                          <div className="icon icon-warning">
-                            <i className="now-ui-icons business_chart-bar-32"></i>
-                          </div>
-                          <div className="description">
-                            <h5 className="info-title">
-                              A Productivity Platform
-                            </h5>
-                            <p className="description">
-                              Integrate the apps your team already uses directly
-                              into your workflow.
-                            </p>
-                          </div>
-                        </div>
                       </Col>
                     </Row>
                   </TabPane>

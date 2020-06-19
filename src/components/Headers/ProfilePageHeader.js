@@ -8,7 +8,7 @@ import { Container } from "reactstrap";
 // core components
 
 function ProfilePageHeader(props) {
-  const { store, actions} = useContext(Context);
+  const { store } = useContext(Context);
   let pageHeader = React.createRef();
   React.useEffect(() => {
     if (window.innerWidth > 991) {
@@ -23,8 +23,6 @@ function ProfilePageHeader(props) {
       };
     }
   });
-  console.log(store.currentUser, "para ver que llega")
-
 
   return (
     <>

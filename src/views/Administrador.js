@@ -23,9 +23,6 @@ function Administrador(props) {
 
   }, []);
 
-  console.log(store.isAuthenticated, "para ver que imprime")
-
-
   React.useEffect(() => {
 
     document.body.classList.add("index-page");

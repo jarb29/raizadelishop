@@ -43,10 +43,10 @@ function Ecommercee(props) {
     };
   });
 
-  console.log(store.currentUser, "para ver que est esto?")
 
   useEffect(() => {
     actions.salsas();
+    actions.profilePage()
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
   return (

@@ -34,6 +34,7 @@ function Ecommerce(props) {
 
   useEffect(() => {
     actions.store();
+    actions.profilePage()
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
 

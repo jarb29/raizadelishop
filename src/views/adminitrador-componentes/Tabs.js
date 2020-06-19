@@ -25,8 +25,6 @@ function Tabs() {
   const [iconTabs, setIconTabs] = React.useState("1");
   const { store } = useContext(Context);
 
-  console.log(store.factura, "facturas")
-  console.log(store.detalleFactura, "detalles factura")
   return (
     <>
       <div className="section section-tabs">

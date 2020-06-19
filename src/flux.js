@@ -63,8 +63,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 // inputs
       handlingInputs: e => {
         e.preventDefault();
-        console.log(e.target.name);
-        console.log(e.target.value);
         setStore({
           [e.target.name]: e.target.value
         });
@@ -72,7 +70,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 // imagen
         handleChangeFile: e => {
           e.preventDefault();
-          console.log(e, "foto")
           setStore({
             avatar: e.target.files[0]
           })
@@ -91,8 +88,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           apellido: store.apellido,
           telefono: store.telefono,
         };
-        console.log(data, "datos en el flux");
-
         getActions().registroUsuarioEmpresa("/api/tienda/register", data, history);
       },
 
@@ -107,7 +102,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         });
         const dato = await resp.json();
-        console.log(dato, "del retorno del back");
         if (dato.msg) {
           setStore({
             error: dato
@@ -148,7 +142,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         });
         const dato = await resp.json();
-        console.log(dato, "retorno del loging");
+        console.log(dato, "lo que llega del login")
         if (dato.msg) {
           setStore({
             error: dato
@@ -167,7 +161,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       // Login out
       logout: (e, history) => {
-        console.log(history, "historia al logout")
         sessionStorage.removeItem("currentUser");
         sessionStorage.removeItem("isAuthenticated");
         setStore({
@@ -197,7 +190,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					formData.append("avatar", store.avatar)
 
 				} else { setStore({ error: { "msg": "Por favor agregar foto" } }) };
-				console.log(store.avatar);
 
 
 
@@ -207,13 +199,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			register: async (url, data, history) => {
 				const store = getStore();
         const { baseURL } = store;
-        console.log(data, "para ver")
 				const resp = await fetch(baseURL + url, {
 					method: 'POST',
 					body: data
 				})
 				const info = await resp.json();
-				console.log(info)
 
 				if (info.msg) {
 					setStore({
@@ -225,7 +215,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           
         }
         history.push("/administrador");
-				console.log(store.productoAgregado)
       },
 
 
@@ -247,8 +236,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 
 				})
-				const dato = await resp.json();
-				console.log(dato, "las tortas")
+        const dato = await resp.json();
+        console.log(dato, "salsas")
+
 				if (dato.msg) {
 					setStore({
 						error: dato
@@ -278,7 +268,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				})
 				const dato = await resp.json();
-				console.log(dato, "las salsas")
 				if (dato.msg) {
 					setStore({
 						error: dato
@@ -326,15 +315,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       addToCartI: producto => {
         const store = getStore();
-        console.log(producto, "que esta pasando")
 
 				let { carrito } = store;
 				let existe = false;
 				let newtotalCarrito = 0;
 
 				let newCarrito = carrito.map((item) => {
-          console.log(item.producto, "item en flux");
-          console.log(producto.producto, "producto en flux")
 					if (JSON.stringify(item.producto) === JSON.stringify(producto.producto)) {
 						item.cantidad += 1;
 						existe = true;
@@ -395,11 +381,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			productoComprado: (e, history) => {
         const store = getStore();
-        console.log(store.carrito, "cuando se va a comprar")
 
 				store.carrito.map(ItemCarrito => {
 
-          console.log(ItemCarrito.cantidad, "cantidad del producto en el mapa")
 							store.ItemProductoCompradoId.push(ItemCarrito.producto.id);
 							store.CantidaProductoComprado.push(ItemCarrito.cantidad);
               store.precioProductoSeleccionado.push(ItemCarrito.producto.precio);							
@@ -415,7 +399,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"usuarioActual":store.currentUser,
 
 				}
-				console.log(data, "comprado")
 
 
 				getActions().productosComprados(`/api/tienda/checkout/`, data, history);
@@ -432,7 +415,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				})
 				const dato = await resp.json();
-				console.log(dato, )
 				if (dato.msg) {
 
           setStore({
@@ -444,7 +426,6 @@ const getState = ({ getStore, getActions, setStore }) => {
             ItemProductoCompradoId: [],
             precioProductoSeleccionado: [],
           });
-          console.log(history, "historia")
           history.push("/landing-page");
 			
 				} else {
@@ -480,7 +461,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         });
         const dato = await resp.json();
-        console.log(dato, "retorno del loging");
         if (dato.msg) {
           setStore({
             error: dato
@@ -526,7 +506,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         });
         const dato = await resp.json();
-        console.log(dato, "del retorno del back");
         if (dato.msg) {
           setStore({
             error: dato
@@ -560,7 +539,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				})
 				const dato = await resp.json();
-				console.log(dato, "lo que regresa del back")
 				if (dato.msg) {
 					setStore({
 						error: dato
@@ -575,10 +553,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       activarDesactivarProducto: async (e, id, status, history) => {
         e.preventDefault();
-        console.log(id, status, "en el flux")
         const store = getStore();
         if (status === 'active') {status ='desactive'} else {status = 'active'};
-        console.log(id, status, "en el flux 2")
         let data = {
           newStatus: status
         }
@@ -592,7 +568,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 				})
 				const dato = await resp.json();
-				console.log(dato)
 				if (dato.msg) {
 					setStore({
 						productoEditado: dato.msg
@@ -621,7 +596,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				} else {
 					setStore({
-						profile: [...dato],
+						profile: dato[1],
 					});
 				}
 			},
