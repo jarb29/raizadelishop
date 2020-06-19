@@ -31,6 +31,12 @@ function Tabs() {
     <>
       <div className="section section-tabs">
         <Container>
+        <Row>
+            <Col className="ml-auto mr-auto" md="12" xl="12">
+              <p className="category">En venta</p>
+                <AdministradorPills />
+            </Col>
+          </Row>
           <Row>
             <Col className="ml-auto mr-auto" md="12" xl="12">
               <p className="category">Orders</p>
@@ -128,12 +134,6 @@ function Tabs() {
                   </TabContent>
                 </CardBody>
               </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="ml-auto mr-auto" md="12" xl="12">
-              <p className="category">En venta</p>
-                <AdministradorPills />
             </Col>
           </Row>
         </Container>

@@ -70,7 +70,9 @@ function TablaSalsas() {
                             <td className="text-center">
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="checkbox"></Input>
+                                  <Input type="checkbox"
+                                  onClick = {e =>{console.log('clicked')}}
+                                  ></Input>
                                   <span className="form-check-sign"></span>
                                 </Label>
                               </FormGroup>
