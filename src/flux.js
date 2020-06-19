@@ -170,7 +170,13 @@ const getState = ({ getStore, getActions, setStore }) => {
         sessionStorage.removeItem("isAuthenticated");
         setStore({
           currentUser: null,
-          isAuthenticated: false
+          isAuthenticated: false,
+          carrito:[],
+          totalCarrito:[],
+          CantidaProductoComprado:[],
+          ItemCarrito: [],
+          ItemProductoCompradoId: [],
+          precioProductoSeleccionado: [],
         });
         history.push("/landing-page");
       },
@@ -390,17 +396,16 @@ const getState = ({ getStore, getActions, setStore }) => {
         console.log(store.carrito, "cuando se va a comprar")
 
 				store.carrito.map(ItemCarrito => {
+
+          console.log(ItemCarrito.cantidad, "cantidad del producto en el mapa")
 							store.ItemProductoCompradoId.push(ItemCarrito.producto.id);
 							store.CantidaProductoComprado.push(ItemCarrito.cantidad);
               store.precioProductoSeleccionado.push(ItemCarrito.producto.precio);							
 					return ' '
         });
-      
 
-				let data = {
-          
-          
-					"usuario_id": store.currentUser.tienda.id,
+				let data = {  
+					"usuario_id": store.currentUser.Usuario.id ,
 					"ItemProductoCompradoId": store.ItemProductoCompradoId,
 					"CantidaProductoComprado": store.CantidaProductoComprado,
 					"precioProductoSeleccionado": store.precioProductoSeleccionado,
@@ -431,7 +436,11 @@ const getState = ({ getStore, getActions, setStore }) => {
           setStore({
             productosActualizados: dato,
             carrito:[],
-            totalCarrito:[]
+            totalCarrito:[],
+            CantidaProductoComprado:[],
+            ItemCarrito: [],
+            ItemProductoCompradoId: [],
+            precioProductoSeleccionado: [],
           });
           console.log(history, "historia")
           history.push("/landing-page");
