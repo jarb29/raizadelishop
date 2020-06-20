@@ -20,7 +20,7 @@ import {
 } from "reactstrap";
 
 // core components
-import EcommerceHeader from "components/Headers/EcommerceHeader.js";
+import HeaderEcomerce from "components/Headers/HeaderEcomerce.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 import FooterDefault from "components/Footers/FooterDefault";
 
@@ -46,14 +46,13 @@ function Ecommercee(props) {
 
   useEffect(() => {
     actions.salsas();
-    actions.profilePage()
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
   }, []);
   return (
     <>
       <FixedTransparentNavbar />
       <div className="wrapper">
-        <EcommerceHeader />
+        <HeaderEcomerce />
         <div className="main">
           <div className="section">
             <Container>

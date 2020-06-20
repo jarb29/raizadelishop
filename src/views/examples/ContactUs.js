@@ -126,7 +126,7 @@ function ContactUs() {
                         className="btn-raised btn-round"
                         color="info"
                         defaultValue="Contact Us"
-                        type="submit"
+                        //type="submit"
                       >
                         Contactanos
                       </Button>

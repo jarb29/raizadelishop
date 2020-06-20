@@ -38,11 +38,14 @@ function AboutUs() {
               <Container>
                 <Row>
                   <Col className="mr-auto ml-auto" md="8">
-                    <h2 className="title">Simpler. Smarter. Faster.</h2>
+                    <h2 className="title">Las experiencias gastronómicas de 
+                  calidad comienzan con ingredientes de calidad.</h2>
                     <h4 className="description">
-                      The CloudCheckr Cloud Management Platform (CMP) provides
-                      full visibility and control to reduce costs, improve
-                      cybersecurity posture, and automate critical tasks.
+                       Nuestros productos horneados se hornean en la 
+                       forma tradicional de la década de 1950, con 
+                       fermentación prolongada, lo que reduce la necesidad 
+                       de usar grandes cantidades de levadura y permite que se 
+                       desarrolle el gluten.
                     </h4>
                   </Col>
                 </Row>
@@ -52,10 +55,9 @@ function AboutUs() {
                       <div className="icon icon-success icon-circle">
                         <i className="now-ui-icons objects_globe"></i>
                       </div>
-                      <h4 className="info-title">Asset Management</h4>
+                      <h4 className="info-title">Hecho Artesanal</h4>
                       <p className="description">
-                        Cross-account dashboards provide sophisticated reporting
-                        for enterprise.
+                      Empleamos métodos tradicionales.
                       </p>
                     </div>
                   </Col>
@@ -64,10 +66,9 @@ function AboutUs() {
                       <div className="icon icon-info icon-circle">
                         <i className="now-ui-icons education_atom"></i>
                       </div>
-                      <h4 className="info-title">Resource Utilization</h4>
+                      <h4 className="info-title">Ingredientes</h4>
                       <p className="description">
-                        CloudCheckr provides summary and detailed usage
-                        statistics for resources.
+                        Utilizamos ingredientes cuidadosamente seleccionados.
                       </p>
                     </div>
                   </Col>
@@ -76,10 +77,10 @@ function AboutUs() {
                       <div className="icon icon-primary icon-circle">
                         <i className="now-ui-icons tech_watch-time"></i>
                       </div>
-                      <h4 className="info-title">Self-Healing</h4>
+                      <h4 className="info-title">Equipo</h4>
                       <p className="description">
-                        CloudCheckr enables users to save money, time, and
-                        effort.
+                      Equipos de última generación para crear nuestra 
+                       gama de productos horneados. 
                       </p>
                     </div>
                   </Col>
@@ -92,11 +93,10 @@ function AboutUs() {
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
-                  <h2 className="title">We have many advantages</h2>
+                  <h2 className="title">Nuestra filosofía.</h2>
                   <h4 className="description">
-                    This is the paragraph where you can write more details about
-                    your projects. Keep you user engaged by providing meaningful
-                    information.
+                  Cada ingrediente se selecciona a mano y 
+                      nuestras recetas se ajustan y se prueban constantemente. 
                   </h4>
                   <div className="section-space"></div>
                 </Col>
@@ -111,14 +111,12 @@ function AboutUs() {
                     }}
                   >
                     <CardBody>
-                      <CardTitle tag="h2">Social Analytics</CardTitle>
                       <p className="card-description">
-                        Insight to help you create, connect, and convert.
-                        Understand Your Audience's Interests, Influence,
-                        Interactions, and Intent. Discover emerging topics and
-                        influencers to reach new audiences.
+ 
+                      Todo para que podamos ofrecer a nuestros clientes un producto 
+                      y servicio superior.
                       </p>
-                      <Badge className="badge-neutral">Analytics</Badge>
+                      <Badge className="badge-neutral">Amamos lo que hacemos.</Badge>
                     </CardBody>
                   </Card>
                 </Col>
@@ -129,12 +127,10 @@ function AboutUs() {
                     </div>
                     <div className="description">
                       <h4 className="info-title">
-                        Listen to Social Conversations
+                      En Raiza's, nuestro objetivo es trabajar con socios que tengan 
+                      la misma filosofía que nosotros.
                       </h4>
-                      <p className="description">
-                        Gain access to the demographics, psychographics, and
-                        location of unique people who talk about your brand.
-                      </p>
+   
                     </div>
                   </div>
                   <div className="info info-horizontal">
@@ -142,12 +138,9 @@ function AboutUs() {
                       <i className="now-ui-icons business_chart-pie-36"></i>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">Performance Analyze</h4>
-                      <p className="description">
-                        Unify data from Facebook, Instagram, Twitter, LinkedIn,
-                        and Youtube to gain rich insights from easy-to-use
-                        reports.
-                      </p>
+                      <h4 className="info-title">Nuestro equipo tiene una 
+                      actitud intransigente hacia la calidad.</h4>
+                   
                     </div>
                   </div>
                   <div className="info info-horizontal">
@@ -155,73 +148,11 @@ function AboutUs() {
                       <i className="now-ui-icons design-2_ruler-pencil"></i>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">Social Conversions</h4>
-                      <p className="description">
-                        Track actions taken on your website that originated from
-                        social, and understand the impact on your bottom line.
-                      </p>
+                      <h4 className="info-title">Nos impulsa 
+                      la mejora continua.</h4>
+                   
                     </div>
                   </div>
-                </Col>
-              </Row>
-              <hr></hr>
-              <Row>
-                <Col className="ml-auto mt-5" md="5">
-                  <div className="info info-horizontal">
-                    <div className="icon icon-warning">
-                      <i className="now-ui-icons users_single-02"></i>
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">Work With Any Team</h4>
-                      <p className="description">
-                        Whether it’s for work or even the next family vacation,
-                        Trello helps your team.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="info info-horizontal">
-                    <div className="icon icon-warning">
-                      <i className="now-ui-icons business_chart-bar-32"></i>
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">A Productivity Platform</h4>
-                      <p className="description">
-                        Integrate the apps your team already uses directly into
-                        your workflow.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="info info-horizontal">
-                    <div className="icon icon-warning">
-                      <i className="now-ui-icons arrows-1_refresh-69"></i>
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">Always In Sync</h4>
-                      <p className="description">
-                        No matter where you are, Trello stays in sync across all
-                        of your devices.
-                      </p>
-                    </div>
-                  </div>
-                </Col>
-                <Col className="mr-auto" md="5">
-                  <Card
-                    className="card-background card-background-product card-raised"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/project9.jpg") + ")"
-                    }}
-                  >
-                    <CardBody>
-                      <CardTitle tag="h2">Trello lets you work.</CardTitle>
-                      <p className="card-description text-white">
-                        Trello’s boards, lists, and cards enable you to organize
-                        and prioritize your projects in a fun, flexible and
-                        rewarding way.
-                      </p>
-                      <Badge className="badge-neutral">Trello</Badge>
-                    </CardBody>
-                  </Card>
                 </Col>
               </Row>
             </Container>
@@ -230,11 +161,12 @@ function AboutUs() {
             <Container>
               <Row className="text-center">
                 <Col className="ml-auto mr-auto" md="8">
-                  <h2 className="title">Our office is our second home</h2>
+                  <h2 className="title">Nuestra gama es innovadora y moderna para que pueda destacar entre la multitud.</h2>
                   <h4 className="description">
-                    Here are some pictures from our office. You can see the
-                    place looks like a palace and is fully equiped with
-                    everything you need to get the job done.
+                  Con nuestro servicio creativo a la medida, trabajaremos juntos para desarrollar un producto que satisfaga sus necesidades. 
+                  Es esta dedicación al servicio personalizado lo que nos ha
+                   dado nuestra reputación sin igual en el sector de la 
+                   panadería, tanto en Chile como en el extranjero.
                   </h4>
                 </Col>
               </Row>

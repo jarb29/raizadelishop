@@ -8,9 +8,6 @@ import {
   Card,
   CardBody,
   CardTitle,
-  NavItem,
-  NavLink,
-  Nav,
   TabContent,
   TabPane,
   Container,
@@ -24,7 +21,7 @@ import FooterDefault from "components/Footers/FooterDefault.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 import TablaProfile from "./TablaProfile";
 
-function ProfilePage() {
+function ProfilePage(props) {
   const { store, actions} = useContext(Context);
   const [pills, setPills] = React.useState("1");
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -39,9 +36,12 @@ function ProfilePage() {
     };
   });
 
-  useEffect(() =>{
+
+  useEffect(() => {
+    actions.store();
     actions.profilePage()
-  }, [])
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
+  }, []);
 
  
 
