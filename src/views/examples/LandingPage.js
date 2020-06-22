@@ -115,11 +115,9 @@ function LandingPage(props) {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="6">
-                <h2 className="title">What is ALPHA?</h2>
+                <h2 className="title">Raiza's?</h2>
                 <h4 className="description text-white">
-                  If you’re selected for ALPHA you’ll also get 3 tickets,
-                  opportunity to access Investor Office Hours and Mentor Hours
-                  and much more all for €850.
+                  No te arrepentiras de nuestra esquisita seleccion. 
                 </h4>
               </Col>
             </Row>

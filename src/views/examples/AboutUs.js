@@ -95,8 +95,7 @@ function AboutUs() {
                 <Col className="ml-auto mr-auto text-center" md="8">
                   <h2 className="title">Nuestra filosofía.</h2>
                   <h4 className="description">
-                  Cada ingrediente se selecciona a mano y 
-                      nuestras recetas se ajustan y se prueban constantemente. 
+                  Nuestra meta es trabajar con socios que tengan la misma filosofía que nosotros. 
                   </h4>
                   <div className="section-space"></div>
                 </Col>
@@ -113,8 +112,7 @@ function AboutUs() {
                     <CardBody>
                       <p className="card-description">
  
-                      Todo para que podamos ofrecer a nuestros clientes un producto 
-                      y servicio superior.
+                      Cada ingrediente se selecciona a mano y nuestras recetas se ajustan y se prueban constantemente. 
                       </p>
                       <Badge className="badge-neutral">Amamos lo que hacemos.</Badge>
                     </CardBody>
@@ -127,8 +125,8 @@ function AboutUs() {
                     </div>
                     <div className="description">
                       <h4 className="info-title">
-                      En Raiza's, nuestro objetivo es trabajar con socios que tengan 
-                      la misma filosofía que nosotros.
+                      Nos impulsa 
+                      la mejora continua.
                       </h4>
    
                     </div>
@@ -148,8 +146,10 @@ function AboutUs() {
                       <i className="now-ui-icons design-2_ruler-pencil"></i>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">Nos impulsa 
-                      la mejora continua.</h4>
+                      <h4 className="info-title">
+                       
+                      Damos el todo para poder ofrecer a nuestros clientes un producto y servicio superior.
+                      </h4>
                    
                     </div>
                   </div>
@@ -182,7 +182,7 @@ function AboutUs() {
                   <img
                     alt="..."
                     className="rounded img-raised"
-                    src={require("assets/img/bg24.jpg")}
+                    src={require("assets/img/project6.jpg")}
                   ></img>
                 </Col>
                 <Col md="4">
@@ -196,7 +196,7 @@ function AboutUs() {
                   <img
                     alt="..."
                     className="rounded img-raised"
-                    src={require("assets/img/project6.jpg")}
+                    src={require("assets/img/bg24.jpg")}
                   ></img>
                 </Col>
                 <Col md="6">

@@ -130,10 +130,9 @@ function Ecommercee(props) {
               <Row>
                 <Col className="ml-auto mr-auto" md="6">
                   <div className="text-center">
-                    <h4 className="title">Subscribe to our Newsletter</h4>
+                    <h4 className="title">Subscribete</h4>
                     <p className="description">
-                      Join our newsletter and get news in your inbox every week!
-                      We hate spam too, so no worries about this.
+                    Te informaremos de importantes ofertas.
                     </p>
                   </div>
                   <Card className="card-raised card-form-horizontal">
@@ -159,7 +158,7 @@ function Ecommercee(props) {
                           </Col>
                           <Col sm="4">
                             <Button block color="info" type="button">
-                              Subscribe
+                              Suscribete
                             </Button>
                           </Col>
                         </Row>

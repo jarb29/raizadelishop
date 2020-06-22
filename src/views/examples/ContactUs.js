@@ -139,11 +139,10 @@ function ContactUs() {
                       <i className="now-ui-icons location_pin"></i>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">Find us at the office</h4>
+                      <h4 className="info-title">Nos gustaría escuchar su opinión.</h4>
                       <p>
-                        Bld Mihail Kogalniceanu, nr. 8, <br></br>
-                        7652 Bucharest, <br></br>
-                        Romania
+                      ¡Pedir nuestros productos y recibirlos es pan 
+                      comido! Todo lo que necesita hacer es llamar por teléfono o escribirnos a nuestro correo correspondiente,
                       </p>
                     </div>
                   </div>
@@ -152,11 +151,9 @@ function ContactUs() {
                       <i className="now-ui-icons tech_mobile"></i>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">Give us a ring</h4>
+                      <h4 className="info-title">Si tiene algún comentario. </h4>
                       <p>
-                        Michael Jordan <br></br>
-                        +40 762 321 762 <br></br>
-                        Mon - Fri, 8:00-22:00
+                      Nos encantaría escucharlo!
                       </p>
                     </div>
                   </div>
@@ -165,12 +162,9 @@ function ContactUs() {
                       <i className="business_briefcase-24 now-ui-icons"></i>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">Legal Information</h4>
+                      <h4 className="info-title">Gran sabor en cada bocado</h4>
                       <p>
-                        Creative Tim Ltd. <br></br>
-                        VAT · EN2341241 <br></br>
-                        IBAN · EN8732ENGB2300099123 <br></br>
-                        Bank · Great Britain Bank
+                    
                       </p>
                     </div>
                   </div>
