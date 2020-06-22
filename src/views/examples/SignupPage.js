@@ -79,7 +79,9 @@ function SignupPage(props) {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg18.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/bg18.jpg") + ")",
+            width:'1270px',
+   
           }}
         ></div>
         <div className="content">
@@ -134,9 +136,7 @@ function SignupPage(props) {
                            src={require("assets/img/logo.jpg")}
                        ></img>
                         </div>
-
-
-                        
+                      
                     <Form action="" className="form" method="">
                       <InputGroup
                         className={firstFocus ? "input-group-focus" : ""}
