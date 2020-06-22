@@ -16,10 +16,9 @@ const items = [
     content: (
       <Row>
         <Col className="ml-auto mr-auto" md="8">
-          <h1 className="title">Finding the Perfect.</h1>
+          <h1 className="title">De nuestro horno hasta tu puerta.</h1>
           <h4 className="description text-white">
-            The haute couture crowds make stylish statements between shows
-            during couture season in Paris...
+       
           </h4>
         </Col>
       </Row>
@@ -32,10 +31,9 @@ const items = [
     content: (
       <Row>
         <Col className="ml-auto mr-auto text-center" md="8">
-          <h1 className="title">Street Style: Couture.</h1>
+          <h1 className="title">Hay pan para cada pensamiento.</h1>
           <h4 className="description text-white">
-            See what Karlie Kloss, Tracee Ellis Ross and others wore between the
-            shows...
+      
           </h4>
         </Col>
       </Row>
@@ -48,10 +46,9 @@ const items = [
     content: (
       <Row>
         <Col className="ml-auto mr-auto" md="8">
-          <h1 className="title">For Men With Style.</h1>
+          <h1 className="title">Gran sabor en cada bocado.</h1>
           <h4 className="description text-white">
-            Shirts that actually fit? Check. Linen shorts? Yup. Those wider
-            pants suddenly in style? Got them, too....
+      
           </h4>
         </Col>
       </Row>
