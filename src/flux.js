@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     // base datos Angel
     store: {
       /////URL
-      baseURL: "http://127.0.0.1:5000",
+      baseURL: "http://jarb29.pythonanywhere.com/",
 
       // claves de usuario
       nombre: "",
