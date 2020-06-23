@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/raizadelishop/precache-manifest.4477443bc609fe9f3086b48c46c883a5.js"
+  "/raizadelishop/precache-manifest.d68d7e5dc06cc1925d90581929813ebe.js"
 );
 
 self.addEventListener('message', (event) => {

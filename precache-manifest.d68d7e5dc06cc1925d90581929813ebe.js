@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0aa370c0654619092c81f897a9d0ee7d",
+    "revision": "1fa17f5ee84a3d755fd6815e20cdeb4f",
     "url": "/raizadelishop/index.html"
   },
   {
-    "revision": "ed05529edf831632d439",
+    "revision": "8e0ca61572f1d092c932",
     "url": "/raizadelishop/static/css/main.05546d48.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/raizadelishop/static/js/2.16b19a3e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ed05529edf831632d439",
-    "url": "/raizadelishop/static/js/main.1f542012.chunk.js"
+    "revision": "8e0ca61572f1d092c932",
+    "url": "/raizadelishop/static/js/main.7bcf5871.chunk.js"
   },
   {
     "revision": "93eac50ba5de5e5a40ba",

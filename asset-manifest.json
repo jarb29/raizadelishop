@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/raizadelishop/static/css/main.05546d48.chunk.css",
-    "main.js": "/raizadelishop/static/js/main.1f542012.chunk.js",
-    "main.js.map": "/raizadelishop/static/js/main.1f542012.chunk.js.map",
+    "main.js": "/raizadelishop/static/js/main.7bcf5871.chunk.js",
+    "main.js.map": "/raizadelishop/static/js/main.7bcf5871.chunk.js.map",
     "runtime-main.js": "/raizadelishop/static/js/runtime-main.8c6ca9d3.js",
     "runtime-main.js.map": "/raizadelishop/static/js/runtime-main.8c6ca9d3.js.map",
     "static/js/2.16b19a3e.chunk.js": "/raizadelishop/static/js/2.16b19a3e.chunk.js",
     "static/js/2.16b19a3e.chunk.js.map": "/raizadelishop/static/js/2.16b19a3e.chunk.js.map",
     "index.html": "/raizadelishop/index.html",
-    "precache-manifest.4477443bc609fe9f3086b48c46c883a5.js": "/raizadelishop/precache-manifest.4477443bc609fe9f3086b48c46c883a5.js",
+    "precache-manifest.d68d7e5dc06cc1925d90581929813ebe.js": "/raizadelishop/precache-manifest.d68d7e5dc06cc1925d90581929813ebe.js",
     "service-worker.js": "/raizadelishop/service-worker.js",
     "static/css/main.05546d48.chunk.css.map": "/raizadelishop/static/css/main.05546d48.chunk.css.map",
     "static/js/2.16b19a3e.chunk.js.LICENSE.txt": "/raizadelishop/static/js/2.16b19a3e.chunk.js.LICENSE.txt",
@@ -46,6 +46,6 @@
     "static/js/runtime-main.8c6ca9d3.js",
     "static/js/2.16b19a3e.chunk.js",
     "static/css/main.05546d48.chunk.css",
-    "static/js/main.1f542012.chunk.js"
+    "static/js/main.7bcf5871.chunk.js"
   ]
 }
