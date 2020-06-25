@@ -57,7 +57,7 @@ function Ecommerce(props) {
         <div className="main">
           <div className="section">
             <Container>
-              <h2 className="section-title">Encuentar el dulces que te gusten</h2>
+              <h2 className="section-title">Encuenta el dulces que te gusta</h2>
               <Row>
                 <Col md="12">
                   <Row>

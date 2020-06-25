@@ -31,7 +31,7 @@ const items = [
     content: (
       <Row>
         <Col className="ml-auto mr-auto text-center" md="8">
-          <h1 className="title">Hay pan para cada pensamiento.</h1>
+          <h1 className="title">Hay postre para cada pensamiento.</h1>
           <h4 className="description text-white">
       
           </h4>
