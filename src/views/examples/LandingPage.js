@@ -98,9 +98,6 @@ function LandingPage(props) {
                   <p>
                   ¿Quieres recrear nuestro premiun deli experiencia en tu casa? Nuestra online deli tienda te ofrece una variedad de aperitivos, salsas (regalos de alerta) y todo lo esencial para esas tardes o desayunos de relajación que necesitas.
                   </p>
-                  <p>
-                  Cuatros de nuestros principales productos.
-                  </p>
                 </Col>
               </Row>
             </div>
@@ -115,7 +112,7 @@ function LandingPage(props) {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="6">
-                <h2 className="title">Raiza's?</h2>
+                <h2 className="title">En Raiza's?</h2>
                 <h4 className="description text-white">
                   No te arrepentiras de nuestra esquisita seleccion. 
                 </h4>
