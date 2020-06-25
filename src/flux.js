@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     // base datos Angel
     store: {
       /////URL
-      baseURL: "http://jarb29.pythonanywhere.com/",
+      baseURL: "http://jarb29.pythonanywhere.com",
 
       // claves de usuario
       nombre: "",
@@ -523,12 +523,10 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       orders: (e, id) => {
-
 				getActions().tiendaOrders(`/api/admi/orders`);
 			},
 
 			tiendaOrders: async (url) => {
-
 				const store = getStore();
 				const { baseURL } = store;
 				const resp = await fetch(baseURL + url, {
@@ -538,7 +536,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 
 				})
-				const dato = await resp.json();
+        const dato = await resp.json();
+        console.log(dato, "deberia llegar las ordenes")
 				if (dato.msg) {
 					setStore({
 						error: dato
