@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1fa17f5ee84a3d755fd6815e20cdeb4f",
+    "revision": "ececabfff8fb895374d83ce51b1c8855",
     "url": "/raizadelishop/index.html"
   },
   {
-    "revision": "8e0ca61572f1d092c932",
+    "revision": "98338150b43bf42da2a0",
     "url": "/raizadelishop/static/css/main.05546d48.chunk.css"
   },
   {
-    "revision": "cfa00fc650e4c460b804",
-    "url": "/raizadelishop/static/js/2.16b19a3e.chunk.js"
+    "revision": "bde0a90e5526bf14f67b",
+    "url": "/raizadelishop/static/js/2.7e0fd0c8.chunk.js"
   },
   {
     "revision": "6d98567bd9d21bb7755c06ab8451d465",
-    "url": "/raizadelishop/static/js/2.16b19a3e.chunk.js.LICENSE.txt"
+    "url": "/raizadelishop/static/js/2.7e0fd0c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e0ca61572f1d092c932",
-    "url": "/raizadelishop/static/js/main.7bcf5871.chunk.js"
+    "revision": "98338150b43bf42da2a0",
+    "url": "/raizadelishop/static/js/main.e3b69ecd.chunk.js"
   },
   {
     "revision": "93eac50ba5de5e5a40ba",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/raizadelishop/static/media/bg18.6735d13c.jpg"
   },
   {
-    "revision": "099010a9c937f66c8ad6294795fa9dc4",
-    "url": "/raizadelishop/static/media/bg19.099010a9.jpg"
+    "revision": "24ce4f0ad071329549fbdbed4f1a05a0",
+    "url": "/raizadelishop/static/media/bg19.24ce4f0a.jpg"
   },
   {
     "revision": "a4ee339c6e002765df1197bfc0655ecf",
@@ -60,6 +60,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/raizadelishop/static/media/bg32.60b4e289.jpg"
   },
   {
+    "revision": "27e868e8bf3f358738d28c468f81e714",
+    "url": "/raizadelishop/static/media/bg33.27e868e8.jpg"
+  },
+  {
+    "revision": "296a2c6b0dd26a6c2fd4e179ad5df76c",
+    "url": "/raizadelishop/static/media/bg34.296a2c6b.jpg"
+  },
+  {
     "revision": "302847fb1fefbf207e18e72ec999e6cc",
     "url": "/raizadelishop/static/media/bg38.302847fb.jpg"
   },
@@ -84,8 +92,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/raizadelishop/static/media/bg45.7bd4e82c.jpg"
   },
   {
-    "revision": "296a2c6b0dd26a6c2fd4e179ad5df76c",
-    "url": "/raizadelishop/static/media/bg50.296a2c6b.jpg"
+    "revision": "855b83dc00edc41834c8deb15a5759c8",
+    "url": "/raizadelishop/static/media/bg50.855b83dc.jpg"
   },
   {
     "revision": "8342f36b5b00cfeab8ca58e759cf1a6a",
@@ -112,8 +120,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/raizadelishop/static/media/logo.5c4fa3fb.jpg"
   },
   {
-    "revision": "0b276fd5496499ade4c42321f61891b7",
-    "url": "/raizadelishop/static/media/michael.0b276fd5.jpg"
+    "revision": "14fed94e753384122ac2d2ca3bd4545d",
+    "url": "/raizadelishop/static/media/michael.14fed94e.jpg"
   },
   {
     "revision": "22a0bffe789c286a9d78eb52670996a7",
