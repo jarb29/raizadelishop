@@ -125,7 +125,7 @@ function LandingPage(props) {
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img
                         alt="..."
-                        className="img img-raised"
+                        //className="img img-raised"
                         src={require("assets/img/michael.jpg")}
                       ></img>
                     </a>
@@ -135,14 +135,8 @@ function LandingPage(props) {
                       The networking at Web Summit is like no other European
                       tech conference.
                     </p>
+                    
                   </CardBody>
-                  <div className="icon icon-info">
-                    <i className="fa fa-quote-right"></i>
-                  </div>
-                  <CardFooter>
-                    <CardTitle tag="h4">Michael Elijah</CardTitle>
-                    <p className="category">@michaelelijah</p>
-                  </CardFooter>
                 </Card>
               </Col>
               <Col md="4">
