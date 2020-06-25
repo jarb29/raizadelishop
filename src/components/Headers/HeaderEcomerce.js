@@ -16,7 +16,7 @@ const items = [
     content: (
       <Row>
         <Col className="ml-auto mr-auto" md="8">
-          <h1 className="title">Creamos recuerdos deliciosos.</h1>
+          <h1 className="title">Creamos recuerdos deliciosos</h1>
           <h4 className="description text-white">
 
           </h4>
@@ -31,7 +31,7 @@ const items = [
     content: (
       <Row>
         <Col className="ml-auto mr-auto text-center" md="8">
-          <h1 className="title">Y dulces tambien..</h1>
+          <h1 className="title">Hecho para usted</h1>
           <h4 className="description text-white">
        
           </h4>
@@ -46,8 +46,7 @@ const items = [
     content: (
       <Row>
         <Col className="ml-auto mr-auto" md="8">
-          <h1 className="title">Encontraras la salsa
-          que le da sabor a tu ....</h1>
+          <h1 className="title">Irresistiblemente delicioso...</h1>
           <h4 className="description text-white">
    
           </h4>
