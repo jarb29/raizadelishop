@@ -196,7 +196,7 @@ function AboutUs() {
                   <img
                     alt="..."
                     className="rounded img-raised"
-                    src={require("assets/img/bg24.jpg")}
+                    src={require("assets/img/bg33.jpg")}
                   ></img>
                 </Col>
                 <Col md="6">
@@ -204,6 +204,22 @@ function AboutUs() {
                     alt="..."
                     className="rounded img-raised"
                     src={require("assets/img/project14.jpg")}
+                  ></img>
+                </Col>
+                <Col md="6">
+                  <img
+                    alt="..."
+                    className="rounded img-raised"
+                    src={require("assets/img/bg24.jpg")}
+                  ></img>
+                </Col>
+               
+             
+                <Col md="6">
+                  <img
+                    alt="..."
+                    className="rounded img-raised"
+                    src={require("assets/img/bg34.jpg")}
                   ></img>
                 </Col>
               </Row>
