@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       /////URL
       baseURL: "http://jarb29.pythonanywhere.com",
+      // baseURL: 'http://127.0.0.1:5000',
 
       // claves de usuario
       nombre: "",
