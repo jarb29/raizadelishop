@@ -5,7 +5,6 @@ import {
   Badge,
   Card,
   CardBody,
-  CardTitle,
   Container,
   Row,
   Col

@@ -4,15 +4,10 @@ import { withRouter } from "react-router";
 
 // reactstrap components
 import {
-  Button,
   Card,
   CardBody,
   CardFooter,
   CardTitle,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col
@@ -24,9 +19,7 @@ import FooterDefault from "components/Footers/FooterDefault.js";
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 
 function LandingPage(props) {
-  const { store, actions } = useContext(Context);
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [emailFocus, setEmailFocus] = React.useState(false);
+  const { store } = useContext(Context);
   useEffect(() => {
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('admi')) props.history.push('/administrador');
