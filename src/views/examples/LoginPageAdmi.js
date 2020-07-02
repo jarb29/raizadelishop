@@ -148,7 +148,7 @@ function LoginPageAdmi(props) {
                       <h6>
                         <Link
                           className="link footer-link"
-                           tag={Link} to="/admi/sign-up">
+                           tag={Link} to="/admi/registrate">
                         <i className="now-ui-icons tech_mobile"></i>
                           Crear Cuenta
                         </Link>

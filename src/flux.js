@@ -116,7 +116,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(dato));
           sessionStorage.setItem("isAuthenticated", true);
-          history.push("/e-commerce");
+          history.push("/tortas");
         }
       },
 
@@ -157,7 +157,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           sessionStorage.setItem("currentUser", JSON.stringify(dato));
           sessionStorage.setItem("isAuthenticated", true);
-          history.push("/e-commerce");
+          history.push("/tortas");
         }
       },
 
@@ -175,7 +175,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           ItemProductoCompradoId: [],
           precioProductoSeleccionado: [],
         });
-        history.push("/landing-page");
+        history.push("/Home");
       },
 
       // Agregando Productos
@@ -428,7 +428,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             ItemProductoCompradoId: [],
             precioProductoSeleccionado: [],
           });
-          history.push("/landing-page");
+          history.push("/Home");
 			
 				} else {
           setStore({

@@ -61,23 +61,23 @@ function FixedTransparentNavbar(props) {
                   <p>Categorias</p>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink" right>
-                <DropdownItem tag={Link} to="/e-commerce">
+                <DropdownItem tag={Link} to="/tortas">
                     <i className="now-ui-icons shopping_shop"></i>
                     Tortas
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/e-commercee">
+                  <DropdownItem tag={Link} to="/salsas">
                     <i className="now-ui-icons shopping_shop"></i>
                     Salsas
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/about-us">
+                  <DropdownItem tag={Link} to="/sobrenosotros">
                     <i className="now-ui-icons business_bulb-63"></i>
                     Sobre Nosotros
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/contact-us">
+                  <DropdownItem tag={Link} to="/contactanos">
                     <i className="now-ui-icons location_pin"></i>
                     Contactanos
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/landing-page">
+                  <DropdownItem tag={Link} to="/Home">
                     <i className="now-ui-icons education_paper"></i>
                     Home
                   </DropdownItem>
@@ -92,7 +92,7 @@ function FixedTransparentNavbar(props) {
                     Profile Page
                   </DropdownItem>: null}
                   { !store.isAuthenticated ? 
-                  <DropdownItem tag={Link} to="/sign-up">
+                  <DropdownItem tag={Link} to="/registrate">
                     <i className="now-ui-icons tech_mobile"></i>
                     Registrate
                   </DropdownItem>: null}

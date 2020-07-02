@@ -27,14 +27,14 @@ function App() {
   return (
   <BrowserRouter>
     <Switch>
-      <Route path="/about-us" render={props => <AboutUs {...props} />} />
-      <Route path="/contact-us" render={props => <ContactUs {...props} />} />
-      <Route path="/e-commerce" render={props => <Ecommerce {...props} />} />
-      <Route path="/e-commercee" render={props => <Ecommercee {...props} />} />
+      <Route path="/sobrenosotros" render={props => <AboutUs {...props} />} />
+      <Route path="/contactanos" render={props => <ContactUs {...props} />} />
+      <Route path="/tortas" render={props => <Ecommerce {...props} />} />
+      <Route path="/salsas" render={props => <Ecommercee {...props} />} />
       <Route path="/administrador" render={props => <Administrador {...props} />} />
  
       <Route
-        path="/landing-page"
+        path="/Home"
         render={props => <LandingPage {...props} />}
       />
       <Route
@@ -42,7 +42,7 @@ function App() {
         render={props => <LoginPageAdmi {...props} />}
       />
       <Route
-        path="/admi/sign-up"
+        path="/admi/registrate"
         render={props => <SignupPageAdmi {...props} />}
       />
       <Route path="/login-page" render={props => <LoginPage {...props} />} />
@@ -51,8 +51,8 @@ function App() {
         path="/profile-page"
         render={props => <ProfilePage {...props} />}
       />
-      <Route path="/sign-up" render={props => <SignupPage {...props} />} />
-      <Redirect to="/landing-page"  />
+      <Route path="/registrate" render={props => <SignupPage {...props} />} />
+      <Redirect to="/Home"  />
     </Switch>
   </BrowserRouter>
 )};

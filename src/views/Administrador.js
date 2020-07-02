@@ -15,7 +15,7 @@ function Administrador(props) {
     actions.salsas();
     actions.store();
     actions.orders();
-    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/landing-page');
+    if(store.isAuthenticated && store.currentUser.hasOwnProperty('tienda')) props.history.push('/Home');
     if(store.isAuthenticated && store.currentUser.hasOwnProperty('administrador')) props.history.push('/administrador');
     if(!store.isAuthenticated) props.history.push('/admi/login');
    

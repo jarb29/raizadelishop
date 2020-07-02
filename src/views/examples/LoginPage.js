@@ -148,7 +148,7 @@ function LoginPage(props) {
                       <h6>
                         <Link
                           className="link footer-link"
-                           tag={Link} to="/sign-up">
+                           tag={Link} to="/registrate">
                         <i className="now-ui-icons tech_mobile"></i>
                           Crear Cuenta
                         </Link>
@@ -158,7 +158,7 @@ function LoginPage(props) {
                       <h6>
                         <Link
                           className="link footer-link"
-                         tag={Link} to="/contact-us">
+                         tag={Link} to="/contactanos">
                           <i className="now-ui-icons location_pin"></i>
                             Necesita Ayuda?
                         </Link>
