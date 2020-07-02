@@ -66,7 +66,7 @@ function TablaSalsas(props) {
                         </thead>
                         <tbody responsive striped colSpan="3">
                         {store.tiendaSalsa.map((producto, i) => {
-                        let img = store.baseURL + `/api/tienda/tienda/` + producto.avatar
+                        let img = store.baseUURL + `/api/tienda/tienda/` + producto.avatar
                         return (
                         
                         <tr >

@@ -66,7 +66,7 @@ function TablaTorta(props) {
                         </thead>
                         <tbody >
                            {store.tiendaSeleccionada.map((producto, i) => {
-                            let img = store.baseURL + `/api/tienda/tienda/` + producto.avatar
+                            let img = store.baseUURL + `/api/tienda/tienda/` + producto.avatar
                         return (
                               
                               <tr >

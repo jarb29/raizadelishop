@@ -63,7 +63,7 @@ function Ecommercee(props) {
 
                   {   
                             store.tiendaSalsa.map((producto, i) => {
-                              let img = store.baseURL + `/api/tienda/tienda/` + producto.avatar
+                              let img = store.baseUURL + `/api/tienda/tienda/` + producto.avatar
                                 return (
                           
                         <Col lg="4" md="6" key ={i}>

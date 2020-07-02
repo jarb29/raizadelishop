@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     // base datos Angel
     store: {
       /////URL
-      baseURL: "http://jarb29.pythonanywhere.com",
+      baseURL: "https://cors-anywhere.herokuapp.com/http://jarb29.pythonanywhere.com",
+      baseUURL: "http://jarb29.pythonanywhere.com",
       // baseURL: 'http://127.0.0.1:5000',
 
       // claves de usuario
@@ -143,7 +144,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         });
         const dato = await resp.json();
-        console.log(dato, "lo que llega del login")
+    
         if (dato.msg) {
           setStore({
             error: dato
@@ -238,7 +239,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				})
         const dato = await resp.json();
-        console.log(dato, "salsas")
+ 
 
 				if (dato.msg) {
 					setStore({
@@ -538,7 +539,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				})
         const dato = await resp.json();
-        console.log(dato, "deberia llegar las ordenes")
+
 				if (dato.msg) {
 					setStore({
 						error: dato
@@ -589,7 +590,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				})
         const dato = await resp.json();
-        console.log(dato, "paa ver que llega del profile")
+        
 				if (dato.msg) {
 					setStore({
 						error: dato

@@ -14,7 +14,7 @@ import {
 function TablasFactura() {
   const { store} = useContext(Context);
 
-  console.log(store.factura, "para ver que es lo que es")
+
 
   return (
           <div >
