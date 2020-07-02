@@ -35,7 +35,8 @@ function AboutUsHeader() {
             <Col className="ml-auto mr-auto" md="8">
               <h1 className="title">Sobre nosotros</h1>
               <h4>
-                Nos dedicamos a la elaboración de productos artesanales.
+                Nos dedicamos a la elaboración de productos artesanales que consiste en ofrecer a todos
+                una reinterpretación moderna y tradicional de lo que hacemos.
               </h4>
             </Col>
           </Row>
