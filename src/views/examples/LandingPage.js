@@ -125,11 +125,18 @@ function LandingPage(props) {
                   </div>
                   <CardBody>
                     <p className="card-description">
-                      The networking at Web Summit is like no other European
-                      tech conference.
+                    Te encantara probar nuestras tortas, 
+                    especialmente cuando estas ofrecen algo un 
+                    poco diferente de otras que ya hayas probado.
                     </p>
-                    
                   </CardBody>
+                  <div className="icon icon-info">
+                    <i className="fa fa-quote-right"></i>
+                  </div>
+                  <CardFooter>
+                    <CardTitle tag="h4">Raiza's</CardTitle>
+                    <p className="category">@raizasdeli</p>
+                  </CardFooter>
                 </Card>
               </Col>
               <Col md="4">
@@ -145,16 +152,16 @@ function LandingPage(props) {
                   </div>
                   <CardBody>
                     <p className="card-description">
-                      The connections you make at Web Summit are unparalleled,
-                      we met users all over the world.
+                    Todas nuestras creaciones están compuestas por ingredientes 
+                    seleccionados con el mayor cuidado por su calidad de sabor excepcional.
                     </p>
                   </CardBody>
                   <div className="icon icon-info">
                     <i className="fa fa-quote-right"></i>
                   </div>
                   <CardFooter>
-                    <CardTitle tag="h4">Olivia Harper</CardTitle>
-                    <p className="category">@oliviaharper</p>
+                    <CardTitle tag="h4">Raiza's</CardTitle>
+                    <p className="category">@raizasdeli</p>
                   </CardFooter>
                 </Card>
               </Col>
@@ -171,16 +178,17 @@ function LandingPage(props) {
                   </div>
                   <CardBody>
                     <p className="card-description">
-                      Web Summit will increase your appetite, your inspiration,
-                      and your network.
+                    Nuestra fortaleza radica en la combinación de artesanía, 
+                    tradición e innovación técnica, que nos permite 
+                    ofrecer a nuestros clientes la delicia del pan artesanal recién horneado.
                     </p>
                   </CardBody>
                   <div className="icon icon-info">
                     <i className="fa fa-quote-right"></i>
                   </div>
                   <CardFooter>
-                    <CardTitle tag="h4">James Logan</CardTitle>
-                    <p className="category">@jameslogan</p>
+                    <CardTitle tag="h4">Raiza's</CardTitle>
+                    <p className="category">@raizasdeli</p>
                   </CardFooter>
                 </Card>
               </Col>
