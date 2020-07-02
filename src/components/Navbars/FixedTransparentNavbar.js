@@ -6,8 +6,6 @@ import { withRouter } from "react-router";
 import {
   Collapse,
   DropdownToggle,
-  NavbarBrand,
-  UncontrolledTooltip,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
@@ -133,7 +131,9 @@ function FixedTransparentNavbar(props) {
                   <p>Cerrar sesion</p>
                 </DropdownToggle>
               </UncontrolledDropdown> :null}
+              <DropdownItem>
               {store.carrito.length !==0? <ButtonCarrito />: null}
+              </DropdownItem>
             </Nav>
           </Collapse>
         </Container>

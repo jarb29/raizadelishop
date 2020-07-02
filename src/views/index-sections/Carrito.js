@@ -27,7 +27,7 @@ function Carrito() {
                   <Card className="card-plain">
                     <CardBody>
                       <p> Sus compras </p>
-                      <Table striped>
+                      <Table striped responsive>
                       <thead>
                           <tr>
                             <th>
