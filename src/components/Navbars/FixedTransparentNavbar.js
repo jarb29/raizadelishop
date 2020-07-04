@@ -131,9 +131,10 @@ function FixedTransparentNavbar(props) {
                   <p>Cerrar sesion</p>
                 </DropdownToggle>
               </UncontrolledDropdown> :null}
+              {store.carrito.length !==0?
               <DropdownItem>
-              {store.carrito.length !==0? <ButtonCarrito />: null}
-              </DropdownItem>
+               <ButtonCarrito />
+              </DropdownItem>: null}
             </Nav>
           </Collapse>
         </Container>
