@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext}  from "react";
+import { Context } from '../../AppContext';
 
 import {
   Button,
@@ -15,7 +16,6 @@ import {
 
 // core components
 import ContactUsHeader from "components/Headers/ContactUsHeader.js";
-
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar";
 import FooterDefault from "components/Footers/FooterDefault";
 
@@ -25,6 +25,7 @@ function ContactUs() {
   const [nameFocus, setNameFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [numberFocus, setNumberFocus] = React.useState(false);
+  const { actions } = useContext(Context);
   React.useEffect(() => {
     document.body.classList.add("contact-page");
     document.body.classList.add("sidebar-collapse");
@@ -50,7 +51,7 @@ function ContactUs() {
                     Nosotros responderemos tan pronto como podamos. <br></br>
                     <br></br>
                   </p>
-                  <Form id="contact-form" method="post" role="form">
+                  <Form id="contact-form" method="post" role="form" onSubmit={e => actions.submitcontact(e)}>
                     <label>Nombre</label>
                     <InputGroup
                       className={nameFocus ? "input-group-focus" : ""}
@@ -67,6 +68,7 @@ function ContactUs() {
                         type="text"
                         onFocus={() => setNameFocus(true)}
                         onBlur={() => setNameFocus(false)}
+                        onChange={e => actions.handlingInputs(e)}
                       ></Input>
                     </InputGroup>
                     <label>Email</label>
@@ -85,6 +87,7 @@ function ContactUs() {
                         type="email"
                         onFocus={() => setEmailFocus(true)}
                         onBlur={() => setEmailFocus(false)}
+                        onChange={e => actions.handlingInputs(e)}
                       ></Input>
                     </InputGroup>
                     <label>Telefono</label>
@@ -102,6 +105,7 @@ function ContactUs() {
                         type="text"
                         onFocus={() => setNumberFocus(true)}
                         onBlur={() => setNumberFocus(false)}
+                        onChange={e => actions.handlingInputs(e)}
                       ></Input>
                     </InputGroup>
                     <FormGroup>
@@ -111,6 +115,7 @@ function ContactUs() {
                         name="message"
                         rows="6"
                         type="textarea"
+                        onChange={e => actions.handlingInputs(e)}
                       ></Input>
                     </FormGroup>
                     <div className="submit text-center">
@@ -118,7 +123,7 @@ function ContactUs() {
                         className="btn-raised btn-round"
                         color="info"
                         defaultValue="Contact Us"
-                        //type="submit"
+                        type="submit"
                       >
                         Contactanos
                       </Button>

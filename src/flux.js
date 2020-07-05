@@ -3,9 +3,9 @@ const getState = ({ getStore, getActions, setStore }) => {
     // base datos Angel
     store: {
       /////URL
-      baseURL: "https://cors-anywhere.herokuapp.com/http://jarb29.pythonanywhere.com",
-      baseUURL: "http://jarb29.pythonanywhere.com",
-      // baseURL: 'http://127.0.0.1:5000',
+      // baseURL: "https://cors-anywhere.herokuapp.com/http://jarb29.pythonanywhere.com",
+      // baseUURL: "http://jarb29.pythonanywhere.com",
+      baseURL: 'http://127.0.0.1:5000',
 
       // claves de usuario
       nombre: "",
@@ -600,12 +600,47 @@ const getState = ({ getStore, getActions, setStore }) => {
 						profile: dato[1],
 					});
 				}
-			},
+      },
 
 
+      //////////
+      submitcontact: (e, history) => {
+        e.preventDefault();
+        const store = getStore();
 
+        let data = {
+          nombre: store.nombre,
+          email: store.email,
+          clave: store.clave,
+          apellido: store.apellido,
+          telefono: store.telefono,
+        };
 
-      
+        getActions().submitcontacto("/api/contacto", data, history);
+      },
+
+      submitcontacto: async (url, data, history) => {
+        const store = getStore();
+        const { baseURL } = store;
+        const resp = await fetch(baseURL + url, {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        const dato = await resp.json();
+        if (dato.msg) {
+          setStore({
+            error: dato
+          });
+        } else {
+          setStore({
+            currentUser: dato,
+          });
+          history.push("/administrador");
+        }
+      }    
     }
   };
 };
