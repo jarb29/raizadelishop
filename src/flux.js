@@ -3,8 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     // base datos Angel
     store: {
       /////URL
-      // baseURL: "https://cors-anywhere.herokuapp.com/http://jarb29.pythonanywhere.com",
-      baseURL: "http://jarb29.pythonanywhere.com",
+      baseURL: "https://cors-anywhere.herokuapp.com/http://jarb29.pythonanywhere.com",
+      // baseURL: "http://jarb29.pythonanywhere.com",
       baseUURL: "http://jarb29.pythonanywhere.com",
       // baseURL: 'http://127.0.0.1:5000',
 
