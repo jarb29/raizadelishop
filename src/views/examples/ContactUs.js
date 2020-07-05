@@ -21,7 +21,7 @@ import FooterDefault from "components/Footers/FooterDefault";
 
 
 
-function ContactUs() {
+function ContactUs(props) {
   const [nameFocus, setNameFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [numberFocus, setNumberFocus] = React.useState(false);
@@ -51,7 +51,7 @@ function ContactUs() {
                     Nosotros responderemos tan pronto como podamos. <br></br>
                     <br></br>
                   </p>
-                  <Form id="contact-form" method="post" role="form" onSubmit={e => actions.submitcontact(e)}>
+                  <Form id="contact-form" method="post" role="form" onSubmit={e => actions.submitcontact(e, props.history)}>
                     <label>Nombre</label>
                     <InputGroup
                       className={nameFocus ? "input-group-focus" : ""}
