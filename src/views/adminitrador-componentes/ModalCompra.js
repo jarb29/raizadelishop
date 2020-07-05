@@ -1,4 +1,4 @@
-import React, { useContext,  useEffect}  from "react";
+import React, { useContext }  from "react";
 import { Context } from '../../AppContext';
 import { withRouter } from "react-router";
 
@@ -13,16 +13,12 @@ import {
 // core components
 
 function ModalCompra(props) {
-    
-    const { store, actions} = useContext(Context);
-
-
-
+  const { actions} = useContext(Context);
   const [modalMini, setModalMini] = React.useState(false);
 
   return (
     <>
-        <Container>
+        <Container responsive>
               <Button
                 onClick={() => setModalMini(true)}
                 className="btn-round"

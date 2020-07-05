@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
     // base datos Angel
     store: {
       /////URL
-      baseURL: "https://cors-anywhere.herokuapp.com/http://jarb29.pythonanywhere.com",
+      // baseURL: "https://cors-anywhere.herokuapp.com/http://jarb29.pythonanywhere.com",
+      baseURL: "http://jarb29.pythonanywhere.com",
       baseUURL: "http://jarb29.pythonanywhere.com",
       // baseURL: 'http://127.0.0.1:5000',
 
@@ -70,8 +71,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 // inputs
       handlingInputs: e => {
         e.preventDefault();
-        console.log(e.target.name, "deberia ser el name");
-        console.log(e.target.value, "deberia ser el value");
         setStore({
           [e.target.name]: e.target.value
         });
@@ -614,7 +613,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       submitcontact: (e, history) => {
         e.preventDefault();
         const store = getStore();
-        console.log(history, "historia")
 
         let data = {
           nombre: store.name,
@@ -622,7 +620,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           celular: store.number,
           mensaje: store.message,
         };
-        console.log(data)
 
         getActions().submitcontacto("/api/contacto", data, history);
       },
@@ -638,7 +635,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         });
         const dato = await resp.json();
-        console.log(dato)
         if (dato.msg) {
           setStore({
             error: dato

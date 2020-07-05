@@ -1,4 +1,4 @@
-import React, { useContext,  useEffect }  from "react";
+import React, { useContext }  from "react";
 import { Context } from '../../AppContext';
 
 // reactstrap components
@@ -21,13 +21,13 @@ function Carrito() {
 
   return (
           <div >
-            <Container >
+            <Container>
               <Row >
                 <Col md="12">
+                <p style ={{color:"black"}}> Sus compras </p>
                   <Card className="card-plain">
-                    <CardBody>
-                      <p> Sus compras </p>
-                      <Table striped responsive>
+                    <CardBody> 
+                      <Table responsive striped >
                       <thead>
                           <tr>
                             <th>

@@ -21,7 +21,7 @@ function TablasFactura() {
               <Row >
                 <Col md="12">
                     <CardBody>
-                      <Table striped>
+                      <Table responsive striped>
                       <thead>
                           <tr>
                             <th>

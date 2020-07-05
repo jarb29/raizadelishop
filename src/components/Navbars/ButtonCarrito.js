@@ -9,6 +9,15 @@ import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Carrito from 'views/index-sections/Carrito';
 import ModalCompra from "views/adminitrador-componentes/ModalCompra";
+import {
+  ButtonGroup,
+  Card,
+  CardBody,
+  Table,
+  Row,
+  Container,
+  Col,
+} from "reactstrap";
 
 
 
@@ -75,11 +84,11 @@ export default function ButtonCarrito() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem>
-          <ListItemIcon>
+          <Container>
+            <CardBody>
               <Carrito />
-          </ListItemIcon>
-        </StyledMenuItem>
+            </CardBody>
+          </Container>
         { store.isAuthenticated ? 
           <div className="text-center">
             <ModalCompra  />
