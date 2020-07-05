@@ -27,7 +27,7 @@ function Carrito() {
                 <p style ={{color:"black"}}> Sus compras </p>
                   <Card className="card-plain">
                     <CardBody> 
-                      <Table striped >
+                      <Table responsive striped >
                       <thead>
                           <tr>
                             <th>
