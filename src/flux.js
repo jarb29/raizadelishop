@@ -46,6 +46,11 @@ const getState = ({ getStore, getActions, setStore }) => {
        detalleFactura: [],
        // Variables profile Page
        profile: [],
+       // values contacto
+       name:'',
+       number:'',
+       message:'',
+
     },
 
     actions: {
@@ -65,6 +70,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 // inputs
       handlingInputs: e => {
         e.preventDefault();
+        console.log(e.target.name, "deberia ser el name");
+        console.log(e.target.value, "deberia ser el value");
         setStore({
           [e.target.name]: e.target.value
         });
@@ -609,11 +616,10 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
 
         let data = {
-          nombre: store.nombre,
+          nombre: store.name,
           email: store.email,
-          clave: store.clave,
-          apellido: store.apellido,
-          telefono: store.telefono,
+          celular: store.number,
+          mensaje: store.message,
         };
 
         getActions().submitcontacto("/api/contacto", data, history);

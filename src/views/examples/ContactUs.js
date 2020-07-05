@@ -64,6 +64,7 @@ function ContactUs() {
                       <Input
                         aria-label="Your Name..."
                         autoComplete="name"
+                        name ="name"
                         placeholder="Tu nombre Aqui..."
                         type="text"
                         onFocus={() => setNameFocus(true)}
@@ -82,6 +83,7 @@ function ContactUs() {
                       </InputGroupAddon>
                       <Input
                         aria-label="Email Here..."
+                        name="email"
                         autoComplete="email"
                         placeholder="Email aqui..."
                         type="email"
@@ -101,6 +103,7 @@ function ContactUs() {
                       </InputGroupAddon>
                       <Input
                         autoComplete="number"
+                        name="number"
                         placeholder="Tu Numero..."
                         type="text"
                         onFocus={() => setNumberFocus(true)}
