@@ -3,24 +3,18 @@ import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
-import { Link } from "react-router-dom";
 
 // core components
 
 function FooterDefault() {
   return (
     <>
-      <footer className="footer footer-default">
+      <footer className="footer footer-default" >
         <Container>
           <nav>
             <ul>
               <li>
-                  <Link
-                      className="link footer-link"
-                      tag={Link} to="/admi/login"
-                      color="default">
                     Jarb29
-                  </Link>
               </li>
               <li>
                 <a
@@ -32,10 +26,10 @@ function FooterDefault() {
               </li>
             </ul>
           </nav>
-          <div className="copyright" id="copyright" color="default">
+          <div className="copyright" id="copyright" color="black">
             © {new Date().getFullYear()}, Designed by{" "}
             <a
-            color="default"
+            color="yellow"
             >
               Jarb29
             </a>
